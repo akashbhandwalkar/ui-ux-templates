@@ -1,0 +1,63 @@
+@import("https://fonts.googleapis.com/css2?family=Roboto&display=swap")
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #e3edf7;
+    padding: 15% 0 0 0 ;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+button {
+    background: #e3edf7;
+    height: 60px;
+    width: 60px;
+    border: none;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+                -6px -6px 10px -1px rgba(255,255,255,0.7);
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+i {
+    font-size: 2rem;
+}
+.facebook:hover i {
+    color: #3B5998;
+}
+
+.twitter:hover i {
+    color: rgba(1,159,245,1);
+}
+.youtube:hover i {
+    color: red;
+}
+.linkedIn:hover i {
+    color: blue;
+}
+
+
+button:hover {
+    box-shadow: inset 6px 6px 10px -1px rgba(0,0,0,0.15),
+                inset -6px -6px 10px -1px rgba(255,255,255,0.7);
+}
+.social-icons {
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+    
+}

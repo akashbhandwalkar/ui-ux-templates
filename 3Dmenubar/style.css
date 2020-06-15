@@ -1,0 +1,87 @@
+@import("https://fonts.googleapis.com/css2?family=Roboto&display=swap")
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #e3edf7;
+    padding: 15% 0 0 0 ;
+}
+ul {
+    position: relative;
+    /* transform: rotate(-35deg) skew(20deg,5deg); */
+}
+  
+.list-item {
+    background: #000;
+    color: white;
+    text-align: center;
+    height: 2.5em;
+    width: 4em;
+    line-height: 2.5em;
+    border-bottom: 1px solid #060606;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    box-shadow: -2em 1.5em 0 #e1e1e1;
+    transition: all .25s linear;
+    margin: 20px;
+}  
+
+.list-item:hover {
+    background: #ff6e42;
+    color: white;
+    transform: translateX(.9em, .9em);
+    transition: all .25s linear;
+    box-shadow: -2em 2em 0 #e1e1e1;
+    width: 10em;
+}
+
+    
+.list-item:hover:before {
+    background: #b65234;
+    width: 1em;
+    top: .5em;
+    left: -1em;
+  }
+  
+.list-item:hover:after {
+    background: #b65234;
+    width: 1em;
+    bottom: -87px;
+    left: 64px;
+    height: 10em;
+  }
+
+  .list-item:before, 
+  .list-item:after {
+    content: '';
+    position: absolute;
+    transition: all .25s linear;
+    width: .5em;
+  }
+
+  .list-item:after {
+    background: #181818;
+    bottom: -29px;
+    left: 32px;
+    transform: rotate(90deg) skew(0,45deg);
+}
+  
+  .list-item:before {
+    height: 2.5em;
+    background: #121212;
+    top: -4px;
+    right: -0.5em;
+    transform: skewY(-45deg);
+  }
+  a {
+      color: white;
+      font-family: "Roboto", monospave;
+
+      text-decoration: none;
+  }

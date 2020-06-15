@@ -1,0 +1,39 @@
+@import("https://fonts.googleapis.com/css2?family=Roboto&display=swap")
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #e3edf7;
+}
+
+.stack-heap {
+    display: flex;
+    align-items: center;
+}
+
+.event-loop-container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.stack {
+    width: 150px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.heap {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+}
+.queue {
+    width: 650px;
+    height: 150px;
+    border: 1px solid black;
+}

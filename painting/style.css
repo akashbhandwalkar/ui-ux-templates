@@ -1,0 +1,66 @@
+@import("https://fonts.googleapis.com/css2?family=Roboto&display=swap")
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+.first {
+    height: 40vh;
+    background: linear-gradient(#FCDA02, #f77807);
+}
+
+.second {
+    height: 20vh;
+    position: relative;
+    background: linear-gradient(#c2ae75, #52a2be, #52a2be, #0942eb); 
+}
+.third {
+    height: 40vh;
+    background: linear-gradient(#fd9a04, #fc5c00); 
+}
+
+.sun {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -60px;
+    left: 45%;
+    background-color: #f3ed0f;
+}
+  .mountains {
+      display: flex;
+      height: 105px;
+      top: 30px;
+      position: absolute;
+  }
+
+.mountain {
+  border-left: 150px solid transparent;
+  border-right: 150px solid transparent;
+  border-bottom: 180px solid #e9c8a4;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+}
+
+.-one {
+ 
+}
+.-two{
+    left: 100px;
+}
+.-three {
+    left: 650px;
+}
+.-four {
+  
+    bottom: 0;
+    left: 800px;
+}
+
+@media()

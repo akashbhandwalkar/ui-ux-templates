@@ -1,0 +1,252 @@
+@import("https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    width: 80%;
+    margin: 0 auto;
+}
+body.dark {
+    color: white;
+    background:linear-gradient(90deg, #202230, #1d202a);
+}
+body.light {
+    background:white;
+}
+
+
+.header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 20px 0;
+}
+.header h1 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 30px
+}
+.header h3 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+
+.header .left {
+    width: 80%
+}
+.header .right {
+    width: 20%;
+    
+}
+.header .right label {
+    right: 0;
+    position: absolute;
+}
+
+.current-cards {
+    display: flex;
+    margin: 30px 0;
+}
+
+.card {
+    background: #252c42;
+    padding: 15px 25px;
+    margin: 0 10px;
+    text-align: center;
+    width: 25%;
+}
+.light  .card {
+    background-color: rgb(240,243,250);
+    color: black;
+}
+.facebook {
+    color: #168ef3;
+    margin-right: 4px;
+}
+.instagram {
+    color: red;
+    margin-right: 4px;
+}
+.youtube {
+    color: red;
+    margin-right: 4px;
+}
+.twitter {
+    color: #1ca0f6;
+    margin-right: 4px;
+}
+
+.card.one{
+    border-top: 3px solid #1b8df1;
+}
+.card.two{
+    border-top: 3px solid #1b8df1;
+}
+.card.three{
+    border-top: 3px solid #e05c8f;
+}
+.card.four{
+    border-top: 3px solid #be052b;
+}
+
+.username {
+    font-size: 10px;
+}
+.title {
+    margin: 15px 0;
+}
+.followers {
+    margin: 15px 0;
+}
+.followers label {
+    letter-spacing: 2px;
+    font-size: 6px;
+}
+.followers .count{
+    font-size: 32px;
+    font-weight: 600;
+
+}
+.delta {
+    color: #2c897e;
+    font-size: 10px;
+}
+.overview-cards {
+    display: flex;
+    margin: 15px;
+}
+.overview-cards .card {
+    padding: 15px 20px;
+    background-color: #252c42;
+    text-align: left;
+}
+.light  .overview-cards .card{
+    background-color: rgb(240,243,250);
+    color: black;
+}
+ .overview-cards .card .right {
+    margin: 5px 0;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.overview-cards .card .left {
+    margin: 5px 0;
+    width: 100%;
+    display: flex;
+}
+.overview-cards .card .left p {
+   font-size: 12px;
+
+}
+.overview-cards .card .right  .bottom label {
+    position: absolute;
+    right:0;
+}
+.overview-cards .card .right  .bottom i {
+    position: absolute;
+    right:35px;
+}
+
+
+
+.overview-cards .card .left p {
+    /* left: 40%; */
+    margin: 0 0 10px 0;
+    
+    width: 90%;
+
+}
+
+
+
+.attribution {
+    bottom: 40px;
+    left: 30%;
+    position: absolute;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+@media(max-width: 600px) {
+    .current-cards, .overview-cards { 
+        display: block;
+    }
+    .card, .overview-cards .card  {
+        width: 100%;
+        margin: 15px 0;
+    }
+    .attribution {
+        position: relative;
+        bottom: 0px;
+        left: 0%;
+        margin-bottom: 20px;
+    }
+}
+

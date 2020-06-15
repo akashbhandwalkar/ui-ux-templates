@@ -1,0 +1,75 @@
+svg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    max-width: 400px;
+}
+
+.square {
+    stroke-dasharray: 650;
+    stroke-dashoffset: 0;
+    animation: animate 1s infinite;
+}
+
+@keyframes animate {
+    from {
+        stroke-dashoffset:  -650;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+.polygon {
+    stroke-dasharray: 425;
+    stroke-dashoffset: -425;
+    animation: polygonAnimate 2s infinite;
+    transform-origin: 50% 50%;
+}
+@keyframes polygonAnimate {
+    from {
+        stroke-dashoffset: -425;
+        transform: rotate(0);
+    }
+    to {
+        stroke-dashoffset: 0;
+        transform: rotate(360deg);
+
+    }
+}
+
+
+
+.monkey {
+    fill:green !important;
+    animation: animateMonkey 2s  infinite;
+}
+
+@keyframes animateMonkey {
+    0% {
+        fill:red !important;
+    }
+    100% {
+        fill: red !important;
+
+    }
+}
+
+
+
+.hey {
+    stroke-dasharray: 563;
+    animation: draw 2s reverse forwards;
+}
+
+@keyframes draw {
+    from {
+        stroke-dashoffset: -563;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}

@@ -1,0 +1,40 @@
+.stroke-class {
+    fill: none;
+    stroke-dashoffset: 800;
+    stroke-dasharray: 800;
+    animation: 2s loading infinite;
+}
+
+svg path {
+    fill: none;
+    stroke: red;
+    stroke-dashoffset: 300;
+    stroke-dasharray: 300;
+    animation: 2s text-animation infinite;
+}
+
+
+@keyframes loading {
+    from {
+        stroke-dashoffset: 800;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+
+@keyframes text-animation {
+    from {
+        stroke-dashoffset: 400;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+svg {
+    margin: 0 auto;
+    width: 80%;
+    top:250px;
+    position: fixed;
+}

@@ -1,0 +1,136 @@
+
+@import("https://fonts.googleapis.com/css2?family=Roboto&display=swap")
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #5373EC;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.signup-form {
+  background: rgb(89, 120, 239);
+  min-height: 200px;
+  width: 70%;
+  top: 180px;
+  left: -100px;
+  transform: rotate(-15deg);
+  transform-origin: top;
+  position: relative;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+}
+.close-container {
+  position: absolute;
+  right: -100px;
+  top: -100px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #5373EC;;
+}
+.close {
+  position: absolute;
+  top: 110px;
+  right: 120px;
+}
+.esc {
+  position: absolute;
+  top: 130px;
+  right: 110px;
+  color: #D4DBF6;;
+}
+.form-container{
+  padding: 100px;
+  color: white;
+  display: flex;
+}
+
+i {
+  color: #D4DBF6;
+}
+button {
+  padding: 12px;
+  width: 190px;
+}
+.sign-in-google {
+  background: white;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: rgb(127, 117, 156);
+  font-weight: 600;
+  display: flex;
+
+}
+.sign-in-google img {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.first-email {
+  margin-left: 40px;
+}
+.input-email {
+  padding: 12px;
+}
+
+.use-your-email {
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 3px;
+}
+
+.left {
+  width: 40%;
+}
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+  flex-direction: column;
+}
+
+.right form {
+  display: flex;
+}
+.second-form {
+  margin-top: 40px;
+  width: 90%;
+  display: none;
+}
+
+.second-form input {
+  padding: 15px;
+}
+
+.second-form form, .second-form .right {
+  display: flex;
+  flex-direction: column;
+}
+.second-form button {
+  width: 360px;
+}
+.submit {
+  margin: 25px auto;
+  padding: 15px;
+}
+.second-button {
+  margin: 20px 0 0 0 ;
+}
+
+a {
+  border-bottom: 1px solid gray;
+}
+
+.terms-condition {
+  color: #D4DBF6;
+  opacity: 0.9;
+  font-size: 12px;
+  margin-top: 20px;
+}

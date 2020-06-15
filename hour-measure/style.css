@@ -1,0 +1,139 @@
+/* $black: #000;
+$blue-light: #b0f9ee;
+$pink: #ff00ff;
+$pink-light: #feb3fe;
+
+body {
+  background: $blue-light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@keyframes rotate {
+    90% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(180deg);
+    }
+}
+
+@keyframes topProgress {
+    3% {
+        transform: scale(1) translateY(0);
+    }
+    90% {
+        transform: scale(0) translateY(0);
+    }
+    100% {
+        transform: scale(0) translateY(0);
+    }
+}
+
+@keyframes lineProgress {
+    10% { height: 35px; }
+    90% { height: 35px; }
+    100% { height: 0; }
+}
+
+@keyframes bottomProgress {
+    10% {
+        transform: scale(0) translateY(0);
+    }
+    90% {
+        transform: scale(1) translateY(0);
+    }
+    100% {
+        transform: scale(1) translateY(-15px);
+    }
+}
+
+.hourglass {
+    height: 40px;
+    width: 41px;
+    margin: 80px auto;
+    animation: rotate 3s cubic-bezier(0.7, 0, 0.2, 1) infinite;
+}
+
+.top {
+    position: relative;
+}
+
+.topBg {
+    position: absolute;
+    z-index: 0;
+    top: -18px;
+    width: 100%;
+    height: 20px;
+    border-top: 5px solid $black;
+    background: $pink-light;
+
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        border-top: 20px solid $pink-light;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+    }
+}
+
+.topProgress {
+    border-top: 20px solid $pink;
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    height: 0;
+    width: 1px;
+    transform: scale(1) translateY(0);
+    transform-origin: 50% 100%;
+    animation: topProgress 3s linear infinite;
+}
+
+.line {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 20px;
+    height: 0;
+    width: 0;
+    border-left: 1px solid $pink;
+    animation: lineProgress 3s linear infinite;
+}
+
+.bottom {
+    position: relative;
+}
+
+.bottomBg {
+    position: absolute;
+    z-index: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 20px;
+    border-bottom: 5px solid $black;
+    background: $pink-light;
+
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        top: -20px;
+        border-bottom: 20px solid $pink-light;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
+    }
+}
+
+.bottomProgress {
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid $pink;
+    border-left: 20px solid transparent;
+    height: 0;
+    width: 1px;
+    margin-top: 15px;
+    transform: scale(0) translateY(0);
+    transform-origin: 50% 100%;
+    animation: bottomProgress 3s linear infinite;
+} */
