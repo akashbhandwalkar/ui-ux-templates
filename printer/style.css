@@ -1,0 +1,155 @@
+/* @import("https://fonts.googleapis.com/css2?family=Roboto&display=swap") */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: #e3edf7;
+}
+
+.container {
+    max-width: 600px;
+    margin:0px auto;
+    position: relative;
+    height: 600px;
+}
+.additional-bottom {
+    height: 40px;
+    width: 400px;
+    background-color: white;
+    bottom: 60px;
+    position: absolute;
+    z-index: 2;
+}
+
+.bottom {
+    height: 60px;
+    width: 400px;
+    background-color: white;
+    bottom: 0;
+    position: absolute;
+    z-index: 2;
+}
+.bottom-block-top {
+    position: absolute;
+    left: 100px;
+    width: 200px;
+    background-color: black;
+    height: 20px;
+    bottom: 50px;
+    z-index: 5;
+}
+
+
+.bottom-block {
+    position: absolute;
+    left: 100px;
+    width: 200px;
+    background-color: black;
+    height: 50px;
+    bottom: 0;
+    z-index: 1;
+}
+
+.head {
+    height: 20px;
+    transform: skew(-5deg);
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    bottom: 100px;
+    background: linear-gradient(#bdbdc2, #ffffff);
+    z-index: 2;
+}
+
+.top {
+	border-bottom: 50px solid #fff;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+    width: 400px;
+    bottom: 120px;
+    position: absolute;
+    z-index: 2;
+}
+
+.top-block{
+    position: absolute;
+    left: 80px;
+    width: 200px;
+    background-color: black;
+    height: 100px;
+    bottom: 0px;
+    z-index: 2;
+}
+
+.print-element {
+    height: 130px;
+    width: 100px;
+    position: absolute;
+    bottom: 120px;
+    background-color: white;
+    left: 150px;
+    z-index: 3;
+    animation: printElement 5s linear infinite;
+    color: white;
+}
+
+
+@keyframes printElement {
+  0% {
+    bottom: 120px;
+    }
+
+    10% {
+        bottom: 120px;
+    }
+    20% {
+        bottom: 100px;
+
+    }
+    20% {
+        bottom: 100px;
+        
+    }
+    30% {
+        bottom: 80px;
+    }
+    40% {
+        bottom: 80px;
+        
+    }
+    50% {
+        bottom: 60px;
+    }
+    60% {
+        bottom: 60px;
+        
+    }
+    70% {
+        bottom: 40px;
+        color: white;
+    }
+    80% {
+        bottom: 30px;
+        color: black;
+    }   
+    90% {
+        bottom: 30px;
+        color: black;
+       
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+
+p {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
