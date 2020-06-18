@@ -1,33 +1,23 @@
-/* @import("https://fonts.googleapis.com/css2?family=Roboto&display=swap") */
+
+@import("https://fonts.googleapis.com/css2?family=Roboto&display=swap")
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     width: 100%;
     height: 100vh;
     background: #e3edf7;
 }
-
 .container {
     max-width: 600px;
-    margin:0px auto;
+    margin: 0 auto;
     position: relative;
     height: 600px;
 }
-.additional-bottom {
-    height: 40px;
-    width: 400px;
-    background-color: white;
-    bottom: 60px;
-    position: absolute;
-    z-index: 2;
-}
-
 .bottom {
-    height: 60px;
+    height: 100px;
     width: 400px;
     background-color: white;
     bottom: 0;
@@ -43,8 +33,6 @@ body {
     bottom: 50px;
     z-index: 5;
 }
-
-
 .bottom-block {
     position: absolute;
     left: 100px;
@@ -54,7 +42,6 @@ body {
     bottom: 0;
     z-index: 1;
 }
-
 .head {
     height: 20px;
     transform: skew(-5deg);
@@ -65,19 +52,17 @@ body {
     background: linear-gradient(#bdbdc2, #ffffff);
     z-index: 2;
 }
-
 .top {
 	border-bottom: 50px solid #fff;
 	border-left: 25px solid transparent;
 	border-right: 25px solid transparent;
 	height: 0;
-    width: 400px;
+    width: 350px;
     bottom: 120px;
     position: absolute;
     z-index: 2;
 }
-
-.top-block{
+.top-block {
     position: absolute;
     left: 80px;
     width: 200px;
@@ -86,7 +71,6 @@ body {
     bottom: 0px;
     z-index: 2;
 }
-
 .print-element {
     height: 130px;
     width: 100px;
@@ -96,10 +80,69 @@ body {
     left: 150px;
     z-index: 3;
     animation: printElement 5s linear infinite;
-    color: white;
 }
-
-
+@keyframes printElement {
+    from {
+    }
+    to {
+        bottom: 0px;
+    }
+}
+.container1 {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    height: 600px;
+}
+.top-block1 {
+   position: absolute;
+    left: 80px;
+    width: 250px;
+    background-color: black;
+    height: 300px;
+    bottom: 0px;
+}
+.print-element1 {
+    height: 130px;
+    width: 130px;
+    position: absolute;
+    bottom: 120px;
+    background-color: white;
+    left: 135px;
+    z-index: 3;
+    animation: printElement 5s linear infinite;
+}
+.top1 {
+	border-bottom: 50px solid #fff;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+    width: 350px;
+    bottom: 120px;
+    position: absolute;
+    z-index: 4;
+}
+.head1{
+    height: 20px;
+    transform: skew(-5deg);
+    width: 400px;
+    background-color: white;
+    position: absolute;
+    bottom: 100px;
+    background: linear-gradient(#bdbdc2, #ffffff);
+    z-index: 4;
+}
+.bottom1 {
+    height: 100px;
+    width: 400px;
+  box-sizing: border-box;
+    border-left: 80px solid white;
+  border-right: 80px solid white;
+  border-bottom: 20px solid white;
+    bottom: 0;
+    position: absolute;
+    z-index: 0;
+}
 @keyframes printElement {
   0% {
     bottom: 120px;
