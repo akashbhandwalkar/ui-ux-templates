@@ -1,0 +1,162 @@
+@import("https://fonts.googleapis.com/css2?family=Roboto&display=swap")
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    height: 100vh;
+    background: #8a64cc;
+}
+.container {
+    margin: 200px auto;
+    width: 1000px;
+}
+.laptop-conatiner {
+    position: relative;
+}
+.screen {
+    width: 400px;
+    height: 280px;
+    background-color: #262626;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+    animation: onLaptop 4s forwards;
+    transform: rotate(5deg);
+}
+.screen-outer {
+    width: 430px;
+    height: 310px;
+    background-color: #000004;
+    position: absolute;
+    border-radius: 10px;
+    transform: rotate(5deg);
+    top: 0;
+    left: 0;
+}
+
+.screen-logo img {
+    width: 50px;
+    height: 60px;
+    position: absolute;
+    top: 120px;
+    left: 200px;
+    z-index: 3;
+    opacity: 0;
+    animation: displayLogo 3s forwards;
+}
+
+.keypad {
+    background-color: #eaebed;
+    height: 90px;
+    width: 480px;
+    position: absolute;
+    left: -47px;
+    top: 395px;
+    border-radius: 10px;
+    /* transform: rotate(-5deg); */
+    transform: skewX(-13deg) rotate(5deg);
+}
+
+.vertical {
+    position: absolute;
+    top: 294px;
+    left: 200px;
+    width: 20px;
+    height: 60px;
+    background: black;
+}
+
+.horizontal {
+    position: absolute;
+    top: 340px;
+    left: 180px;
+    width: 60px;
+    height: 20px;
+    background: black;
+}
+
+.wallpaper {
+    /* display: none; */
+}
+
+.wallpaper img {
+    width: 400px;
+    height: 280px;
+    background-color: #262626;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 5;
+    transform: rotate(5deg);
+    animation: displayWallpaper 6s forwards;
+    opacity: 0;
+}
+.welcome {
+    width: 400px;
+    height: 280px;
+    background-color: #3F51B5;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 15;
+    transform: rotate(5deg);
+    animation: displayWallpaper 6s forwards;
+    text-align: center;
+    display: none;
+
+    /* opacity: 0; */
+}
+.wallpaper .password {
+    background-color: white;
+    border: none;
+    border-radius: 3px;
+    position: absolute;
+    top: 155px;
+    left: 145px;
+    z-index: 5;
+    transform: rotate(5deg);
+    animation: displayWallpaper 6s forwards;
+    opacity: 0;
+    padding: 0 5px;
+}
+
+label {
+    position: absolute;
+    top: 135px;
+    left: 145px;
+    z-index: 5;
+    transform: rotate(5deg);
+    animation: displayWallpaper 6s forwards;
+    opacity: 0;
+    color: white;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+p {
+    margin-top: 115px;
+    opacity: 0;
+}
+@keyframes onLaptop {
+    100% {
+        background-color: #ffffff;
+    }
+}
+
+@keyframes displayLogo {
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes displayWallpaper {
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
