@@ -1,0 +1,157 @@
+@import("https://fonts.googleapis.com/css2?family=Roboto&display=swap")
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 10px;
+    background: #ccdee5;
+}
+
+.container {
+  position: relative;
+  top: 0px;
+  left: 400px;
+  height: 800px;
+}
+
+.jam {
+  position: absolute;
+  bottom: 0;
+  left: -40px;
+  height: 300px;
+  width: 220px;
+  background-color: #f84671;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px #c5b9b9;
+  z-index: 3;
+
+}
+
+.jam-top {
+  position: absolute;
+  background-color: #7ad1d4;
+  height: 26px;
+  width: 160px;
+  left: -7px;
+  bottom: 300px;
+  border-radius: 5px;
+  z-index: 3;
+  animation: jam-top-animate 3s ease;
+}
+
+.straberry-container{
+  position: absolute;
+  bottom: 125px;
+}
+.label{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  bottom: 110px;
+  left: 60px;
+  z-index: 5;
+}
+
+.cicle {
+  width: 135px;
+  height: 135px;
+  background-color: #fcd2a4;
+  border-radius: 50%;
+  border: 5px solid #fba572;
+}
+
+.one {
+  position: absolute;
+  bottom: 130px;
+  left: 58px;
+  animation: animate3 3s ease;
+}
+
+.two {
+  position: absolute;
+  bottom: 118px;
+  left: 198px;
+  animation: animate2 3s ease;
+
+}
+
+.bread-bottom {
+  width: 200px;
+  height: 250px;
+  background-color: #fcd2a4;
+  position: absolute;
+  z-index: -1;
+  bottom: -50px;
+  left: 75px;
+  border-bottom: 5px solid #fba572;
+  border-left: 5px solid #fba572;
+  border-right: 5px solid #fba572;
+  z-index: 2;
+  animation: animate1 3s ease;
+}
+.line{
+  position: absolute;
+  width: 5px;
+  height: 79px;
+  background: #fcd2a4;
+  z-index: 4;
+  left: 280px;
+  bottom: 125px;
+  animation: animate4 3s ease;
+}
+.line2{
+  position: absolute;
+  width: 5px;
+  height: 55px;
+  background: #fcd2a4;
+  z-index: 2;
+  left: 75px;
+  bottom: 163px;
+  animation: animate5 3s ease;
+}
+
+
+@keyframes animate1 {
+  100% {
+    bottom: 50px
+  }
+}
+
+@keyframes animate2 {
+  100% {
+    bottom: 218px;
+  }
+}
+@keyframes animate3 {
+  100% {
+    bottom: 230px;
+  }
+}
+@keyframes animate4 {
+  100% {
+    bottom: 225px;
+  }
+}
+@keyframes animate5 {
+  100% {
+    bottom: 263px;
+  }
+}
+@keyframes jam-top-animate {
+  100% {
+    transform: skew(0deg, -10deg);
+    transform-origin: left;
+  }
+}
+
+p{
+  margin: 30px 25px;
+  font-family: sans-serif;
+  font-weight: 500;
+}
+

@@ -1,0 +1,75 @@
+@import("https://fonts.googleapis.com/css2?family=Roboto&display=swap")
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 10px;
+    background: #ccdee5;
+}
+
+.container {
+  position: relative;
+  margin-top: 200px;
+  display: flex;
+  /* border: 1px solid black; */
+  padding: 100px;
+
+}
+.labels {
+  position: relative;
+  /* margin: 0px 400px; */
+  display: flex;
+
+}
+
+.labels label {
+  width: 450px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 24px;
+}
+
+.square {
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  margin: 0 100px;
+}
+
+.one {
+  transform: rotateX(35deg);
+}
+.two {
+  transform: rotateX(-35deg);
+}
+.three {
+  transform: rotateY(35deg);
+}
+.four {
+  transform: rotateZ(-35deg);
+}
+.five {
+  transform: rotateZ(35deg);
+}
+.six {
+  transform: rotateZ(-35deg);
+}
+
+.origin-left {
+  transform-origin: left;
+}
+
+.origin-right {
+  transform-origin: right;
+}
+
+.origin-top {
+  transform-origin: top;
+}
+
+.origin-bottom {
+  transform-origin: bottom;
+}
