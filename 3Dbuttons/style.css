@@ -1,0 +1,119 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #ccc;
+    font-family: sans-serif;
+}
+
+ul {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    transform: translateX(-50%, -50%);
+    display: flex;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin: 0 10px;
+    list-style: none;
+}
+ul li a span .fa {
+    font-size: 40px;
+    color: #333;
+    line-height: 80px;
+    transition: 0.5s;
+    padding-right: 14px;
+    margin: -10px 10px 10px 10px;
+}
+ul li a span label {
+    
+    padding-top: 20px;
+}
+
+ul li a span {
+    padding: 0;
+    margin: 0;
+    /* position: absolute; */
+    top: 30px;
+    color: #333;
+    letter-spacing: 4px;
+    transition: 0.5s;
+    display: flex;
+    padding: 10px;
+
+}
+
+ul li a {
+    text-decoration: none;
+    /* position: absolute; */
+    display: block;
+    width: 210px;
+    height: 80px;
+    background: #fff;
+    text-align: left;
+    transform: rotate(-30deg) skewX(25deg) translate(0,0);
+    transition: 0.5;
+    box-shadow: -20px 20px 10px rgba(0,0,0,0.5);
+}
+
+ul li a:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #b1b1b1;
+    transition: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+ul li a:after {
+    left: -11px;
+    content: "";
+    bottom: -20px;
+    position: absolute;
+    height: 20px;
+    width: 210px;
+    background: #b1b1b1;
+    transition: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+ul li a:hover:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -20px;
+    height: 100%;
+    width: 20px;
+    background: #b1b1b1;
+    transition: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+    background: mediumpurple;
+}
+ul li a:hover:after {
+    left: -11px;
+    content: "";
+    bottom: -20px;
+    position: absolute;
+    height: 20px;
+    width: 210px;
+    background: #b1b1b1;
+    transition: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+    background: mediumpurple;
+}
+ul li a:hover {
+    transform: rotate(-30deg) skew(25deg) translate(20px, -15px);
+    box-shadow: -50px 50px 10px rgba(0,0,0,0.5);
+    background: mediumpurple;
+    color: white;
+}

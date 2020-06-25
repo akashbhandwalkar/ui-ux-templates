@@ -1,0 +1,236 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    background-color: #eee;
+    position: relative;
+}
+
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .85);
+    position: fixed;
+    transform: scaleX(0);
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.menu {
+    padding: 2rem 2.5rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background-color: #fff;
+    z-index: 999;
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+}
+
+
+.bar,
+.bar::before,
+.bar::after {
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: 2px;
+   background-color: black;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    transition: all 650ms;
+}
+
+.bar::before {
+    top: -2rem;
+}
+
+.bar::after {
+    top: 2rem;
+}
+
+.open .bar {
+    background-color: transparent;
+}
+
+.open .bar::before {
+    transform: rotate(45deg);
+}
+
+.open .bar::after {
+    transform: rotate(-45deg);
+}
+
+.open .bar::before, .open .bar::after {
+    top: 0;
+}
+
+nav {
+    width: 100%;
+    height: 6rem;
+    line-height: 6rem;
+    display: flex;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.2);
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+.brand {
+    font-size: 1.5rem;
+    color: white;
+    background-color: black;
+    padding: 0 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+    color: black;
+    margin-right: 2rem;
+    padding: 0 1rem;
+    display: block;
+    position: relative;
+    transform-style: preserve-3d;
+    transform-origin: top;
+    transition: transform 650ms cubic-bezier(0.55, 0.55, 0.675, 0.19);
+}
+
+.nav-link:hover {
+    transform: rotateX(90deg);
+}
+
+.nav-item:last-child .nav-link{
+    margin-right: 0;
+}
+
+.nav-link::after {
+    background-color: black;
+    content: attr(data-text);
+    position: absolute;
+    left:0;
+    bottom: -100%;
+    padding: inherit;
+    color: white;
+    transform: rotateX(-90deg);
+    transform-origin: top;
+}
+
+.nav-item:nth-child(odd) {
+    animation: up 1s forwards;
+}
+.nav-item:nth-child(even) {
+    animation: down 1s forwards;
+}
+
+@keyframes up{
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes down{
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .brand {
+        animation: initial;
+        border-radius: 100%;
+        width: 10rem;
+        height: 10rem;
+        margin: auto;
+        padding-top: 4rem;
+    }
+
+    header {
+        perspective: 75rem;
+        overflow: hidden;
+
+    }
+    nav {
+        top: 0;
+        left: 0;
+        width: 30rem;
+        height: 100vh;
+        line-height: initial;
+        flex-direction: column;
+        box-shadow: none;
+        position: absolute;
+        text-align: center;
+        transform: rotateY(180deg);
+        transform-origin: top left;
+        transition: transform 650ms cubic-bezier(0.55, 0.55, 0.675, 0.19);
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: -5rem;
+    }
+
+    .nav-item:nth-child(n) {
+        animation: initial;
+    }
+    .nav-link {
+        margin: 2rem 0;
+    }
+    header.open nav {
+        transform: rotateY(0);
+    }
+    .overlay.open {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+    .menu {
+        display: block;
+    }
+    .nav-link::after {
+        display: none;
+    }
+}
+
+.under-construction {
+    font-size: 30px;
+    width: 400px;
+    margin: 200px auto;
+    font-family: sans-serif;
+}

@@ -1,0 +1,128 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #00bdb4;
+    font-family: sans-serif;
+}
+
+
+.container {
+    position: absolute;
+    width: 300px;
+    margin: 0 auto;
+    /* transform: translate(-50%, -50%); */
+    top: 30%;
+    left: 30%;
+}
+
+.steam {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    /* left: 0; */
+    z-index: 0;
+    opacity: 0;
+    margin-left: 75px;
+    margin-top: 75px;
+}
+
+.steam-one {
+    animation: steam-one 2s ease-out 0.5s infinite;
+}
+
+.steam-two {
+    animation: steam-two 2s ease-out 1.5s infinite;
+}
+
+.steam-three {
+    animation: steam-three 2s ease-out 2s infinite;
+}
+
+.steam-four {
+    animation: steam-four 2s ease-out infinite;
+}
+
+@keyframes steam-one {
+    0% {
+        transform: translateY(0) translateX(0) scale(0.25);
+        opacity: 0.25;
+    }
+    100% {
+        transform: translateY(-200px) translateX(-20px) scale(1);
+        opacity: 0;
+    }
+}
+@keyframes steam-two {
+    0% {
+        transform: translateY(0) translateX(0) scale(0.25);
+        opacity: 0.25;
+    }
+    100% {
+        transform: translateY(-200px) translateX(20px) scale(1);
+        opacity: 0;
+    }
+}
+@keyframes steam-three {
+    0% {
+        transform: translateY(0) translateX(0) scale(0.25);
+        opacity: 0.25;
+    }
+    100% {
+        transform: translateY(-200px) translateX(-20px) scale(1);
+        opacity: 0;
+    }
+}
+
+@keyframes steam-four {
+    0% {
+        transform: translateY(0) translateX(0) scale(0.25);
+        opacity: 0.25;
+    }
+    100% {
+        transform: translateY(-200px) translateX(-40px) scale(1);
+        opacity: 0;
+    }
+}
+
+.cup-body {
+    position: absolute;
+    width: 220px;
+    height: 250px;
+    background-color: #fcd478;
+    border-radius: 10px;
+    z-index: 2;
+    box-shadow: 0px -5px 10px beige;
+}
+ .cup-handle {
+    position: absolute;
+    right: -23%;
+    width: 75px;
+    height: 80px;
+    border: 15px solid #fcd478;
+    margin-left: 135px;
+    margin-bottom: 95px;
+    z-index: 1;
+    bottom: -75px;
+    border-radius: 10px;
+}
+
+#typedtext {
+    font-family: 'Waiting for the Sunrise', cursive; 
+  font-size:30px; 
+  margin: 10px 50px; 
+  letter-spacing: 6px; 
+  font-weight: bold;
+  position: absolute;
+  
+  width: 600px;
+  top: -200px;
+  left: -100px;
+
+}
