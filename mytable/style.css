@@ -1,0 +1,132 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #182531;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 800px;
+    height: 600px;
+    border: 1px dotted pink;
+    margin: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+}
+
+.table-wrapper {
+    position: relative;
+}
+
+.table {
+    width: 400px;
+    height: 20px;
+    border-radius: 10px;
+    background:#a27355;
+    position: absolute;
+    top: 400px;
+    left:  200px;
+}
+
+.book {
+    position: absolute;
+    width: 80px;
+    height: 20px; 
+    
+    border-radius: 10px;
+    background: linear-gradient(90deg, #182531, #182531 10%, white 11%, white);
+}
+
+.red-book {
+    border-top: 10px solid #e75d60;
+    border-right: 10px solid #e75d60;
+    border-bottom: 10px solid #e75d60;
+    top: 360px;
+    left: 216px;
+}
+
+.green-book {
+    border-top: 10px solid #34c5a1;
+    border-right: 10px solid #34c5a1;
+    border-bottom: 10px solid #34c5a1;
+    top: 320px;
+    left: 200px;
+}
+
+.yellow-book {
+   
+    border-top: 10px solid #e9ac46;
+   border-right: 10px solid  #e9ac46;
+   border-bottom: 10px solid  #e9ac46;
+   top: 338px;
+   left: 286px;
+   transform: rotate(50deg);
+}
+
+.coke {
+    position: absolute;
+    border-bottom: 10px solid white;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    height: 50px;
+    width: 20px;
+    top: 340px;
+    left: 410px;
+    background: white;
+}
+
+.middle {
+    background: #346a83;
+    width: 30px;
+    height: 10px;
+    top: 30px;
+    left: -4px;
+    position: absolute;
+}
+.top1 {
+    background: #346a83;
+    width: 36px;
+    height: 5px;
+    top: 0px;
+    left: -8px;
+    position: absolute;
+}
+.top2 {
+    background: #346a83;
+    width: 30px;
+    height: 5px;
+    top: -5px;
+    left: -4px;
+    position: absolute;
+}
+
+.opened-book {
+    border-left: 10px solid #e75d60;
+    border-bottom: 10px solid #e75d60;
+    top: 310px;
+    left: 480px;
+    width: 70px;
+    height: 80px;
+    position: absolute;
+}
+
+.opened-book-page {
+    border-left: 10px solid white;
+    border-bottom: 10px solid white;
+    top: 310px;
+    left: 490px;
+    width: 60px;
+    height: 70px;
+    position: absolute;
+    border-right: 2px dashed white;
+    border-top: 4px dashed white;
+    border-radius: 0 84% 0% 0;
+}

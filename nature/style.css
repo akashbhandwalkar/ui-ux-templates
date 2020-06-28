@@ -1,0 +1,190 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: linear-gradient(#382c41, #5a3097);
+    font-family: sans-serif;
+    height: 100vh;
+    position: relative;
+}
+
+.moon {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: 100px;
+    top: 100px;
+    z-index: 1;
+
+
+}
+
+.moon:after {
+    content: "";
+    width: 104px;
+    height: 104px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    right: -2px;
+    top: -2px;
+    opacity: 0.5;
+    z-index: 2;
+}
+
+
+.little-star {
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    animation: twinkling 800s ease-in infinite;
+}
+.medium-star {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    animation: twinkling 1000ms ease-in infinite;
+}
+
+.road {
+    background-color: #342c45;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+}
+
+.bus {
+    width: 200px;
+    height: 80px;
+    background-color: #372c5f;
+    position: absolute;
+    bottom: 120px;
+    left: 120px;
+    display: flex;
+    padding: 10px;
+    animation:  move-van 8s linear forwards;
+    
+}
+
+.window {
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    margin: 0 10px 0  0px;
+    z-index: 3;
+}
+
+.small-window {
+    background-color: white;
+    width: 5px;
+    height: 10px;
+    margin: 0 2px;
+    z-index: 2;
+}
+
+.tyres {
+    position: absolute;
+    display: flex;
+    bottom: -15px;
+    width: 200px;
+}
+
+.tyre {
+    width: 10px;
+    height: 10px;
+    background-color: #342c45;
+    border-radius: 50%;   
+    position: absolute;
+    bottom: 0;
+}
+
+.tyre-one {
+    left: 40px;
+    
+}
+
+.tyre-two {
+    right: 40px;
+}
+
+.light {
+    background: linear-gradient(90deg, white, #455242);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right:-20px;
+    bottom: 20px;
+}
+
+.outer-tyre-one {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    border: 5px solid #342c45;
+    left: 32px;
+    bottom: -8px;
+}
+.outer-tyre-two {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    border: 5px solid #342c45;
+    right: 32px;
+    bottom: -8px;
+}
+
+.speed-breaker {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    background-color: #342c45;
+    left: 400px;
+    bottom: 30px;
+    border-radius: 50%;
+}
+
+@keyframes twinkling {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+ @keyframes move-van{
+     0% {
+        transform: translate(0);
+     }
+      
+     20% {
+        transform: translate(100px);
+     }
+     50% {
+        transform: rotate(-5deg) translate(300px);
+     }
+     80% {
+        transform: rotate(1deg) translate(500px);
+     }
+    100% {
+        transform: translate(1000px);
+    }
+}
