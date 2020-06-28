@@ -1,0 +1,105 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #00bdb4;
+    font-family: sans-serif;
+}
+
+
+.container {
+    width: 100%;
+    display: flex;
+    margin: 200px auto;
+}
+
+.card {
+    background: white;
+    padding: 80px 40px;
+    margin: 0 30px;
+    font-family: sans-serif;
+    color: rgba(0,0,0,0.2);
+    font-size: 24px;
+    position: relative;
+    width: 300px;
+}
+
+.one {
+    box-shadow: -30px 30px 30px rgba(0, 0, 0, 0.3);
+}
+
+.two:before {
+    /* box-shadow: -30px 30px 30px rgba(0, 0, 0, 0.3); */
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 10%;
+    width: 90%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.3);
+    transform: skewY(5deg);
+    transform-origin: left;
+    z-index: -1;
+    filter: blur(2px);
+}
+
+
+.three:before {
+    /* box-shadow: -30px 30px 30px rgba(0, 0, 0, 0.3); */
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+    width: 90%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.3);
+    transform: skewY(-7deg);
+    transform-origin: right;
+    z-index: -1;
+    filter: blur(2px);
+}
+
+.four:after {
+    /* box-shadow: -30px 30px 30px rgba(0, 0, 0, 0.3); */
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    left: 5%;
+    width: 90%;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    /* transform: skewY(-7deg); */
+    /* transform-origin: right; */
+    filter: blur(10px);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+
+.six {
+    background:  #00bdb4;
+    border-radius: 15px;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+                15px 15px 15px rgba(0,0,0,0.1);
+}
+
+
+.seven {
+    background:  #00bdb4;
+    border-radius: 15px;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+                15px 15px 15px rgba(0,0,0,0.1),
+                inset -50px -50px 50px rgba(255, 255, 255, 0.2),
+                inset 50px 50px 50px rgba(0,0,0,0.1);
+}
+
+.seven:hover {
+    background:  mediumpurple;
+    border-radius: 15px;
+    box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+                15px 15px 15px rgba(180, 62, 62, 0.1);
+}
