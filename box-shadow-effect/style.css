@@ -103,3 +103,7 @@ body {
     box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
                 15px 15px 15px rgba(180, 62, 62, 0.1);
 }
+
+.shadow1 {
+        box-shadow: 10px 10px 10px red;
+    }

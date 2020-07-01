@@ -1,0 +1,147 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #333333;
+    font-family: sans-serif;
+}
+
+
+.container {
+    width: 800px;
+    height: 600px;
+    border: 1px dashed mediumaquamarine;
+    margin: 200px auto;
+    position: relative;
+}
+
+.camera {
+    background-color: #eaeaea;
+    height: 200px;
+    width: 200px;
+    border-radius: 40px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+.camera .circle {
+    border-radius: 50%;
+    position: absolute;
+}
+
+.camera .circle:nth-child(1) {
+    background-color: white;
+    width: 2px;
+    height: 2px;
+    left: 99px;
+    top: 99px;
+    z-index: 10;
+}
+.camera .circle:nth-child(2) {
+    background-color: #808080;
+    width: 10px;
+    height: 10px;
+    left: 95px;
+    top: 95px;
+    z-index: 9;
+}
+
+.camera .circle:nth-child(3) {
+    background-color: #141414;
+    width: 20px;
+    height: 20px;
+    left: 90px;
+    top: 90px;
+    z-index: 8;
+}
+
+.camera .circle:nth-child(4) {
+    background-color: #3c3c3c;
+    width: 30px;
+    height: 30px;
+    left: 85px;
+    top: 85px;
+    z-index: 7;
+}
+
+.camera .circle:nth-child(5) {
+    background-color: #111111;
+    width: 40px;
+    height: 40px;
+    left: 80px;
+    top: 80px;
+    z-index: 6;
+}
+.camera .circle:nth-child(6) {
+    background-color: #b14838;
+    width: 50px;
+    height: 50px;
+    left: 75px;
+    top: 75px;
+    z-index: 5;
+}
+
+.camera .center {
+    position: absolute;
+    background-color: #53b49a;
+    border-top: 5px solid #4a9680;
+    border-bottom: 5px solid #4a9680;
+    left: 0;
+    top: 78px;
+    height: 34px;
+    width: 100%;
+}
+
+.camera .button {
+    background-color: red;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    opacity: 0.5;
+    animation: buttonAnimation 1s ease forwards;
+    box-shadow: 4px 4px 4px gray;
+}
+
+@keyframes buttonAnimation {
+    100% {
+        opacity: 1;
+        transform: scale(2);
+        box-shadow: none;
+    }
+}
+
+
+.picture {
+    background-color: #eaeaea;
+    height: 200px;
+    width: 200px;
+    border-radius: 40px;
+    top: 100px;
+    left: 300px;
+    position: absolute;
+    transform: rotate(-15deg);
+    background-image: url('https://images.pexels.com/photos/3622517/pexels-photo-3622517.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');
+    background-size: cover;
+    border: 2px solid white;
+    animation: picture-animation 1.5s ease-in forwards;
+    animation-delay: 1s;
+    opacity: 0;
+}
+
+@keyframes picture-animation {
+    0% {
+        opacity: 0;
+        transform: rotate(25deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(-25deg);
+    }
+}

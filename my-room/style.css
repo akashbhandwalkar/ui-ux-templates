@@ -1,0 +1,318 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: sans-serif;
+    background: #d1c1dc;
+}
+
+.container {
+    margin: 100px;
+    /* border: 5px dashed mediumpurple; */
+    background: #d1c1dc;
+    padding: 20px;
+    position: relative;
+    min-width: 500px;
+    min-height: 500px;
+}
+
+.table-container{
+    position: absolute;
+    left: 300px;
+    bottom: 10px;
+}
+
+.table {
+    position: relative;
+}
+
+.table .bottom {
+    background-color: #bf7f56;
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    bottom: 0;
+}
+
+.table .top {
+    background: #d8976e;
+    height:25px;
+    width: 350px;
+    position: absolute;
+    bottom: 250px;
+    left: -25px;
+    /* animation: tabletop 2s ease-in forwards; */
+}
+
+
+@keyframes tabletop {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+
+
+
+/**
+* Files
+*/
+.file-one {
+    background: #5fb0c4;
+    height: 20px;
+    width: 100px;
+    bottom: 275px;
+    position: absolute;
+    animation: fileone 2s ease-in forwards;
+}
+
+.file-one .staple {
+    background: #9cd4e4;
+    height: 9px;
+    width: 10px;
+    top: 6px;
+    position: absolute;
+    left: 10px;
+}
+
+.file-one .staple:after {
+    content: "";
+    background: #9cd4e4;
+    height: 9px;
+    width: 2px;
+    right: -5px;
+    position: absolute;
+}
+
+.file-two {
+    background: #f86e6a;
+    height: 20px;
+    width: 90px;
+    bottom: 295px;
+    position: absolute;
+    left: 5px;
+    animation: fileone 2.5s ease-in forwards;
+    animation-delay: 0.3s;
+    opacity: 0;
+}
+
+.file-two .staple {
+    background: #efa8a7;
+    height: 9px;
+    width: 15px;
+    top: 6px;
+    position: absolute;
+    left: 10px;
+}
+
+@keyframes fileone {
+    0% {
+        bottom: 500px;
+        transform: rotate(360deg);
+        display: block;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+/**
+* Monitor
+*/
+
+.monitor .support {
+    height: 70px;
+    width: 40px;
+    border-left: 8px solid #a8a1a2;
+    border-bottom: 8px solid #a8a1a2;
+    left: 130px;
+    position: absolute;
+    bottom: 275px;
+}
+.screen {
+    height: 130px;
+    width: 15px;
+    left: 138px;
+    position: absolute;
+    bottom: 305px;
+    background-color: #7c7676;
+}
+
+.screen .green {
+    height: 9px;
+    width: 4px;
+    background: green;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 15px;
+    left: 5px;
+}
+
+.screen .red {
+    height: 4px;
+    width: 4px;
+    background: red;
+    border-radius: 2px;
+    position: absolute;
+    bottom: 7px;
+    left: 5px;
+}
+
+/**
+* Dairy
+*/
+
+.dairy {
+    background-color: #a8a1a2;
+    height: 5px;
+    width: 60px;
+    position: absolute;
+    bottom: 275px;
+    left: 230px;
+}
+
+.dairy:after {
+    content: "";
+    width: 54px;
+    top: -3px;
+    background-color: white;
+    position: absolute;
+    height: 3px;
+    left: 4px;
+}
+
+/**
+* Chair
+*/
+
+
+
+.chair {
+    position: absolute;
+    bottom: 0;
+    left: 700px;
+    animation: chairAnimation 4s ease-in;
+}
+
+
+@keyframes chairAnimation {
+    0% {
+        transform: rotate(5deg)
+    }
+    20% {
+        transform: rotate(0deg)
+    }
+    40% {
+        transform: rotate(5deg)
+    }
+    60% {
+        transform: rotate(0deg)
+    }
+    80% {
+        transform: rotate(5deg)
+    }
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+.chair .sit {
+    
+    height: 30px;
+    width: 200px;
+    background: #97c398;
+    border-radius: 10px;
+    z-index: 3;
+    top: 100px;
+    position: relative;
+
+}
+
+.chair .middle {
+    background-color: #a8a1a2;
+    height: 80px;
+    width: 35px;
+    left: 80px;
+    position: relative;
+}
+
+.chair .bottom {
+    background-color: white;
+    height: 40px;
+    width: 15px;
+    left: 90px;
+    position: relative;
+}
+
+.chair .support {
+    height: 100px;
+    width: 45px;
+    background: #97c398;
+    border-radius: 10px;
+    left: 170px;
+    position: relative;
+    top: 35px;
+    z-index:3;
+}
+
+.chair .wheel-top {
+    height: 20px;
+    width: 120px;
+    border-radius: 10px;
+    background-color: #a8a1a2;
+    left: 35px;
+    position: relative;
+    z-index: 3;
+}
+
+.chair .wheels {
+    display: flex;
+    left: 25px;
+    position: relative;
+}
+
+.chair .wheels .wheel {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: black;
+    margin: 0 10px;
+}
+
+.chair .wheels .wheel:nth-child(1) {
+    top: -2px;
+    position: relative;
+    z-index: 1;
+}
+.chair .wheels .wheel:nth-child(2) {
+    top: -2px;
+    position: relative;
+    z-index: 1;
+}
+.chair .wheels .wheel:nth-child(4) {
+    top: -2px;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.curve {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-right: 10px solid white;
+    top: -22px;
+    position: relative;
+    left: 88px;
+    transform: rotate(40deg);
+    /* z-index: -1; */
+    z-index: 1;
+}
