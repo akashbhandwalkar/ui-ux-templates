@@ -1,0 +1,90 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: mediumseagreen;
+    font-family: sans-serif;
+}
+p {
+    color: white;
+    font-size: 23px;
+    font-family: sans-serif;
+    position: absolute;
+    top: 40%;
+    left: 49px;
+}
+
+.pages p  {
+    color: black;
+    font-size: 23px;
+    font-family: sans-serif;
+    position: absolute;
+    top: 40%;
+    left: 19px;
+    transform: rotateY(-25deg);
+    width: 400px;
+}
+
+.container {
+    margin: 100px auto;
+    width: 600px;
+}
+
+
+.Book {
+    width: 400px;
+    height: 650px;
+    background-color: black;
+    transform: rotateY(-25deg);
+    position: absolute;
+    z-index: 3;
+    animation: bookslide 4s ease;
+}
+
+
+@keyframes bookslide {
+    100% {
+        transform: rotateY(180deg) scaleX(1);
+        transform-origin: top left;
+
+    }
+}
+.pages {
+    background-color: white;
+    width: 400px;
+    height: 650px;
+    position: absolute;
+    transform: rotateY(-25deg);
+    z-index: 2;
+}
+
+
+.Book:before {
+    content: "";
+    width: 12px;
+    height: 650px;
+    background-color: black;
+    /* transform: rotateX(108deg); */
+    position: absolute;
+    left: -13px;
+    transform: skewY(-57deg);
+    transform-origin: right;
+
+}
+
+.Book:after {
+    content: "";
+    width: 400px;
+    height: 18px;
+    background-color: #ebebeb;
+    /* transform: rotateX(108deg); */
+    position: absolute;
+    bottom: -18px;
+    transform: skewX(-32deg);
+    transform-origin: right;
+    left: -6px;
+}

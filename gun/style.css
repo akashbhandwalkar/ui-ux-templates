@@ -1,0 +1,522 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #9c27b0;
+}
+.container {
+    margin: 200px;
+    display: flex;
+}
+
+.gun-container {
+    display: flex;
+}
+
+
+/**
+* Middle first
+*/
+
+.middle-first {
+    width: 130px;
+    height: 30px;
+    position: relative;
+    left: 0;
+    border-radius: 3px;
+}
+
+.middle-first .top {
+    background-color: black;
+    height: 20px;
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+    position: absolute;
+    top: -3px;
+    display: flex;
+    box-shadow: 0 -1px white;
+    z-index: 2;
+
+}
+.middle-first .bottom {
+    background-color: #a8a8a8;
+    height: 10px;
+    width: 100%;
+    border-radius: 0  0 3px 3px;
+    position: absolute;
+    top: 17px;
+    display: flex;
+    z-index: 2;
+}
+
+.amo {
+    width: 10px;
+    background: #3f3f3f;
+    top: -4px;
+    position: relative;
+}
+
+.amo div {
+    height: 1px;
+    width: 100%;
+    background: black;
+    margin-top: 3px;
+}
+
+.middle-first  .base {
+    width: 20px;
+    height: 50px;
+    background: #101010;
+    position: relative;
+    top: 15px;
+    left: 10px;
+    z-index: 1;
+    transform: rotate(40deg);
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0px 2px #707070, 0px 3px black;
+
+}
+
+.middle-first  .base div:nth-child(even) {
+    height: 17px;
+    background: #858585;
+}
+
+
+.middle-first  .base div:nth-child(odd) {
+    height: 17px;
+}
+
+
+.middle-first .shooting-point {
+    width: 20px;
+    height: 11px;
+    border: 2px solid black;
+    position: absolute;
+    top: 24px;
+    left: 44px;
+    border-radius: 5px;
+}
+
+.middle-first .shooting-point .trigger {
+    width: 1px;
+    height: 7px;
+    background: transparent;
+    border: 2px solid black;
+    transform: rotate(-23deg);
+    left: 4px;
+    top: -1px;
+    position: absolute;
+}
+
+
+
+
+
+
+
+/*
+*  Middle second
+*/
+
+
+.middle-second {
+    width: 130px;
+    height: 30px;
+    position: relative;
+    left: 0;
+    border-radius: 3px;
+}
+
+.middle-second .top {
+    background-color: black;
+    height: 20px;
+    width: 100%;
+    border-radius: 3px 3px 0 0;
+    position: absolute;
+    top: -3px;
+    display: flex;
+    box-shadow: 0 -1px white;
+
+}
+.middle-second .bottom {
+    background-color: white;
+    height: 10px;
+    width: 100%;
+    border-radius: 0  0 3px 3px;
+    position: absolute;
+    top: 17px;
+    display: flex;
+}
+
+.middle-second .shape {
+    margin: 0 6px;
+    background: #191919;
+    width: 10px;
+    height: 5px;
+    border-radius: 40%;
+    border: 2px solid black;
+    position: relative;
+
+}
+
+.middle-second .top .shape {
+    top: 5px;
+    position: relative;
+}
+
+.middle-second .bottom .shape {
+    width: 8px;
+    height: 4px;
+    top: 1px;
+}
+
+
+
+
+
+
+
+.middle-second .vertical {
+    position: absolute;
+    height: 400px;
+    width: 20px;
+    /* border: 1px solid white; */
+    right: 10px;
+}
+
+.vertical .knotch {
+    width: 15px;
+    height: 30px;
+    border: 2px solid #040404;
+    z-index: 4;
+    background-color: #404040;
+    position: absolute;
+    top: -5px;
+}
+
+
+.vertical .knotch:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    border: 2px solid black;
+    height: 3px;
+    width: 100%;
+    border-top: none;
+    left: -2px;
+}
+
+.vertical .patch {
+    background-color: #181818;
+    height: 5px;
+    width: 15px;
+    position: absolute;
+    top: 32px;
+    left: 2px;
+}
+
+
+.vertical .patch:before {
+    content: "";
+    height: 2px;
+    width: 2px;
+    position: absolute;
+    left: 2px;
+    background-color: red;
+}
+.vertical .patch:after {
+    content: "";
+    height: 2px;
+    width: 2px;
+    position: absolute;
+    right: 2px;
+    background-color: red
+}
+
+.vertical .hold {
+    position: absolute;
+    top: 40px;
+    background-color: #212121;
+    height: 20px;
+    width: 10px;
+    border: 2px solid black;
+    left: 2px;
+    box-shadow: -2px 0px #212121,
+                -3px 0px black,
+                2px 0px #212121,
+                3px 0px black;
+}
+
+.vertical .hold:before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 1px;
+    border: 2px solid black;
+    top: -5px;
+    left: -8px;
+    background-color: #212121;
+}
+
+
+.vertical .patch2 {
+    position: absolute;
+    top: 64px;
+    left: 1px;
+    background-color: #212121;
+    height: 14px;
+    width: 4px;
+    border: 2px solid black;
+    left: 5px;
+    box-shadow: -2px 0px #212121, -3px 0px black, 2px 0px #212121, 3px 0px black;
+}
+
+.patch2 .dot {
+    width: 2px;
+    height: 2px;
+    background-color: black;
+    border-radius: 1px;
+    margin: 2px 1px;
+}
+
+
+
+.vertical .bottom {
+    position: absolute;
+    height: 60px;
+    width: 20px;
+    top: 82px;
+    left: -3px;
+    background-color: #292929;
+    border: 2px solid black;
+    flex-direction: column;
+}
+
+.vertical .bottom .shape {
+    background-color: #151515;
+    border: 2px solid black;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    margin-top: 4px;
+    margin-left: 7px;
+    display: block;
+}
+
+.last-section {
+    position: absolute;
+    top: 146px;
+    left: -1px;
+
+}
+
+.last-section div {
+    margin: 0 auto;
+}
+
+.last-section div:nth-child(1) {
+    height: 2px;
+    border: 2px solid black;
+    width: 10px;
+}
+
+.last-section div:nth-child(2) {
+    height: 2px;
+    border: 2px solid black;
+    width: 14px;
+}
+
+.last-section div:nth-child(3) {
+    height: 2px;
+    border: 2px solid black;
+    width: 18px;
+}
+
+.last-section div:nth-child(4) {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid black;
+
+}
+
+
+
+
+
+
+
+
+
+
+/* FRON BOX*/
+.front {
+    display: flex;
+    position: relative;
+}
+
+.front .supressor {
+    background-color: #151515e3;
+    border: 2px solid #040404;
+    border-radius: 3px;
+    width: 60px;
+    height: 10px;
+    z-index: 2;
+    position: absolute;
+    left: 130px;
+}
+.front .supressor:before {
+    content: "";
+    height: 10px;
+    width: 1px;
+    position: absolute;
+    border-left: 2px solid #040404;
+    border-right: 1px dotted #040404;
+    position: absolute;
+    left: 2px;
+    z-index: 3;
+}
+
+.front .divider {
+    background-color: #1f1f1f;
+    border: 2px solid #040404;
+    height: 5px;
+    width: 10px;
+    position: absolute;
+    left: 120px;
+    top: 2px;
+    border-right: none;
+    border-left: none;
+}
+.front .stick {
+    background-color: #1f1f1f;
+    border: 2px solid #040404;
+    top: 2px;
+    border-right: none;
+    border-left: none;
+    width: 120px;
+    height: 6px;
+    left: 0;
+    position: absolute;
+    box-shadow: 0px -2px 0 #202020,
+                0px 2px 0 #202020;
+}
+
+
+
+/**
+* first section
+*/
+
+.back {
+    position: relative;
+    top: -3px;
+}
+
+.back .top {
+        background-color: #0f0f0f;
+        height: 29px;
+        width: 100px;
+        border: 2px solid black;
+        z-index: 3;
+        position: relative;
+}
+
+.back .top .light {
+    background-color: #00ceed;
+    width: 15px;
+    height: 2px;
+    position: absolute;
+    top: 3px;
+    left: 5px;
+}
+.back .bottom {
+    transform: rotate(-12deg) skewX(-10deg);
+    top: -19px;
+    position: relative;
+    z-index: 1;
+    left: -1px;
+    background-color: #0f0f0f;
+    height: 25px;
+    width: 99px;
+    border: 2px solid black;
+}
+
+.amo-leaving {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    right: 460px;
+    display: flex;
+   
+    
+}
+.amo-leaving.one {
+    animation: amoLeaving 3s ease-in forwards;
+}
+
+.amo-leaving.two {
+    animation: amoLeaving 3s ease-in forwards;
+    animation-delay: 0.5s;
+}
+.amo-leaving.three {
+    animation: amoLeaving 3s ease-in forwards;
+    animation-delay: 1s;
+}
+.amo-leaving.four {
+    animation: amoLeaving 3s ease-in forwards;
+    animation-delay: 1.5s;
+}
+.amo-leaving.five {
+    animation: amoLeaving 3s ease-in forwards;
+    animation-delay: 2s;
+}
+.amo-leaving.six {
+    animation: amoLeaving 3s ease-in forwards;
+    animation-delay: 2.5s;
+}
+.amo-leaving.seven {
+    animation: amoLeaving 4s ease-in forwards;
+    animation-delay: 2.6s;
+}
+
+
+
+@keyframes amoLeaving {
+    100% {
+        transform: translateX(500px);
+        opacity: 0;
+    }
+}
+
+
+.amo-leaving-front {
+    background-color: black;
+    height: 3px;
+    width: 4px;
+    position: absolute;
+    top: 3px;
+    position: absolute;
+    left: 24px;
+
+}
+.amo-leaving-middle {
+    background-color: #6e4535;
+    height: 6px;
+    width: 8px;
+    position: absolute;
+    top: 2px;
+    position: absolute;
+    left: 16px;
+
+}
+.amo-leaving-back {
+    background-color: #6e4535;
+    height: 10px;
+    width: 16px;
+}
