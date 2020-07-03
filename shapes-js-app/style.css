@@ -1,0 +1,57 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+
+.wrapper {
+      display: flex;
+}
+
+#codeblock {
+    width: 200px;
+    margin: 10px;
+}
+.preview {
+    box-sizing: border-box;
+    height: 400px;
+    border: 1px solid black;
+    width: 400px;
+    padding: 50px;
+    display: flex;
+    margin: 0 auto;
+
+}
+
+
+
+
+.preview #shape {
+    height: 300px;
+    width: 300px;
+    background-color:#673AB7;
+}
+.cta-container {
+    display: flex;
+    margin-top: 50px;
+}
+.cta button{
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #e3edf7;
+    border: none;
+    box-shadow: 3px 3px 3px gray;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.cta button:active {
+    border-bottom: 2px solid black;
+}
