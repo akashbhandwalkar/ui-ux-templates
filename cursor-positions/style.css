@@ -1,0 +1,142 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+.cards {
+    display: flex;
+    margin: 40px;
+}
+.card {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 4px 4px 4px black;
+    margin: 0 15px;
+    width: 20%;
+}
+pre {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+button {
+    margin: 10px 20%;
+    padding: 5px 15px;
+    border: none;
+}
+
+.one {
+    cursor: default;
+}
+.two {
+    cursor: pointer;
+}
+.three {
+    cursor: none;
+}
+
+.four {
+    cursor: context-menu;
+}
+
+.five {
+    cursor: progress;
+
+}
+
+.six {
+    cursor: wait;
+}
+
+
+.seven {
+    cursor: cell;
+}
+
+.eight {
+    cursor: crosshair;
+}
+
+.nine {
+    cursor: text;
+}
+
+.ten {
+    cursor: vertical-text;
+}
+.eleven {
+    cursor:  alias;
+}
+
+.twelve {
+    cursor:  copy;
+}
+.thirteen {
+    cursor:  move;
+}
+
+.fourteen {
+    cursor:  no-drop;
+}
+
+.fifteen {
+    cursor:  not-allowed;
+}
+.sixteen{
+    cursor:  grab;
+}
+.seventeen{
+    cursor:  grabbing;
+}
+.eighteen {
+    cursor:  all-scroll;
+}
+.nineteen {
+    cursor:  col-resize;
+}
+.twenty {
+    cursor: row-resize ;
+}
+.twenty1 {
+    cursor:  n-resize;
+}
+.twenty2 {
+    cursor:  e-resize;
+}.twenty3 {
+    cursor:  s-resize;
+}.twenty4 {
+    cursor:  w-resize;
+}.twenty5 {
+    cursor:  ne-resize;
+}.twenty6 {
+    cursor:  nw-resize;
+}.twenty7 {
+    cursor: se-resize ;
+}.twenty8 {
+    cursor:  sw-resize;
+}.twenty9 {
+    cursor: ew-resize ;
+}
+.thirty {
+    cursor: ns-resize ;
+}
+.thirty1 {
+    cursor: nesw-resize;
+}
+.thirty2 {
+    cursor: nwse-resize;
+}
+.thirty3 {
+    cursor: zoom-in;
+}
+.thirty4 {
+    cursor: zoom-out;
+}

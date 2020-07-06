@@ -1,0 +1,182 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #292829;
+    font-family: sans-serif;
+    position: relative;
+}
+
+
+.satelite-container {
+    position: absolute;
+    top: 800px;
+    left: 100px;
+    animation: animateMain 10s ease-out forwards;
+    transform: rotate(0) rotate(-45deg);
+
+}
+
+.satelite-container .main {
+    width: 80px;
+    height: 30px;
+    background-color: #ffcfce;
+    position: relative;
+    z-index: 3;
+    
+}
+
+@keyframes animateMain {
+    50% {
+        transform: translate(800px, -650px) rotate(-45deg);
+    }
+    75% {
+        transform: translate(1250px, -450px) rotate(45deg);
+       z-index: 7;
+    }
+    85% {
+        z-index: 2;
+    }
+    100% {
+        transform: translate(800px, -650px) rotate(45deg);
+        z-index: 2;
+    }
+}
+
+
+.satelite-container .main:before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    left: -5px;
+    background-color: #ff97c4;
+    border-radius: 5px 0 0 5px;
+}
+
+.front-sticks {
+    position: absolute;
+    display: flex;
+    left: 50px;
+    top: -2px;
+}
+
+.front-sticks div {
+    background-color: white;
+    height: 34px;
+    width: 3px;
+    margin: 0 5px;
+}
+.fans-container {
+    position: absolute;
+    top: -63px;
+    left: 25px;
+    z-index: 1;
+    transform: rotateZ(10deg); 
+    animation: animateFan 120s ease infinite;
+}
+
+.fans-container .fan {
+    background-color: #2eced9;
+    height: 50px;
+    width: 30px;
+}
+
+.fans-container .stick {
+    background-color: #fbfeff;
+    width: 3px;
+    height: 60px;
+    margin-left: 14px;
+}
+
+@keyframes animateFan {
+    0% {
+        transform: rotateZ(10deg) rotateX(0deg); 
+    }
+    100% {
+        transform: rotateZ(10deg) rotateX(36000deg);
+    }
+
+}
+
+._front {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(90deg, #2fcfda 0 50%, rgba(0,0,0,0)  50% 100%);
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 82px;
+    border-left: 3px solid white;
+    animation: animateFront 3s forwards;
+}
+
+@keyframes animateFront {
+    0% {
+        background:linear-gradient(90deg, #2fcfda 0 50%, rgba(0,0,0,0) 50% 100%);
+    }
+
+    100% {
+        background:linear-gradient(90deg, #2fcfda 0 50%, rgba(0,0,0,0)  50% 100%);
+    }
+}
+
+.moon {
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    right: 300px;
+    top: 200px;
+    border-radius: 50%;
+    background-color: white;
+    animation: aniamateMoon 4s forwards;
+    z-index: 4;
+    box-shadow: -4px 4px 4px grey, 
+                4px 4px 4px grey,
+                -4px -4px 4px grey, 
+                4px -4px 4px grey;
+
+}
+
+@keyframes aniamateMoon {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+       transform: scale(2);
+    }
+}
+
+
+.little-star {
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    animation: twinkling 800s ease-in infinite;
+}
+.medium-star {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    animation: twinkling 1000ms ease-in infinite;
+}
+
+@keyframes twinkling {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}

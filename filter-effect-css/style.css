@@ -1,0 +1,104 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+.cards {
+    display: flex;
+    margin: 40px;
+}
+.card {
+    background-color: white;
+    padding: 10px;
+    box-shadow: 4px 4px 4px black;
+    margin: 0 15px;
+    width: 20%;
+    opacity: 0;
+   
+}
+pre {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+button {
+    margin: 10px 20%;
+    padding: 5px 15px;
+    border: none;
+}
+
+img {
+    height: 120px;
+    width:250px;
+    margin: 15px 50px;
+  
+}
+
+.two {
+    filter: blur(5px);
+}
+.three {
+    filter: contrast(200%);
+}
+
+.four {
+    filter: grayscale(80%);
+}
+
+.five {
+    filter: hue-rotate(90deg);
+
+}
+
+.six {
+    filter: drop-shadow(16px 16px 20px red) invert(75%);
+}
+
+.seven {
+    filter: invert(75%);
+}
+
+.eight {
+    filter: opacity(25%);
+}
+
+.nine {
+    filter: sepia(60%);
+}
+
+.ten {
+    filter: brightness(0.4);
+}
+.eleven {
+    filter: contrast(175%) brightness(3%);
+}
+
+.twelve {
+    filter: none;
+}
+
+.card:nth-child(1) {
+    animation: cardsAnimation 1s ease-in forwards;
+}
+.card:nth-child(2) {
+    animation: cardsAnimation 2s ease-in forwards;
+}
+.card:nth-child(3) {
+    animation: cardsAnimation 3s ease-in forwards;
+}
+.card:nth-child(4) {
+    animation: cardsAnimation 4s ease-in forwards;
+}
+@keyframes cardsAnimation {
+    100% {
+        opacity: 1;
+    }
+}
