@@ -1,0 +1,333 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    /* background: #e3edf7; */
+    font-family: sans-serif;
+}
+
+.cradle-container {
+    display: flex;
+    position: absolute;
+    top: 200px;
+    left: 600px;
+    padding: 100px;
+    background-color: #ffeb3b;
+ 
+
+}
+.cradle {
+    display: block;
+    background: black;
+    border-radius: 100%;
+    height: 20px;
+    width: 20px;
+    margin: 0;
+    background: radial-gradient(circle at 10px 10px, #5cabff, #000);
+}
+
+.sticks {
+    height: 100px;
+    width: 4px;
+    background: radial-gradient(circle at 10px 10px, #5cabff, #000);
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+.cradle-sticks {
+    position: relative;
+    
+}
+
+.cradle-sticks:nth-child(5) .cradle {
+    transform: translate(91px, -35px);
+    animation: animationRightStick 3s ease-in infinite;
+   
+}
+.cradle-sticks:nth-child(5) .sticks {
+    transform: rotate(-54deg);
+    transform-origin: top;
+    animation: animationRightCradle 3s ease-in infinite;
+}
+
+.cradle-sticks:nth-child(1) .cradle {
+    /* transform: translate(-91px, -35px); */
+    animation: animationLeftStick 3s ease-in infinite;
+    /* animation-delay: 2s; */
+}
+
+.cradle-sticks:nth-child(1) .sticks {
+    /* transform: rotate(54deg); */
+    transform-origin: top;
+    animation: animationLeftCradle 3s ease-in infinite;
+    /* animation-delay: 2s; */
+}
+
+
+
+
+
+
+
+
+.cradle-sticks:nth-child(4) .cradle {
+    animation: animationRightStick 3s ease-in infinite;
+    animation-delay: 3s;
+   
+}
+.cradle-sticks:nth-child(4) .sticks {
+    transform-origin: top;
+    animation: animationRightCradle 3s ease-in infinite;
+    animation-delay: 3s;
+}
+
+
+.cradle-sticks:nth-child(2) .cradle {
+    /* transform: translate(-91px, -35px); */
+    animation: animationLeftStick 3s ease-in infinite;
+    animation-delay: 3s;
+   
+}
+.cradle-sticks:nth-child(2) .sticks {
+    /* transform: rotate(54deg); */
+    transform-origin: top;
+    animation: animationLeftCradle 3s ease-in infinite;
+    animation-delay: 3s;
+}
+
+
+
+
+.cradle-sticks:nth-child(3) .cradle {
+    /* transform: translate(-91px, -35px); */
+    animation: animationMiddleCradle 3s ease-in infinite;
+    animation-delay: 6s;
+   
+}
+.cradle-sticks:nth-child(3) .sticks {
+    /* transform: rotate(54deg); */
+    transform-origin: top;
+    animation: animationMiddleStick 3s ease-in infinite;
+    animation-delay: 6s;
+}
+
+@keyframes animationMiddleStick {
+    0% {
+        transform: rotate(-54deg);
+    }
+    10% {
+        transform: rotate(0);
+    }
+    20% {
+        transform: rotate(54deg);
+    }
+    30% {
+        transform: rotate(0);
+    }
+    40% {
+        transform: rotate(-54deg);
+    }
+    50% {
+        transform: rotate(0);
+    }
+    60% {
+        transform: rotate(54deg);
+    }
+    70% {
+        transform: rotate(0);
+    }
+    80% {
+        transform: rotate(-54deg);
+    }
+    90% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(54deg);
+    }
+
+}
+@keyframes animationMiddleCradle {
+    0% {
+        transform: translate(91px, -35px);
+    }
+    10% {
+        transform: none;
+    }
+    20% {
+        transform: translate(-87px, -36px);
+    }
+    30% {
+        transform: none; 
+    }
+    40% {
+        transform: translate(91px, -35px);
+    }
+    50% {
+        transform: none;
+    }
+    60% {
+        transform: translate(-87px, -36px);
+    }
+    70% {
+        transform: none;
+    }
+    80% {
+        transform: translate(91px, -35px);  
+    }
+    90% {
+        transform: none; 
+    }
+    100% {
+        transform: translate(-87px, -36px);
+    }
+}
+@keyframes animationRightStick {
+    0% {
+        transform: translate(91px, -35px);
+    }
+    10% {
+        transform: none;
+    }
+    20% {
+       transform: none;
+    }
+    30% {
+        transform: none; 
+    }
+    40% {
+        transform: translate(91px, -35px);
+    }
+    50% {
+        transform: none;
+    }
+    60% {
+        transform: none;
+    }
+    70% {
+        transform: none;
+    }
+    80% {
+        transform: translate(91px, -35px);  
+    }
+    90% {
+        transform: none; 
+    }
+    100% {
+        transform: none;
+    }
+
+}
+@keyframes animationRightCradle {
+    0% {
+        transform: rotate(-54deg);
+    }
+    10% {
+        transform: rotate(0);
+    }
+    20% {
+        transform: rotate(0);
+    }
+    30% {
+        transform: rotate(0);
+    }
+    40% {
+        transform: rotate(-54deg);
+    }
+    50% {
+        transform: rotate(0);
+    }
+    60% {
+        transform: rotate(0);
+    }
+    70% {
+        transform: rotate(0);
+    }
+    80% {
+        transform: rotate(-54deg);
+    }
+    90% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(0);
+    }
+
+}
+@keyframes animationLeftStick {
+    0% {
+        transform: none;
+    }
+    10% {
+        transform: none;
+    }
+    20% {
+        transform: translate(-87px, -36px);
+    }
+    30% {
+        transform: none;
+    }
+    40% {
+        transform: none;
+    }
+    50% {
+        transform: none;
+    }
+    60% {
+        transform: translate(-87px, -36px);
+    }
+    70% {
+        transform: none;
+    }
+    80% {
+        transform: none;
+    }
+    90% {
+        transform: none;
+    }
+    100% {
+        transform: translate(-87px, -36px);
+    }
+
+}
+@keyframes animationLeftCradle {
+    0% {
+        transform: rotate(0);
+    }
+    10% {
+        transform: rotate(0);
+    }
+    20% {
+        transform: rotate(54deg);
+    }
+    30% {
+        transform: rotate(0);
+    }
+    40% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(0);
+    }
+    60% {
+        transform: rotate(54deg);
+    }
+    70% {
+        transform: rotate(0);
+    }
+    80% {
+        transform: rotate(0);
+    }
+    90% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(54deg);
+    }
+
+}
