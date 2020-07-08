@@ -6,8 +6,309 @@
 
 
 body {
-    background: #e3edf7;
+    background: black;
     font-family: sans-serif;
+    display: flex;
+    /* flex-direction: column; */
+    padding: 200px;
 }
 
 
+a {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    color: #03e9f4;
+    margin: 40px;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    /* width: 350px; */
+    overflow: hidden;
+
+}
+
+
+
+a:hover {
+    background-color: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+}
+a:nth-child(2) {
+    color: pink;
+}
+
+
+
+a:nth-child(3):hover {
+    color: black;
+    background-color: mediumpurple;
+    box-shadow: 0 0 5px mediumpurple,
+                0 0 25px mediumpurple,
+                0 0 50px mediumpurple,
+                0 0 200px mediumpurple;
+}
+
+a:nth-child(3) {
+    color: mediumpurple;
+}
+
+
+
+a:nth-child(2):hover {
+    color: black;
+    background-color: pink;
+    box-shadow: 0 0 5px pink,
+                0 0 25px pink,
+                0 0 50px pink,
+                0 0 200px pink;
+}
+
+a span {
+    display: block;
+}
+a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent,#03e9f4 );
+    animation: firstSpan 1s linear infinite;position: absolute;
+}
+
+@keyframes firstSpan {
+    0% {
+        left:  -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent,#03e9f4 );
+    animation: SecondSpan 1s linear infinite;
+    animation-delay: 0.25s;
+    position: absolute;
+}
+
+@keyframes SecondSpan {
+    0% {
+        top:  -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+
+a span:nth-child(3) {
+    bottom: 0%;
+    right: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(180deg, transparent,#03e9f4 );
+    animation: thirdSpan 1s linear infinite;
+    animation-delay: 1.50s;
+    position: absolute;
+}
+
+@keyframes thirdSpan {
+    0% {
+        right:  -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+a span:nth-child(4) {
+    bottom: -100%;
+    left: 0%;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(-90deg, transparent,#03e9f4 );
+    animation: fourthSpan 1s linear infinite;
+    animation-delay: 2.75s;
+    position: absolute;
+}
+
+@keyframes fourthSpan {
+    0% {
+        bottom:  -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
+}
+
+
+
+a:nth-child(2) span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent,pink );
+    animation: firstSpan 1s linear infinite;position: absolute;
+}
+
+@keyframes firstSpan {
+    0% {
+        left:  -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+a:nth-child(2)  span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent,pink );
+    animation: SecondSpan 1s linear infinite;
+    animation-delay: 0.25s;
+    position: absolute;
+}
+
+@keyframes SecondSpan {
+    0% {
+        top:  -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+
+a:nth-child(2)  span:nth-child(3) {
+    bottom: 0%;
+    right: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(180deg, transparent,pink );
+    animation: thirdSpan 1s linear infinite;
+    animation-delay: 1.50s;
+    position: absolute;
+}
+
+@keyframes thirdSpan {
+    0% {
+        right:  -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+a:nth-child(2)  span:nth-child(4) {
+    bottom: -100%;
+    left: 0%;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(-90deg, transparent,pink );
+    animation: fourthSpan 1s linear infinite;
+    animation-delay: 2.75s;
+    position: absolute;
+}
+
+@keyframes fourthSpan {
+    0% {
+        bottom:  -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
+}
+
+
+a:nth-child(3) span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, transparent,mediumpurple );
+    animation: firstSpan 1s linear infinite;position: absolute;
+}
+
+@keyframes firstSpan {
+    0% {
+        left:  -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+a:nth-child(3)  span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(180deg, transparent,mediumpurple );
+    animation: SecondSpan 1s linear infinite;
+    animation-delay: 0.25s;
+    position: absolute;
+}
+
+@keyframes SecondSpan {
+    0% {
+        top:  -100%;
+    }
+    50%, 100% {
+        top: 100%;
+    }
+}
+
+
+a:nth-child(3)  span:nth-child(3) {
+    bottom: 0%;
+    right: -100%;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(180deg, transparent,mediumpurple );
+    animation: thirdSpan 1s linear infinite;
+    animation-delay: 1.50s;
+    position: absolute;
+}
+
+@keyframes thirdSpan {
+    0% {
+        right:  -100%;
+    }
+    50%, 100% {
+        right: 100%;
+    }
+}
+
+a:nth-child(3)  span:nth-child(4) {
+    bottom: -100%;
+    left: 0%;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(-90deg, transparent,mediumpurple );
+    animation: fourthSpan 1s linear infinite;
+    animation-delay: 2.75s;
+    position: absolute;
+}
+
+@keyframes fourthSpan {
+    0% {
+        bottom:  -100%;
+    }
+    50%, 100% {
+        bottom: 100%;
+    }
+}
