@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="Stylesheet" href="./style.css"> </link>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+ </head>
+<body>
+    <div class="container">
+
+        <div class="ranges">
+           <div class="input-parent">
+                <label for="">All Sides</label>  <input type="range" class="range" oninput="onchangeHorizontal(this, 'border-radius')">
+            </div>
+            <div class="input-parent">
+                <label for="">Top Left</label>  <input type="range" class="range" oninput="onchangeHorizontal(this, 'border-top-left-radius')">
+            </div>
+             <div class="input-parent">
+                <label for="">Top Right</label>  <input type="range" class="range" oninput="onchangeHorizontal(this, 'border-top-right-radius')">
+                
+            </div>
+            <div class="input-parent">
+                <label for="">Bottom Right</label>   <input type="range" class="range" oninput="onchangeHorizontal(this, 'border-bottom-right-radius')"> 
+            </div>
+            <div class="input-parent">
+                <label for="">Bottom Left</label>  <input type="range" class="range" oninput="onchangeHorizontal(this, 'border-bottom-left-radius')">     
+            </div>
+
+          
+        </div>
+        <div class="demo"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
