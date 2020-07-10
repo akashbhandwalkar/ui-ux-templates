@@ -1,0 +1,101 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+
+.container {
+    margin: 100px auto;
+    width: 400px;
+    display: flex;
+
+    transform: rotate(180deg);
+}
+
+.sketch-pen {
+    margin: 0 5px;
+}
+.sketch-pen .middle{
+    height: 300px;
+    width: 30px;
+    
+}
+.sketch-pen .middle:hover{
+    height: 300px;
+    width: 30px;
+    
+}
+.sketch-pen .middle-top {
+    height: 150px;
+    width: 30px;
+    border-radius: 3px 3px 0 0;
+}
+
+.bottom-top {
+    display: block;
+    width: 30px;
+    height: 40px;
+    clip-path: polygon(0 0, 100% 0, 66% 100%, 33% 100%);
+}
+
+.nip {
+    display: block;
+    width: 7px;
+    margin-top: -1px;
+    height: 16px;
+    margin-left: 11px;
+    border-radius: 0 0 100% 100%;
+}
+
+.black {
+    background-color: black;
+}
+.black-middle {
+    background: radial-gradient(circle at 100%, #262626, #262626);
+}
+
+.silver {
+    background-color: #03a9f4;
+}
+
+.purple {
+    background-color: #8e86b5
+}
+
+
+.red{
+    background-color: #bd1f1f
+}
+
+.green {
+    background-color: #4caf50
+}
+
+.orange {
+    background-color: #d6c4a4
+}
+
+.violet {
+    background-color: violet;
+}
+.pink {
+    background-color: pink;
+}
+
+.peru {
+    background-color: peru;
+}
+
+.top {
+    width: 20px;
+    height: 12px;
+    margin-left: 4px;
+    border-radius: 4px 4px 0 0;
+}
