@@ -1,0 +1,222 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 200px auto;
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: #ccc0b3;
+}
+
+.cup-stand {
+    position: absolute;
+    width:  30%;
+    height: 5%;
+    background-color: #ffffff;
+    bottom: 40px;
+    left: 38%;
+}
+
+.cup {
+    position: absolute;
+    width:  40%;
+    height: 30%;
+    background-color: #ffffff;
+    bottom: 14%;
+    left: 33%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    z-index: 2;
+    animation: cup 2s;
+    -webkit-animation-delay: 2s;
+    
+}
+
+@keyframes cup {
+    0% {
+       
+    }
+    10% {
+        transform: rotate(-35deg);
+    }
+    20% {
+        transform: rotate(35deg);
+    }
+    30% {
+        transform: rotate(-25deg);
+    }
+    40% {
+        transform: rotate(25deg);
+    }
+    50% {
+        transform: rotate(-15deg);
+    }
+    60% {
+        transform: rotate(15deg);
+    }
+    70% {
+        transform: rotate(-5deg);
+    }
+    80% {
+        transform: rotate(5deg);
+    }
+    90% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.triangle {
+    width: 0px;
+    height: 0px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #2f5672;
+    position: relative;
+}
+
+.triangle:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ccc0b3;
+    position: absolute;
+    left: -10px;
+    top: 6px;
+}
+
+.one {
+    position: absolute;
+    left: 23%;
+    top: 15%;
+    animation: drop 6s;
+    transform: rotate(-80deg);
+}
+
+.two {
+    position: absolute;
+    left: 69%;
+    top: 25%;
+    transform: rotate(70deg);
+    animation: drop 6s;
+
+}
+
+.square {
+    position: absolute;
+    width: 3%;
+    height: 4%;
+    background-color: #ffffff;
+    top: 35%;
+    left: 30%;
+    transform: rotate(70deg);
+    animation: drop 6s;
+}
+
+.egg {
+    position: absolute;
+    width: 18%;
+    height: 30%;
+    background-color: #ffffff;
+    top: 15%;
+    left: 45%;
+    border-radius: 50% 50%; 
+    animation: drop 6s;
+    /* transform: rotate(70deg); */
+}
+.egg:after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 50%;
+    background-color: #f29e3c;
+    bottom: 17px;
+    left: 28px;
+    border-radius: 50%;
+}
+
+
+.apple {
+    width:6em;
+    height:5em;
+    background-color:  #ff4355;
+    box-shadow: inset 0.2em -0.2em  #cc1022;
+    border-radius: 2em 2em 3em 3em;
+    position:absolute;
+    top: 5%;
+    left: 35%;
+    animation: drop 6s;
+  }
+  
+  .apple:before {
+    top:-.2em;
+    left:1.8em;
+    content:"";
+    width:4.1em;
+    height:2.75em;
+    background-color: inherit;
+    border-radius: 3em 3em 0 0 ;
+    position: absolute;
+    box-shadow:-1.5em 0 0   #ff4355, inset .2em 0.2em  #ff4355;
+  }
+  
+  .apple:after{
+    content:"";
+    width: 0.2em;
+    height: 1em;
+    background-color:brown;
+    position:absolute;
+    z-index: 2;
+    top: -0.5em;
+    left: 3em;
+  }
+
+  .stone {
+      position: absolute;
+      left: 0;
+      bottom: 20%;
+      background: radial-gradient(circle at 10px 10px, #5cabff, #000);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      animation: stone 2s ease-in forwards; 
+    }
+
+    @keyframes stone {
+        100%{ 
+            left: 23%;
+        }
+    }
+
+  
+
+  @keyframes drop {
+
+    30% {
+        opacity: 1;
+    }
+    35% {
+        opacity: 0;
+
+    }
+    50% {
+        top: 60%;
+        left: 40%;
+        opacity: 0;
+        z-index: 1;
+    }
+  }

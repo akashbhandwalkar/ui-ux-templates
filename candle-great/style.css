@@ -1,0 +1,209 @@
+
+body {
+    background-color: #8a1c2f;
+    animation: background-body 5s infinite;
+    /* animation: shake-cylinder 2s infinite; */
+
+}
+
+
+.fire-on-off {
+      
+    position: absolute;
+    top: -10px;
+    left: -7px;
+    animation-delay: 2s;
+    animation: close-fire 5s infinite;
+}
+
+.eyes div {
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    animation-delay: 2s;
+    animation: close-eyes 5s infinite;
+}
+
+@keyframes background-body {
+    100% {
+        background-color:#211d4a;
+    }
+}
+
+@keyframes close-eyes {
+      100% {
+          border-radius: 0%;
+          height: 0px;
+      }
+}
+
+@keyframes close-fire {
+    100% {
+       opacity: 0;
+    }
+}
+
+
+#scene {
+    perspective: 1000px;
+    width:200px;
+    height:200px;
+    position:relative;
+    top:50vh;
+    left:50vw;
+    transform:translateX(-50%) translateY(-50%);
+  }
+  .cylinder{
+    
+    transform-style:preserve-3d;
+    width:200px;
+    height:200px;
+     transform:rotateX(-20deg) rotateY(-40deg);
+
+  }
+
+
+
+ .cylinder > div {
+    position:absolute;
+  }
+  .cylinder > .circle {
+    background-color: #e6f7f7;
+    width:98px;
+    height:98px;
+    border-radius:50px;
+    
+  }
+  .cylinder > .top {
+    transform:translateY(-50px) rotateX(90deg);
+    position: absolute;
+  }
+  .cylinder > .bottom {
+    transform:translateY(150px) rotateX(-90deg);
+    position: absolute;
+  }
+  .cylinder > .side {
+    width:100px;
+    height:200px;
+    position: absolute;
+    
+  }
+  .cylinder > .side > div {
+    position:absolute;
+     width:100px;
+    height:200px;
+    background-color:#e6f7f7
+  }
+  .cylinder > .side > .face2 {
+    transform:rotateY(45deg);
+  }
+ .eyes {
+    position: relative;
+    width: 70px;
+    z-index: 8;
+    left: 25px;
+    top: 40px;
+  }
+
+
+ .eyes div:nth-child(1) {
+      position: absolute;
+      left: 5px;
+     
+  }
+ .eyes div:nth-child(2) {
+    position: absolute;
+    right: 5px;
+
+  }
+
+  .fire {
+    position: relative;
+    top: 4px;
+    left: 56px;
+    z-index: 4;
+  }
+
+
+  
+   .fire .side{
+    content: "";
+    width: 11px;
+    height: 20px;
+    /* margin-top: -19px; */
+    position: relative;
+    background: #4c5485;
+    transform: none;
+    top: -10px;
+  }
+
+  .fire .top {
+    width: 10px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #4c5485;
+    position: absolute;
+    transform: rotateX(45deg);
+    top: -21px;
+  }
+
+
+  .fire .bottom {
+    width: 10px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #4c5485;
+    position: absolute;
+    transform: rotateX(45deg);
+    bottom: -1px;
+  }
+  .fire:before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      background-color: transparent;
+      box-shadow: 10px 10px 0 #f7f7f7;
+  }
+  /**
+  * #f79f04
+ * #f7f7f7
+  */
+
+
+
+
+  .fire-on-off  div:nth-child(1) {
+      background-color: white;
+      width: 9px;
+      height: 12px;
+      border-radius: 50%;
+      bottom: 0;
+      position: absolute;
+      z-index: 5;
+      left: 9px;
+
+  }
+
+  .fire-on-off  div:nth-child(2) {
+    background-color: yellow;
+    width: 18px;
+    height: 24px;
+    border-radius: 50%;
+    bottom: 0;
+    position: absolute;
+    z-index: 4;
+    left: 4.5px;
+
+
+}
+.fire-on-off  div:nth-child(3) {
+    background-color: orange;
+    width: 27px;
+    height: 36px;
+    border-radius: 50%;
+      position: absolute;
+      bottom: 0;
+      z-index: 3;
+
+}

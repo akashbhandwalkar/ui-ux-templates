@@ -1,6 +1,6 @@
 img {
     width: 300px;
-    height: 300px;
+    height: 30px;
 }
 
 .wrapper{
@@ -14,7 +14,8 @@ img {
     height: 300px;
     margin: auto;
     position: relative;
-    animation: loop 6s linear infinite;
+    transform: skew(-15deg) rotateX(-15deg);
+    /* animation: loop 6s linear infinite; */
 }
 
 .cube img {
@@ -23,21 +24,33 @@ img {
 }
 
 .cube img:nth-child(1) {
+    width: 300px;
+    height: 100px;
     transform: rotateY(0deg) translateZ(150px);
 }
 .cube img:nth-child(2) {
+    width: 300px;
+    height: 30px;
     transform: rotateY(90deg) translateZ(150px);
 }
 .cube img:nth-child(3) {
+    width: 300px;
+    height: 30px;
     transform: rotateY(180deg) translateZ(150px);
 }
 .cube img:nth-child(4) {
+     width: 300px;
+    height: 30px;
     transform: rotateY(-90deg) translateZ(150px);
 }
 .cube img:nth-child(5) {
+     width: 300px;
+    height: 30px;
     transform: rotateX(90deg) translateZ(150px);
 }
 .cube img:nth-child(6) {
+    width: 300px;
+    height: 30px;
     transform: rotateX(-90deg) translateZ(150px);
 }
 

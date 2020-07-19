@@ -1,0 +1,234 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+
+.container {
+    position: relative;
+    margin: 200px auto;
+    width: 50vw;
+    height: 60vh;
+    background: linear-gradient(#122a53 0%, #3f2e4e 50%, #594761 51%, #5c4964 52%, #4d3a58 53%, #4d3a58 56%, #624b65 57% , #624b65 60%, #775971 61%, #775971 64%, #6d4760 65%, #6d4760 67%, #4490d0 80%, #142d56 100% );
+}
+
+
+.moon {
+    position: absolute;
+    background-color: #f1f2e4;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    left: 25%;
+    top: 10%;
+    box-shadow: 4px 4px 4px gray;
+}
+
+.moon div:nth-child(1) {
+    position: absolute;
+    background-color: #c4ccce;
+    width: 45px;
+    height: 45px;
+    right: 30px;
+    top: 50px;
+    border-radius: 50%;
+    box-shadow: inset 2px 2px 2px silver;
+}  
+
+.moon div:nth-child(2) {
+    position: absolute;
+    background-color: #b9c3c9;
+    width: 25px;
+    height: 25px;
+    left: 30px;
+    top: 50px;
+    border-radius: 50%;
+    box-shadow: inset 2px 2px 2px silver;
+}
+
+.moon div:nth-child(3) {
+    position: absolute;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    left: 70px;
+    top: 110px;
+    border-radius: 50%;
+    border: 10px solid #cacec7;
+
+}
+
+.moon div:nth-child(4) {
+    position: absolute;
+    background-color: #b3bcc0;
+    width: 15px;
+    height: 15px;
+    left: 90px;
+    top: 20px;
+    border-radius: 50%;
+
+}
+
+.moon div:nth-child(1) {
+    
+}
+
+.little-star {
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    animation: twinkling 800s ease-in infinite;
+}
+.medium-star {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    animation: move 3s;
+}
+
+@keyframes move {
+    0% {
+
+    }
+    100% {
+        opacity: 0.1;
+        transform: translate(600px, 200px);
+    }
+}
+
+.ship {
+    position: absolute;
+    bottom: 100px;
+    left: 10%;
+    animation: ship 10s forwards;
+}
+
+
+@keyframes ship {
+    100% {
+        bottom: 100px;
+        left: 80%;
+    }
+}
+.ship .middle {
+    position: absolute;
+    bottom: 40px;
+    width: 200px;
+    height: 40px;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+    background: #202834;
+}
+
+/* .ship .bottom {
+    position: absolute;
+    width: 160px;
+    left:20px;
+    height: 40px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background: #202834;
+    bottom: 0;
+} */
+
+.ship .top {
+    position: absolute;
+    bottom: 80px;
+    left: 20px;
+    background-color: #ffffff;
+    width: 160px;
+    height: 40px;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+.circle {
+    background-color: #8b949c;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+
+.circles {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    display: flex;
+}
+
+
+.chimnes {
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    left: 40px;
+    transform: skew(-15deg);
+    transform-origin: top;
+}
+
+.chimne {
+    position: abolute;
+    height: 70px;
+    width: 20px;
+    background-color: #d65954;
+    margin: 0 26px;
+}
+.chimne:before {
+    content: "";
+    position: absolute;
+    background-color: #242834;
+    width: 20px;
+    height: 15px;
+}
+
+/* .chimnes .chimne .bubble1 {
+    position: absolute;
+    background-color: #dee3eb;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: -20px;
+    opacity: 0.5;
+    animation: bubble 2s infinite;
+    animation-delay: 1s;
+} */
+
+.chimnes .chimne .bubble2 {
+    position: absolute;
+    background-color: #dee3eb;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: -20px;
+    opacity: 0.5;
+    animation: bubble 2s infinite;
+    animation-delay: 0.5s;
+}
+
+.chimnes .chimne .bubble3 {
+    position: absolute;
+    background-color: #dee3eb;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: -20px;
+    opacity: 0.5;
+    animation: bubble 2s infinite;
+}
+
+
+@keyframes bubble {
+    100% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}

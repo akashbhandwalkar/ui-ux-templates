@@ -1,0 +1,72 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 200px auto;
+    background-color: #eec954;
+    width: 800px;
+    height: 700px;
+    border-radius: 30px;
+}
+
+.radio-container {
+    position: relative;
+    /* padding: 200px 200px; */
+    transform-style: preserve-3d;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    position: relative;
+    animation: loop 6s linear infinite;
+}
+
+.radio-container div {
+    background-color: #cfd1c2;
+    width: 300px;
+    height: 300px;
+}
+
+/* .one {
+    top: 300px;
+    left: 200px;
+    position: absolute;
+    height: 200px;
+    width: 400px;
+    transform: skewY(15deg);
+}
+
+.two {
+    position: absolute;
+    top: 230px;
+    left: 200px;
+    height: 40px;
+    width: 400px;
+    transform: skewY(15deg) rotateX(15deg);
+} */
+.radio-container  div:nth-child(1) {
+    transform: rotateY(0deg) translateZ(150px);
+}
+.radio-container  div:nth-child(2) {
+    transform: rotateY(90deg) translateZ(150px);
+}
+.radio-container  div:nth-child(3) {
+    transform: rotateY(180deg) translateZ(150px);
+}
+.radio-container  div:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(150px);
+}
+.radio-container  div:nth-child(5) {
+    transform: rotateX(90deg) translateZ(150px);
+}
+.radio-container  div:nth-child(6) {
+    transform: rotateX(-90deg) translateZ(150px);
+}
