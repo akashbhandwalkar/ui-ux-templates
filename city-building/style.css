@@ -1,0 +1,626 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+
+.container {
+    position: relative;
+    margin: 100px auto;
+    height: 900px;
+    width: 700px;
+    background: #ffffff;
+    overflow: hidden;
+    animation: animate-container 15s infinite;
+}
+
+@keyframes animate-container {
+    0% {
+        background-color: #3ba4db;
+    }
+    49% {
+        background-color: #f8792d;
+    }
+    50% {
+        background: #4b2c6b;
+    }
+    100% {
+        background: #619de6;
+    }
+}
+
+
+.element-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.first-layer {
+    position: absolute;
+    width: 100%;
+    height: 15%;
+    background: #2185c3;
+    bottom: 0;
+}
+
+
+
+.second-layer {
+    position: absolute;
+    bottom: 15%;
+    height: 30%;
+    width: 100%;
+    -webkit-box-reflect: below 5px linear-gradient(transparent, white);
+}
+
+.second-layer .element-container .first-building {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background: #003f68;
+    clip-path: polygon(0% 0%, 70% 0%, 70% 25%, 100% 25%, 100% 100%, 0% 100%);
+    z-index:3;
+}
+.second-layer .first-building-gallary {
+    position: absolute;
+    left: 17%;
+    top: 19%;
+    width: 7%;
+    height: 10px;
+    border: 2px solid #003f68;
+    z-index: 4;
+    display: flex;
+}
+.second-layer .first-building-gallary div {
+    z-index: 4;
+    position: absolute;
+    width:10%;
+    height: 10px;
+    background-color: #003f68;
+}
+.second-layer .first-building-gallary div:nth-child(1) {
+    left: 20%;
+}
+.second-layer .first-building-gallary div:nth-child(2) {
+    left: 40%;
+}
+.second-layer .first-building-gallary div:nth-child(3) {
+    left: 60%;
+}
+.second-layer .first-building-gallary div:nth-child(4) {
+    left: 80%;
+}
+
+
+.second-layer .first-building-top-floor {
+    position: relative;
+    height: 5%;
+    width: 17%;
+    margin-left: 0%;
+    top: -10px;
+    display: flex;
+}
+
+
+.second-layer .lamp-line {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    display: flex;
+}
+
+.second-layer .lamp-line div {
+    position: absolute;
+    height: 30px;
+    width: 2px;
+    background-color: white;
+    margin: 0 20px;
+    z-index: 4;
+    bottom: 3px;
+}
+.second-layer .lamp-line div:after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 6px;
+    background-color: #c7eee2;
+
+    z-index: 4;
+    top: 0px;
+}
+
+.second-layer .lamp-line div:nth-child(1) {
+    left: 0%;
+}
+.second-layer .lamp-line div:nth-child(2) {
+    left: 35%;
+}
+.second-layer .lamp-line div:nth-child(3) {
+    left: 70%;
+}
+.second-layer .first-building-top-floor div {
+    width: 15%;
+    height: 100%;
+    background-color: white;
+    margin: 0 4%;
+    position: relative;
+}
+.second-layer .first-building-top-floor div::before {
+    content: "";
+    width: 4px;
+    height: 100%;
+    left: 0;
+    background-color: #124f94;
+    position: absolute;
+}
+.second-layer .first-building-top-floor div::after {
+    content: "";
+    width: 4px;
+    height: 40%;
+    right: 20%;
+    top: 30%;
+    background-color: #124f94;
+    position: absolute;
+}
+
+.second-layer .pipeline {
+    position: absolute;
+    left: 3%;
+    width: 3px;
+    top: 3%;
+    height: 40%;
+    background: #124f94;
+    z-index: 4;
+}
+.second-layer .pipeline:after {
+    content: "";
+    position: absolute;
+    left: 3%;
+    height: 3px;
+    top: 0%;
+    width: 40px;
+    background: #124f94;
+    z-index: 4;
+}
+.second-layer .pipeline:before {
+    content: "";
+    position: absolute;
+    left: 40px;
+    height: 8px;
+    top: -5%;
+    width: 3px;
+    background: #124f94;
+    z-index: 4;
+}
+.third-layer {
+    position: absolute;
+    bottom: 42%;
+    /* background: #2185c3; */
+    height: 27%;
+    width: 100%;
+}
+
+.fourth-layer {
+    position: absolute;
+    top: 0%;
+    background: #32afd5;
+    height: 15%;
+    width: 100%;
+}
+
+.window-container {
+    position: absolute;
+    left: 6%;
+    top: 15%;
+    z-index: 4;
+    display: flex;
+}
+.window-container .first-line{
+    margin-right: 30px;
+}
+.window-container .first-line div, .window-container .second-line div {
+    margin: 30px 0;
+}
+
+
+.window-type-1 {
+    width: 12px;
+    height: 10px;
+    background-color: #0168b2;
+    position: relative;
+}
+
+
+
+.window-type-1:after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    bottom: 15px;
+    width: 12px;
+    height: 10px;
+    background-color: #0168b2;
+}
+.window-type-2 {
+    width: 12px;
+    height: 10px;
+    background-color: #7bbdaf;
+    position: relative;
+}
+
+.window-type-2:after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    bottom: 15px;
+    width: 12px;
+    height: 10px;
+    background-color: #7bbdaf;
+}
+
+
+.second-layer .window-type-1 .air-conditioner {
+    width: 10px;
+    height: 10px;
+    background-color: #124f94;
+    left: 25px;
+    top: -18px;
+    position: relative;
+}
+.second-layer .window-type-1 .air-conditioner:before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    height: 10px;
+    width: 3px;
+    background-color: #124f94;
+}
+
+
+.second-layer .window-type-1 .air-conditioner:after {
+    content: "";
+    position: absolute;
+    right: 2px;
+    top: 3px;
+    height: 4px;
+    width: 4px;
+    background-color: #003f67;
+}
+
+.road {
+    left: 0;
+    bottom: 14%;
+    position: absolute;
+    height: 4px;
+    width: 95%;
+    background-color: #45d5de;
+}
+
+
+.second-layer .third-building {
+    position: absolute;
+    width: 15%;
+    height: 100%;
+    right: 0;
+    background-color: #003f68;
+}
+
+.second-layer .third-building::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 12px;
+    border: 1px solid #003f68;
+    background: linear-gradient(90deg, #003f68 0%, #003f68 2%, transparent 3%, transparent 10%, #003f68 11%, #003f68 13%, transparent 14%, transparent 21%, #003f68 22%, #003f68 25%, transparent 26%, transparent 33%, #003f68 34%, #003f68 37%, transparent 38%, transparent 45%, #003f68 46%, #003f68 49%, transparent 50%, transparent 60%,#003f68 61%, #003f68 64%, transparent 65%, transparent 75%,#003f68 76%, #003f68 79%, transparent 80%, transparent 90%, #003f68 91%, #003f68 94%, transparent 95%, transparent 100%);
+    top: -10px;
+}
+
+.second-building {
+    position: absolute;
+    left: 45%;
+    display: flex;
+    width: 33%;
+    height: 100%;
+    /* background: red; */
+}
+.second-building .first {
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    height: 20%; 
+    background: #003f68;
+}
+.second-building .second {
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+    left: 40%;
+    height: 100%; 
+    background: #003f68;
+    /* z-index: 5; */
+}
+.second-building .third {
+    position: absolute;
+    bottom: 0;
+    width: 20%;
+    left: 80%;
+    height: 80%; 
+    background: #003f68;
+    /* z-index: 5; */
+
+}
+
+.second-building .four {
+    position: absolute;
+    bottom: 20%;
+    width: 10%;
+    left: 30%;
+    height: 40%; 
+    background: #003f68;
+    /* z-index: 5; */
+
+}
+
+.second-building .second-window-container {
+    position: absolute;
+    right: 36%;
+    top: 15%;
+    z-index: 4;
+    display: flex;
+}
+
+.second-building .second-window-container .window-type-1 {
+    margin: 30px 0;
+}
+
+.second-building .second-window-container .window-type-2 {
+    margin: 30px 0;
+}
+
+.second-building .second-window-container .first-line {
+    margin: 0 20px;
+}
+
+
+.bridge {
+    background-color: #014069;
+    z-index: 5;
+    display: flex;
+    position: absolute;
+}
+.bridge-one {  
+    left: 25%;
+    top: 45%;
+    width: 30%;
+    height: 20px;
+}
+
+.bridge-two {
+    left: 25%;
+    top: 80%;
+    width: 30%;
+    height: 15px;
+    flex-direction: row;
+}
+
+.bridge-two .train  {
+
+    display: flex;
+    top: -20px;
+    position: absolute;
+    z-index: 2;
+    /* width: 100%; */
+    width: 200px;
+    height: 40px;
+    overflow: hidden;
+    /* animation: move-train 1s infinite ease; */
+}
+
+.bridge-two .train div:before {
+    content: "";
+    position: absolute;
+    background-color: red;
+    width: 3px;
+    height: 10px;
+    right: 0;
+    top: 20%;
+}
+
+.bridge-two .train div {
+    position: absolute;
+    width: 120px;
+    height: 20px;
+    background-color: #0168b2;
+    /* margin: 0 30px; */
+    z-index: 2;
+    animation: move-train 6s linear infinite;
+}
+
+.bridge-two .train div::after{
+    position: absolute;
+    content: "";
+    background: linear-gradient(90deg, #003f68 0%, #003f68 2%, transparent 3%, transparent 10%, #003f68 11%, #003f68 13%, transparent 14%, transparent 21%, #003f68 22%, #003f68 25%, transparent 26%, transparent 33%, #003f68 34%, #003f68 37%, transparent 38%, transparent 45%, #003f68 46%, #003f68 49%, transparent 50%, transparent 60%,#003f68 61%, #003f68 64%, transparent 65%, transparent 75%,#003f68 76%, #003f68 79%, transparent 80%, transparent 90%, #003f68 91%, #003f68 94%, transparent 95%, transparent 100%);
+    width: 80px;
+    height: 10px;
+    left: 20%;
+    top: 5%;
+}
+
+.bridge-two .train div:nth-child(1) {
+    left: -1000px;
+    animation: move-train 1s forwards;
+}
+
+.bridge-two .train div:nth-child(2) {
+    left: -850px;
+    z-index: 1;
+    /* animation: move-train 1s forwards; */
+}
+.bridge-two .train div:nth-child(3) {
+    left: -750px;
+    z-index: 1;
+    /* animation: move-train 1s forwards; */
+}
+.bridge-two .train div:nth-child(4) {
+    left: -650px;
+    z-index: 1;
+    /* animation: move-train 1s forwards; */
+}
+.bridge-two .train div:nth-child(5) {
+    left: -500px;
+    z-index: 1;
+    /* animation: move-train 1s forwards; */
+}
+.bridge-two .train div:nth-child(6) {
+    left: -350px;
+    /* animation: move-train 1s forwards; */
+}
+
+.bridge-two .train div:nth-child(7) {
+    left: -200px;
+    z-index: 1;
+    /* animation: move-train 5s forwards; */
+}
+
+.bridge-two .train div:nth-child(9) {
+    left: 150px;
+    z-index: 1;
+    /* animation: move-train 5s forwards; */
+}
+.bridge-two .train div:nth-child(10) {
+    left: 350px;
+    /* animation: move-train 5s forwards; */
+}
+
+.bridge-two .train div:nth-child(11) {
+    left: 500px;
+    z-index: 1;
+    /* animation: move-train 5s infinite; */
+}
+
+.bridge-two .train div:nth-child(12) {
+    left: 650px;
+    z-index: 1;
+    /* animation: move-train 5s infinite; */
+}
+
+
+
+@keyframes move-train {
+    0% {
+        transform: translateX(-600px);
+    }
+    100% {
+        transform: translateX(600px);
+    }
+}
+
+
+
+
+.pillar {
+    top: 25px;
+    height: 65px;
+    width: 10px;
+    background: #014069;
+    position: relative;
+    margin: 0 30px;
+}
+.pillar::before {
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: -20%;
+    width: 140%;
+    height: 5px;
+    background: #014069;
+}
+
+.bridge-two .track {
+    display: flex;
+}
+
+.bridge-two .track div {
+    background-color: #104e94;
+    width: 5px;
+    height: 5px;
+    margin: 0 5px;
+}
+.pillars-container {
+    display: flex;
+    position: absolute;
+}
+.pillar-small{
+    top: 20px;
+    height: 65px;
+    width: 10px;
+    background: #014069;
+    position: relative;
+    margin: 0 30px;
+}
+
+.pillar-small::before {
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: -20%;
+    width: 140%;
+    height: 5px;
+    background: #014069;
+}
+
+.pillar-small.one {
+    /* top: 0px; */
+    
+}
+
+.pillar-small.two {
+    /* margin-top: 0px; */
+    /* margin-left: 10px; */
+}
+
+.moon {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;;
+    background-color: orange;
+    z-index: 6;
+    animation: sun-to-moon 15s infinite;
+}
+
+@keyframes sun-to-moon  {
+    0% {
+        background-color: orange;
+        right: 0;
+    }
+    50% {
+        background-color: orangered;
+        right: 100%;
+    }
+    51% {
+        background-color: white;
+
+    }
+    99% {
+        background-color: white;
+    }
+
+    100% {
+        background-color: orange;
+        right: -30%;
+    }
+}
