@@ -1,0 +1,254 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+  
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100vh;
+    /* background-color: #77286a; */
+
+}
+.container {
+    margin: 200px auto;
+    width: 800px;
+    height: 800px;
+    background: #010009;
+    box-sizing: border-box;
+    padding: 200px 100px;
+
+    display: flex;
+
+}
+
+.radio {
+    position: relative;
+    width: 600px;
+    height: 350px;
+    border: 3px solid #ee62eb;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px #a7259b,
+                3px -3px 3px #a7259b,
+                -3px 3px 3px #a7259b,
+                -3px -3px 3px #a7259b;
+}
+
+.radio .song-name {
+    border: 3px solid #74a8d5;
+    left: 10%;
+    width: 80%;
+    height: 20%;
+    position: absolute;
+    top: 10%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    z-index: 3;
+    overflow: hidden;
+}
+
+.radio .song-name p {
+    position: absolute;
+    top: 25px;
+    padding: 0 40px;
+    color: #5bc5ec;
+    height: 20px;
+    overflow: hidden;
+    animation: text-animate 10s infinite;
+    z-index: 2;
+}
+
+@keyframes text-animate  {
+    0% {
+        left: 100%;
+    }
+    50% {
+       left: -400px;
+    }
+    100% {
+        left: 10px;
+    }
+}
+
+.circle {
+    background-color: #ed62ea;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 3px 3px 3px #710f82,
+                3px -3px 3px #710f82,
+                -3px 3px 3px #710f82,
+                -3px -3px 3px #710f82;
+                z-index: 2;
+
+}
+.radio .left-circle {
+    height: 150px;
+    width: 150px;
+    left: 10%;
+    top: 25%;
+}
+
+.radio .right-circle {
+    height: 130px;
+    width: 130px;
+    right: 14%;
+    top: 30%;
+}
+
+.radio .left-circle  .inner-circle {
+    position: absolute;
+    top: 33%;
+    left: 33%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    animation: rotate 20s infinite;
+
+}
+
+.radio .right-circle  .inner-circle {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    animation: rotate 20s infinite;
+
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(3600deg);
+    }
+}
+
+.two-circle-container {
+    position: absolute;
+    border: 2px solid white;
+    left: 16%;
+    top: 38%;
+    width: 66%;
+    height: 17%;
+    z-index: 6;
+}
+.radio .right-circle .inner-circle .setting, .radio .left-circle .inner-circle .setting {
+    padding: 1px;
+    border: 4px dashed  #7f0f94;
+    border-radius: 50%;
+    position: absolute;
+    top: 15%;
+    left: 18%;
+}
+.radio .right-circle .inner-circle .setting div, .radio .left-circle .inner-circle .setting div  {
+    background-color: #7f0f94;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    
+}
+
+.bottom-section {
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    height: 25%;
+    width: 70%;
+    border: 5px solid #5bc6ec;
+    border-left: 5px solid #5bc6ec;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0 100%); 
+}
+
+.close {
+    color: #d75dd2;
+    position: absolute;
+}
+
+.close.one {
+   left: 10px;
+   top: 5px;
+}
+
+.close.two {
+    right: 10px;
+    top: 5px;
+ }
+
+ .close.three {
+    left: 10px;
+    bottom: 5px;
+ }
+
+ .close.four {
+    right: 10px;
+    bottom: 5px;
+ }
+
+ .timer {
+     color: #5bc5ec;
+     position: absolute;
+     bottom: 25%;
+     left: 47%;
+ }
+
+ .digital-radio {
+     background-color: #01bcd6;
+     width: 800px;
+     height: 400px;
+     padding: 100px;
+     position: absolute;
+     right: 10%;
+     top: 0;
+     box-shadow: 5px 5px 5px #01bcd6;
+ }
+
+ .digital-radio .pop-up {
+     background-color: #feffff;
+     width: 350px;
+     height: 400px;
+     margin: 0px auto;
+     position: relative;
+ }
+
+ .digital-radio .pop-up .center {
+     background-color: #202221;
+     position: absolute;
+     width: 150px;
+     height: 150px;
+    left: 100px;
+    top: 120px;
+    border-radius: 50%;
+ }
+
+ .digital-radio .pop-up .center:before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: #202221;
+    position: absolute;
+    left: 44%;
+    top: 44%;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+ .digital-radio .pop-up .center:after {
+     content: "";
+     width: 70px;
+     height: 70px;
+    background-color: white;
+    position: absolute;
+    left: 27%;
+    top: 28%;
+    border-radius: 50%;
+}
+
+
+.digital-radio .pop-up .bottom{
+    background: #f4f6f5;
+}
