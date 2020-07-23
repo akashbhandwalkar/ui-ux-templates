@@ -1,0 +1,397 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --green: #aeca1e;
+    --orange-primary: #ef5701; 
+    --orange-secondary: #fa6810;
+    --wallcolor: #a79a94;
+    --wallcolor-second: #c5bbb9;
+    --wallcolor-third: #d4c9c5;
+    --window-color: #947f74;
+    --gate-left: #bc6732;
+    --gate-right:#d07d34;
+  }
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+
+.container {
+    background-color: #3a5c90;
+    width: 600px;
+    height: 600px;
+    margin: 100px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.catsle {
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.base-line {
+    border-radius: 5px;
+    width: 100%;
+    height: 9px;
+    background-color: var( --green);
+    bottom: 10px;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    z-index: 99;
+}
+
+.bottom {
+    position: absolute;
+    left: 10%;
+    display: flex;
+    bottom: 9px;
+    z-index: 3; 
+}
+
+@keyframes bottom-animation {
+    0% {
+        transform: translateY(1000px);
+    }
+}
+
+
+
+.bottom .wall {
+    position: absolute;
+    bottom: 0;
+}
+.bottom .wall.one {
+    width: 70px;
+    background-color: var(--wallcolor);
+    height: 100px;
+    left: 0;
+    animation: bottom-animation 1s forwards;
+}
+.bottom .wall.two {
+    width:70px;
+    background-color: var(--wallcolor-second);
+    height: 200px;
+    left: 70px;
+    animation: bottom-animation 2s forwards;
+}
+.bottom .wall.three{
+    width:130px;
+    background-color: var(--wallcolor-third);
+    height: 110px;
+    left: 140px;
+    animation: bottom-animation 3s forwards;
+}
+.bottom .wall.four {
+    width:70px;
+    background-color: var(--wallcolor-second);
+    height: 200px;
+    left: 270px;
+    animation: bottom-animation 4s forwards;
+}
+.bottom .wall.five {
+    width: 70px;
+    background-color: var(--wallcolor);
+    left: 340px;
+    height: 100px;
+    animation: bottom-animation 5s forwards;
+}
+
+.bottom .wall.one .after-wall {
+    display: flex;
+    top: -10px;
+    position: absolute;
+    justify-items: space-between;
+}
+.bottom .wall.one .after-wall div, .bottom .wall.two .after-wall div, .bottom .wall.four .after-wall div,.bottom .wall.five .after-wall div {
+    height: 10px;
+    width: 10px;
+    background-color: var(--wallcolor);
+    margin-right: 10px;
+}   
+.bottom .wall.three .after-wall {
+    display: flex;
+    top: -10px;
+    position: absolute;
+    justify-items: space-between;
+}
+.bottom .wall.two .after-wall div, .bottom .wall.four .after-wall div {
+    background-color: var(--wallcolor-second);
+}
+
+.bottom .wall.three .after-wall div {
+    height: 10px;
+    width: 10px;
+    background-color: var(--wallcolor);
+    margin-right: 10px;
+    background-color: var(--wallcolor-third);
+}
+
+.bottom .wall.one .after-wall,  .bottom .wall.two .after-wall, .bottom .wall.four .after-wall, .bottom .wall.five .after-wall{
+    display: flex;
+    top: -10px;
+    position: absolute;
+    justify-items: space-between;
+}
+
+.window {
+    background-color: var(--window-color);
+    height: 20px;
+    width: 12px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.wall.one .window, .wall.five .window {
+    position: absolute;
+    top: 38%;
+    left: 38%;
+}
+
+.wall.two .windows, .wall.four .windows {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+}
+
+.wall.two .windows .window, .wall.four .windows .window {
+    margin-bottom: 70px;
+}
+
+/***/
+
+.wall.two .separator, .wall.four .separator {
+    background: #d4c9c5;
+    width: 70px;
+    height: 12px;
+    z-index: 5;
+    position: absolute;
+    top: 45%;
+}
+
+.wall.three .windows {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wall.three .gate {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    width: 50%;
+    height: 60%;;
+    background: linear-gradient(90deg, var(--gate-left) 0%, var(--gate-left) 50%, var(--gate-right) 50%, var(--gate-right) 100%);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    box-shadow:  inset 5px 5px 5px #a65a18,
+                    inset 5px -5px 5px #a65a18,
+                    inset -5px 5px 5px #a65a18,
+                    inset -5px -5px 5px #a65a18;
+}
+
+.middle-layer {
+    position: absolute;
+    left: 24%;
+    display: flex;
+    bottom: 9px;
+    z-index: 2;
+}
+.middle-layer .wall {
+    position: absolute;
+    bottom: 0;
+}
+
+.middle-layer .wall.one {
+    width: 70px;
+    background-color: var(--wallcolor);
+    height: 300px;
+    left: 0;
+    -webkit-animation-delay: 4s;
+    animation: middle-animation 4s forwards;
+}
+.middle-layer .wall.two {
+    width: 100px;
+    background-color: var(--wallcolor-second);
+    height: 400px;
+    left: 70px;
+    animation-delay: 4s;
+    animation: middle-animation 6s forwards;
+}
+.middle-layer .wall.three{
+    width: 70px;
+    background-color: var(--wallcolor);
+    height: 300px;
+    left: 170px;
+    animation-delay: 4s;
+    animation: middle-animation 4s forwards;
+}
+
+@keyframes middle-animation {
+    0% {
+        transform: translateY(2000px);
+    }
+}
+
+.middle-layer .wall.one .top, .middle-layer .wall.three .top {
+   position: absolute;
+   top: -50px;
+   left: 0;
+}
+
+.middle-layer .wall.one .top .top-most, .middle-layer .wall.three .top .top-most {
+    height: 50px;
+    width: 70px;
+    background: linear-gradient(90deg,  var(--orange-primary) 0%,  var(--orange-primary) 50%,  var(--orange-secondary) 51%,  var(--orange-secondary) 100%);
+    clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+    position: absolute;
+    z-index: 2;
+
+}
+
+.middle-layer .wall.two .top {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    z-index: 3;
+ }
+ 
+ .middle-layer .wall.two .top .top-most {
+     position: absolute;
+     height: 70px;
+     width: 100px;
+     background: linear-gradient(90deg,  var(--orange-primary) 0%,  var(--orange-primary) 50%,  var(--orange-secondary) 51%,  var(--orange-secondary) 100%);
+     clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+     z-index: 3;
+    position: absolute;
+
+ }
+
+ .flag {
+     background-color: #b1958a;
+     height: 50px;
+     width: 3px;
+     border-radius: 7px;
+     position: absolute;
+     top: -40px;
+     left: 34px;
+     z-index: 1;
+     animation: animate-flag 2s infinite;
+ }
+
+ .flag::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: orangered;
+    top: 3px;
+    right: 2px;
+    clip-path: polygon(0% 50%, 100% 0, 100% 100%);
+    animation: animate-flag 6s infinite;
+}
+
+@keyframes animate-flag {
+    
+    50% {
+        transform: rotateY(-45deg);
+    }
+}
+.middle-layer .wall.two .top .flag {
+    left: 48px;
+}
+
+
+.middle-layer .wall.two .balcony {
+    background-color: #d4c9c5;
+    width: 120px;
+    height: 10px;
+    position: absolute;
+    top: 15px;
+    left: -10px;
+}
+
+.middle-layer .wall.two .separator1 {
+    background: #d4c9c5;
+    width: 100px;
+    height: 12px;
+    z-index: 5;
+    position: absolute;
+    top: 25%;
+}
+.middle-layer .wall.two .separator2 {
+    background: #d4c9c5;
+    width: 100px;
+    height: 12px;
+    z-index: 5;
+    position: absolute;
+    top: 45%;
+}
+
+.middle-layer .wall.two .balcony .div-container {
+   position: absolute;
+   top: 0px;
+   display: flex;
+    justify-content: space-between;
+   z-index: 10;
+   width: 100%;
+}
+
+.middle-layer .wall.two .balcony .div-container div {
+    height: 15px;
+    width: 10px;
+    margin-top:-10px;
+    background-color:#d4c9c5;
+}
+.first-window-set  {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width:70%;
+    display: flex;
+    justify-content: space-between;
+}
+.second-window-set  {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    width:70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.third-window-set  {
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    width:70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.first-window-set div, .second-window-set div, .third-window-set div {
+    height: 18px;
+    width: 12px;
+    background-color: #937e73;
+}
+.middle-layer .wall.one .window {
+    top: 10% !important;
+}
+
+.middle-layer .window {
+    position: absolute;
+    top: 10%;
+    left: 38%;
+}
