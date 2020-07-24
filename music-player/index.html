@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Music Player </title>
+    <link rel="Stylesheet" href="./style.css"> </link>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+ </head>
+<body>
+    <div class="container">
+
+        <div class="playing-now">
+            <div class="header">
+                <button class="back button"><i class="fa fa-arrow-left"></i></button>
+                <button class="menu button"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                <p class="song-name">PLAYING NOW</p>
+            </div>
+
+            <div class="song-thumbnail"></div>
+
+            <div class="song-details">
+                <h5>Perfect</h5>
+                <p>I found a love for me</p>
+            </div>
+
+            <div class="timers">
+                <div class="current">1:21</div>
+                <div class="total">1:51</div>
+            </div>
+            
+
+            <div class="progressbar">
+              
+                <div class="line"></div>
+                <div class="pointer"></div>
+            </div>
+
+            <div class="footer">
+                <button class="previous-song button"><i class="fa fa-fast-backward" aria-hidden="true"></i></button>
+                <button class="play-pause button"><i class="fa fa-pause" aria-hidden="true"></i></button>
+                <button class="next-song button"><i class="fa fa-fast-forward" aria-hidden="true"></i></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

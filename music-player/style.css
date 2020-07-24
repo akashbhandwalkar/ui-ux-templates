@@ -1,0 +1,210 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #ceddf2;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 100px auto;
+    width: 250px;
+}
+
+.playing-now {
+    height: 500px;
+    width: 250px;
+    background-color: #edf4fc;
+    border-radius: 35px;
+    position: relative;
+}
+
+.playing-now .header {
+    position: relative;
+}
+
+.button {
+    background-color: #dee6f4;
+    box-shadow: 1px 1px 1px #becae2,
+                4px 4px 4px #becae2,
+                8px 8px 8px #becae2,
+
+                1px -1px 1px #becae2,
+                3px -3px 4px #becae2,
+                5px -5px 8px #becae2,
+                -3px 3px 3px #dde6f5,
+                -2px -2px 3px white,
+                -4px -4px 4px white;
+    border-radius: 50%;
+    padding: 8px 10px;
+    border: none;
+}
+
+.playing-now .header .back {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+.playing-now .header .menu {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+
+.playing-now .header .song-name {
+    position: absolute;
+    left: 35%;
+    top: 25px;
+    width: 80px;
+    margin: 0 auto;
+    color: #a8b6cf;
+    font-size: 10px;
+}
+
+
+.playing-now .song-thumbnail {
+    position: absolute;
+    top: 25%;
+    left: 50px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 8px solid #d9e4f4;
+    background: linear-gradient(45deg, #dc84a4, #bdaada);
+    box-shadow:  
+                1px 1px 1px #acbbd3,
+                4px 4px 4px #acbbd3,
+                8px 8px 8px #acbbd3,
+
+                1px 1px 1px #acbbd3,
+
+                1px -1px 1px #acbbd3,
+
+                -1px -1px 1px #faffff,
+                -4px -4px 4px #faffff,
+                -8px -8px 8px #faffff;
+}
+
+.playing-now .footer {
+    position: absolute;
+    bottom: 25px;
+    width: 100%;
+    height: 40px;
+
+}
+
+.playing-now .footer .previous-song {
+    position: absolute;
+    left: 15px;
+}
+
+.playing-now .footer .next-song {
+    position: absolute;
+    right: 15px;
+}
+
+.playing-now .footer .play-pause {
+    position: absolute;
+    left: 40%;
+    background-color: #83a4ff;
+    box-shadow: inset 1px 1px 1px #5a84ff,
+    inset 1px -1px 1px #5a84ff;
+    
+}
+
+.footer .button {
+    padding: 15px 17px;
+}
+
+
+.progressbar {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    background-color: #e2eaf8;
+    border-radius: 13px;
+    padding: 1px;
+    width: 80%;
+}
+.progressbar .line {
+    border: 1px solid #b5c9f9;
+    background-color:#8daeff;
+     width: 40%;
+     height: 2px;
+     border-radius: 10px;
+    animation: music-progress 15s infinite
+}
+
+
+.progressbar .pointer {
+    position: absolute;
+    left: 40%;
+    background-color: #92aeff;
+    border: 4px solid #e8f4ff;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    bottom: -5px;
+    box-shadow: 1px 1px 1px #d3def0,
+    -1px 1px 1px #d3def0,
+    1px -1px 1px #d3def0,
+    -1px -1px 1px #d3def0;
+    animation: move-pointer 15s infinite;
+}
+
+
+.song-details {
+    position: absolute;
+    top: 60%;
+    text-align: center;
+    width: 100%;
+    
+}
+.song-details h5{ 
+    color: #8491a9;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+.song-details p{
+    color: #b3bfd3;
+    font-size: 10px;
+}
+
+
+.timers {
+    position: absolute;
+    top: 68%;
+    font-size: 8px;
+    color: #b3bfd3;
+    width: 100%;
+}
+
+.timers .current {
+    position: absolute;
+    left: 10%;
+}
+.timers .total {
+    position: absolute;
+    right: 10%;
+}
+
+@keyframes move-pointer {
+    100% {
+        left: 90%;
+    }
+}
+
+@keyframes music-progress {
+    100% {
+        width:90%;
+    }
+}
+
+
