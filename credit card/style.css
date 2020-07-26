@@ -1,0 +1,178 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #d2dded;
+    font-family: sans-serif;
+    font-family: sans-serif;
+}
+
+
+.card {
+    width: 320px;
+    height: 550px;
+    background: #e0e8f2;
+    margin: 200px auto;
+    border-radius: 20px;
+    position: relative;
+}
+
+.card .title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #364b6e;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.card .subtitle {
+    position: absolute;
+    top: 70px;
+    left: 20px;
+    color: #364b6e;
+    font-size: 14px;
+}
+
+.default-card {
+    position: absolute;
+    top: 100px;
+    background-color: #e0e9f4;
+    box-shadow: 2px 2px 2px #b5c2d1,
+        2px -2px 2px #e9eef2,
+        -2px 2px 2px #e9eef2;
+    padding: 30px 20px 20px 20px;
+    width: calc(100% - 40px);
+    left: 20px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.default-card .card-number-amount {
+    width: 50%;
+}
+.default-card .card-number-amount .card-number{
+    background-color: #e6edf6;
+    width:100%;
+    padding: 5px;
+    box-shadow: 2px 2px 2px #b5c2d1,
+        2px -2px 2px #e9eef2,
+        -2px 2px 2px #e9eef2;
+        border-radius: 10px;
+    padding: 10px 5px;
+    text-align: center;
+}
+
+
+.default-card .card-number-amount .amount{
+    color: #3e5072;
+    margin: 20px 5px;
+    font-weight: 400;
+}
+
+.default-card .card-icon{
+    position: relative;
+    margin-left: 10%;
+    background-color: #e6edf6;
+    width: 40%;
+    height: 100%;
+    padding: 5px;
+    box-shadow: 2px 2px 2px #b5c2d1,
+        2px -2px 2px #e9eef2,
+        -2px 2px 2px #e9eef2;
+        border-radius: 10px;
+    padding: 20px 5px 40px 5px;
+    text-align: center;
+    color: #4e5d73;
+
+}
+
+.icons {
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    background-color: red;
+    bottom: 30px;
+    right: 30px;
+}
+
+.icons::after {
+    border-radius: 50%;
+    content: "";
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    right: -10px;
+    background-color: #d4e0ef;
+    box-shadow: 1px 1px 1px transperent;
+    /* border: 1px solid #bdcbdb; */
+}
+
+.icons::before {
+    border-radius: 50%;
+    content: "";
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 5px;
+    background-color: #dce5f2;
+    box-shadow: -1px -1px 1px #b4c5d7;
+    /* border: 1px solid #ebf0f8; */
+}
+
+.brand {
+    font-style: italic;
+    font-weight: 600;
+}
+.new-card {
+    position: absolute;
+    background: #e4edf7;
+    padding: 20px;
+    left: 20px;
+    box-shadow: 2px 2px 2px #b5c2d1,
+    2px -2px 2px #e9eef2,
+    -2px 2px 2px #e9eef2;
+    top: 60%;
+    width: calc(100% - 40px);
+    border-radius: 10px;
+    color: #5b6b89;
+}
+
+.enter-credit-card  {
+    margin-top: 10px;
+}
+
+.enter-credit-card input, .amount-credit-card input {
+    border: none;
+    border-radius: 10px;
+    background-color: #e3edf7;
+    padding: 10px 20px;
+    box-shadow: inset 20px 20px 20px 0px #d7e4f0,
+                inset 20px -20px 20px 0px  #ecf3fa,
+                inset -20px 20px 20px 0px #d7e4f0,
+                inset  -20px -20px 20px 0px  #ecf3fa;
+}
+
+.enter-credit-card input:click {
+    border: none;
+}
+
+.amount-credit-card {
+    position: absolute;
+    bottom: 5%;
+    left: 20px;
+    color: #4e5d73;
+    width: 100%;
+}
+
+.amount-credit-card input {
+    margin-top: 10px;
+    margin-left: -3px;
+    width: calc(100% - 40px);
+    padding: 10px 30px;
+}
