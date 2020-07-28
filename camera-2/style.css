@@ -1,0 +1,401 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #f7f6f7;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    margin: 200px auto;
+    position: relative;
+}
+
+
+.face {
+   
+    position: absolute;
+    background: #eec1a0;
+    width: 50%;
+    height: 33%;
+    border-radius: 47%;
+    z-index: 4;
+}
+.mouth {
+    height: 15%;
+    width: 15%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-radius: 0 0 100% 100% /100% 100%;
+    position: absolute;
+    bottom: 1000%;
+    left: 43%;
+    background: white;
+}
+
+.neck {
+    position: absolute;
+    height: 20%;
+    width: 20%;
+    top: -100%;
+    left: 16%;
+    border-radius: 50%;
+    background-color: #ea9788;
+    z-index: 3;
+}
+
+.tshirt {
+    position: absolute;
+    top: -100%;
+    left: 6%;
+    height: 43%;
+    width: 40%;
+    background-color: #6d3192;
+    border-radius: 100%;
+    z-index: 2;
+}
+
+.hands {
+    position: absolute;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    left: -8%;
+    z-index: 3;
+}
+
+
+.left-hand , .right-hand {
+    background-color: #eec1a3;
+    height: 15%;
+    width: 15%;
+    border-radius: 50%;
+    z-index: 4;
+    margin-right: 35%;
+    position: relative;
+}
+
+
+.tablet {
+    top: -100%;
+    left: 5%;
+    width: 40%;
+    height: 10%;
+    position: absolute;
+    background-color: white;
+    transform: rotateX(-9deg);
+    z-index: 2;
+}
+
+.left-hand::before, .right-hand::before  {
+    content: "";
+    position: absolute;
+    right: -22px;
+    height: 35%;
+    width: 80%;
+    border-radius: 55%;
+    background-color: #eec1a3;
+    transform: rotate(-32deg);
+}
+.left-hand::after, .right-hand::after  {
+    content: "";
+    position: absolute;
+    right: -22px;
+    top: 30%;
+    height: 35%;
+    width: 80%;
+    border-radius: 55%;
+    background-color: #eec1a3;
+    /* transform: rotate(-32deg); */
+}
+
+.right-hand::after {
+    left: -22px;
+}
+.right-hand::before {
+    left: -22px;
+    transform: rotate(32deg);
+}
+
+.left-hand-remaining-hand, .right-hand-remaining-hand {
+    position: absolute;
+    background-color: #430161;
+    width: 25%;
+    height: 13%;
+    left: -8%;
+    top: -100%;
+    border-radius: 40%;
+    transform: rotate(-36deg);
+    transform-origin: left;
+    z-index: 1;
+}
+
+.right-hand-remaining-hand {
+    
+    left: 38% !important;
+    transform: rotate(36deg);
+    top: -100%;
+
+}
+
+.right-hand-remaining-hand::after {
+    position: absolute;
+    background-color: #ed9383;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 17px;
+    right: -6px;
+    content: "";
+}
+.left-hand-remaining-hand::after {
+    position: absolute;
+    background-color: #ed9383;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 17px;
+    left: -6px;
+    content: "";
+}
+
+
+.eyes {
+    top: -100%;
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 4;
+}
+
+.eyes .eye {
+    position: relative;
+    background-color: white;
+    border-radius: 50%;
+    height: 50%;
+    width: 50%;
+    border: 30px solid #002840;
+}
+.eyes .eye::after {
+    content: "";
+    position: absolute;
+    background-color: #002840;
+    height: 40%;
+    width: 40%;
+    bottom: 10%;
+    right: 30%;
+    border-radius: 50%;
+}
+.ear {
+    position: absolute;
+    width: 66%;
+    height: 10%;
+    border-radius: 30px;
+    background-color: #ea978e;
+    top: -100%;
+    left: -8%;
+}
+
+.head {
+    height: 60%;
+    width: 60%;
+    top: -100%;
+    left: -5%;
+    position: absolute;
+    background-color: #e94748;
+    border-radius: 50%;
+}
+
+.legs {
+    position: absolute;
+    top: -100%;
+    left: 15%;
+    height: 30%;
+    width: 23%;
+    background-color: red;
+}
+
+
+.legs::after, .legs::before{
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    height: 60px;
+    width: 80px;
+    border-top-left-radius: 55px;
+    border-top-right-radius: 55px;
+}
+.legs::before {
+    left: -18px;
+    background-color: black;
+}
+.legs::after {
+    right: -18px;
+    background-color: #002841;
+}
+.legs div:nth-child(1) {
+    height: 40%;
+    width: 100%;
+    background: linear-gradient(90deg, #2c003d, #2c003d 50%, #43025f 51%, #43025f);
+}
+
+.legs div:nth-child(2) {
+    height: 20%;
+    width: 100%;
+    background: linear-gradient(90deg, #e99784 0%, #e99784 50%, #f0c1a5 51%, #f0c1a5 100%);
+}
+
+.legs div:nth-child(3) {
+    height: 40%;
+    width: 100%;
+    background: linear-gradient(90deg, #b00c12 0%,#b00c12 50%, #ec4649 51%, #ec4649 100%);
+}
+
+.mouth {
+    /* display: none; */
+    animation: introduce-mouth 1s forwards;
+    -webkit-animation-delay: 4s;
+} 
+
+@keyframes introduce-mouth{
+    100% {
+        bottom: 16%
+    }
+}
+
+.face {
+    /* display: none; */
+    animation: introduce-face 1s forwards;
+}
+@keyframes introduce-face {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 20%;
+    }
+}
+.head {
+    /* display: none; */
+    animation:  introduce-head 1s forwards;
+    -webkit-animation-delay: 2s;
+}
+
+@keyframes introduce-head{
+    100% {
+        top: -10%;
+    }
+}
+
+.ear {
+    /* display: none; */
+    animation:  introduce-ear 1s forwards;
+    -webkit-animation-delay: 3s;
+}
+@keyframes introduce-ear {
+    100% {
+        top: 27%;
+    }
+}
+
+.eyes {
+    animation:  introduce-eyes 1s forwards;
+    -webkit-animation-delay: 1s;
+
+}
+@keyframes introduce-eyes {
+    0% {
+        top: -100%;
+        left: -5%;
+    }
+    100% {
+        top: 12%;
+        left: -5%;
+    }
+}
+
+.tshirt {
+    /* display: none; */
+    animation:  introduce-tshirt 1s forwards;
+    -webkit-animation-delay: 5s;
+}
+@keyframes introduce-tshirt {
+    100% {
+        top: 45%;
+    }
+}
+.neck {
+     /* display: none; */
+     animation:  introduce-neck 1s forwards;
+     -webkit-animation-delay: 5s;
+ }
+ @keyframes introduce-neck {
+     100% {
+        top: 40%;
+     }
+ }
+.hands {
+    animation:  introduce-hands 1s forwards;
+     -webkit-animation-delay: 6s;
+ }
+ @keyframes introduce-hands {
+     100% {
+        top: 60%;
+     }
+ }
+.tablet {
+    animation:  introduce-hands 1s forwards;
+    -webkit-animation-delay: 7s;
+}
+
+@keyframes introduce-tablet {
+    100% {
+        top: 60%;
+    }
+}
+.legs {
+    animation:  introduce-legs 1s forwards;
+    -webkit-animation-delay: 9s;
+}
+
+@keyframes introduce-legs {
+    100% {
+        top: 83%;
+    }
+}
+
+
+
+.left-hand-remaining-hand {
+    /* display: none; */
+    animation:  introduce-left-hand 1s forwards;
+    -webkit-animation-delay: 8s;
+}
+
+@keyframes introduce-left-hand {
+    100% {
+        top: 60%;
+    }
+}
+
+.right-hand-remaining-hand {
+    /* display: none; */
+    animation:  introduce-right-hand 1s forwards;
+    -webkit-animation-delay: 8s;
+}
+
+@keyframes introduce-right-hand {
+    100% {
+        top: 46%;
+    }
+}
