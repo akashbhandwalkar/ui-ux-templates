@@ -1,0 +1,82 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --hair-color: #2a2a2a;
+}
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+
+.container {
+    background: linear-gradient(#317b9b, #1c5385);
+    width: 600px;
+    height: 700px;
+    margin: 100px auto;
+    position: relative;
+}
+
+
+.face {
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    background-color: #f4c3af;
+    height: 25%;
+    width: 25%;
+    border-radius: 50% 50%;
+    z-index: 3;
+}
+
+.hair-container {
+    position: absolute;
+    top: 3%;
+    width: 40%;
+    height: 40%;
+    left: 28%;
+    z-index: 2;
+
+}
+
+
+
+.main {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #2a2a2a;
+    clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
+    border-radius: 40%;
+}
+
+.first-curve-hair {
+    height: 10%;
+    width: 25%;
+    border-radius: 50%;
+    position: absolute;
+    background-color: var(--hair-color);
+    top: 5%;
+    left: 38%;
+    transform: rotate(-160deg);
+    z-index: 4;
+}
+
+.second-curve-hair {
+    height: 10px;
+    width: 11%;
+    border-radius: 100% 0% 100% 0%;
+    position: absolute;
+    background-color: var(--hair-color);
+    top: 12%;
+    left: 36%;
+    transform: rotate(-143deg);
+    z-index: 4;
+}
