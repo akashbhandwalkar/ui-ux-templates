@@ -1,0 +1,97 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+
+.container {
+    margin: 300px auto;
+    width: 600px;
+    height: 600px;
+    background: #f6b8cd;
+    position: relative;
+    box-shadow: 1px 1px 1px #a6a7a4,
+                -1px -1px 1px #a6a7a4,
+                -1px 2px 2px #a6a7a4,
+                2px -2px 2px #a6a7a4;
+}
+
+.swim-pool-container {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 60%;
+    height: 30%;
+    border: 15px solid #e9ebea;
+    transform: rotate(20deg);
+    z-index: 2;
+    background-color: #8ac6e2;
+}
+
+.swim-pool-container-left {
+    height: 100%;
+    width: 10%;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    background: #35afdc;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+
+}
+.swim-pool-container-right {
+    width: 100%;
+    height: 20%;
+    background-color: #dbdad8;
+    transform-origin: bottom;
+    z-index: 5;
+    background: #35afdc;
+    background-size: 50% 50%;
+    background-repeat: no-repeat;
+}
+.tyre {
+    border: 10px solid #e0a9b5;
+    width: 10%;
+    height: 20%;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 1px 1px 2px #147dbd,
+    -1px -1px 2px #147dbd;
+}
+.tyre2 {
+    left: 20%;
+    top: 30%;
+}
+
+.tyre1 {
+    left: 50%;
+    top: 50%;
+}
+.stairs {
+    z-index: 20;
+    left: -10%;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    border: 3px solid #ababab;
+    border-left: none;
+    border-right: none;
+    display: flex;
+    justify-content: space-evenly;
+    /* transform:rotate(10deg) */
+
+}
+
+.stairs div {
+    width: 2px;
+    height: 100%;
+    background-color: #ababab;
+}
