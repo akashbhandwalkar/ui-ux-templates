@@ -15,17 +15,17 @@ body {
     width: 800px;
     height: 800px;
     margin: 150px auto;
-    background-color: white;
+    background-color: #0485b8;
     position: relative;
+    border-radius: 10%;
 }
-
 
 .face {
     position: absolute;
     left: 30%;
     top: 30%;
-    height: 20%;
-    width: 20%;
+    height: 40%;
+    width: 40%;
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
     border-top-left-radius: 20%;
@@ -37,9 +37,9 @@ body {
 .hair {
     position: absolute;
     left: 25%;
-    top: 16%;
-    height: 30%;
-    width: 30%;
+    top: 10%;
+    height: 50%;
+    width: 50%;
     background-color: #00273f;
     border-radius: 50%;
     z-index: 2;
@@ -48,11 +48,11 @@ body {
 .ear {
     position: absolute;
     background: #ec9786;
-    width: 26%;
-    height: 3%;
-    top: 40%;
+    width: 46%;
+    height: 5%;
+    top: 50%;
     left: 27%;
-    border-radius: 10px;
+    border-radius: 20px;
     z-index: 3;
 }
 
@@ -60,11 +60,11 @@ body {
     content: "";
     position: absolute;
     background: #e57074;
-    width: 90%;
+    width: 94%;
     height: 80%;
     top: 10%;
-    left: 5%;
-    border-radius: 10px;
+    left: 3%;
+    border-radius: 20px;
     z-index: 3;
 }
 
@@ -186,7 +186,14 @@ body {
     top: 60%;
     left: 50%;
     border-radius: 50%;
+    animation: blink-eyes 3s;
+    -webkit-animation-delay: 10s;
+}
 
+@keyframes blink-eyes {
+    50% {
+        height: 0;
+    }
 }
 
 .eye-brow:nth-child(1) {
@@ -198,17 +205,17 @@ body {
 
 .head {
     position: absolute;
-    top: 1%;
+    top: 3%;
     width: 100%;
-    height: 5%;
+    height: 15%;
     lefT: 20%;
 }
 
 .head div {
-    height: 40%;
+    height: 15%;
     width: 60%;
     background: #ecb196;
-    margin: 5px;
+    margin: 9px 0;
 }
 
 .mouth {
@@ -235,19 +242,20 @@ body {
 }
 .neck {
     position: absolute;
-    top: 50%;
-    left: 35%;
+    top: 69%;
+    left: 41%;
     background: linear-gradient(#e67071 0%, #e67071 50%, #eb9886 51%, #eb9886 100%);
-    width: 10%;
-    height: 8%;
+    width: 19%;
+    height: 12%;
+
 }
 
 .button {
     position: absolute;
-    top: 55%;
-    left: 35%;
-    width: 10%;
-    height: 3%;
+    top: 76%;
+    left: 41%;
+    width: 19%;
+    height: 5%;
 }
 
 .button div {
@@ -284,3 +292,100 @@ body {
     border-radius: 50%;
     background-color: white;
 }
+
+.hair {
+    left: -50%;
+    animation: hair 2s forwards;
+    -webkit-animation-delay: 2s;
+}
+@keyframes hair {
+    100% {
+        left: 25%;
+    }
+}
+
+.face {
+    animation: face 3s forwards;
+    -webkit-animation-delay: 2s;
+    opacity: 0;
+}
+@keyframes face {
+    100% {
+        opacity: 1;
+    }
+}
+
+.ear {
+    top: -10%;
+    animation: ear 2s forwards;
+    -webkit-animation-delay: 2s;
+}
+@keyframes ear {
+    100% {
+        top: 50%;
+    }
+}
+
+.mustashe {
+    top: -100%;
+    left: 100%;
+    animation: mustashe 2s forwards;
+    -webkit-animation-delay: 4s;
+}
+
+@keyframes mustashe {
+    100% {
+        top: 50%;
+        left: 15%;
+    }
+}
+
+.eyes {
+    left: 100%;
+    top: -50%;
+    animation: eyes 2s forwards;
+    -webkit-animation-delay: 5s;
+}
+
+@keyframes eyes {
+    100% {
+        left: 4%;
+        top: 15%;
+    }
+}
+
+.eye-brows {
+    left: 100%;
+    top: 50%;
+    animation: eye-brows 3s forwards;
+    -webkit-animation-delay: 6s;
+}
+
+@keyframes eye-brows {
+    100% {
+        top: 22%;
+        left: 4%;
+    }
+}
+
+.mouth {
+    left: 100%;
+    top: 150%;
+    animation: mouth 3s forwards;
+    -webkit-animation-delay: 6s;
+}
+
+@keyframes mouth {
+    100% {
+        top: 38%;
+        left: 30%;
+
+    }
+}
+/**
+
+nose
+
+mouth
+neck
+button */
