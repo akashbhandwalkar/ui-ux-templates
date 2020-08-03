@@ -1,0 +1,253 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+
+.container {
+    background-color: white;
+    width: 800px;
+    height: 800px;
+    margin: 100px auto;
+    position: relative;
+}
+
+.earth {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    height: 50%;
+    width: 50%;
+    background: linear-gradient(transparent 0%, transparent 50%, #5db7c3 51%, #5db7c3 100%);
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.earth::after{
+    content: "";
+    height: 80%;
+    width: 80%;
+    background-color: #f8b867;
+    position: absolute;
+    top: 90%;
+    border-radius: 50%;
+    left: 5%;
+    border: 20px solid #fbcc6e;
+}
+
+.sea-creatures {
+    overflow: hidden;
+    height: 28%;
+    width: 30%;
+    position: absolute;
+    bottom: 30%;
+    right: 10%;
+    border-radius: 50%;
+    /* background-color: #bde5f2; */
+    background: linear-gradient(transparent 0%, transparent 30%, #bde5f2 31%, #bde5f2 100%);
+}
+.sea-creatures::after{
+    content: "";
+    height: 80%;
+    width: 90%;
+    background-color: #c3ad9c;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    border: 5px solid #6dab5b;
+}
+
+.fishes {
+    position: absolute;
+    bottom: 0%;
+    left: 20%;
+    height: 80%;
+    width: 100%;
+}
+.fish {
+    width: 15px;
+    height: 6px;
+    background: #5db7c3;
+    position: absolute;
+    bottom: 30%;
+    border-radius: 50%;
+    z-index: 1;
+
+}
+.fish::after{
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    top: 31%;
+    background-color: #5db7c3;
+    right: -25%;
+    z-index: 2;
+}
+.fish::before{
+    content: "";
+    position: absolute;
+    width: 10%;
+    height: 80%;
+    top: 15%;
+    background-color: #5db7c3;
+    right: -25%;
+    z-index: 2;
+}
+
+
+.fish:nth-child(1) {
+    bottom: 50%;
+    left: 20%;
+    width: 10px;
+    height: 5px;
+    animation:  move-fish  12s infinite;
+    -webkit-animation-delay: 3s;
+}
+.fish:nth-child(2) {
+    top: 40%;
+    left: 60%;
+    width: 10px;
+    height: 5px;
+    animation:  move-fish  20s infinite;
+    -webkit-animation-delay: 2.5s;
+}
+.fish:nth-child(3) {
+    bottom: 80%;
+    left: 10%;
+    width: 10px;
+    height: 5px;
+    animation:  move-fish  8s infinite;
+    -webkit-animation-delay: 1.5s;
+}
+.fish:nth-child(4) {
+    bottom: 70%;
+    left: 30%;
+    width: 10px;
+    height: 5px;
+    animation:  move-fish  10s infinite;
+    -webkit-animation-delay: 1s;
+}
+.fish:nth-child(5) {
+    bottom: 30%;
+    width: 10px;
+    height: 5px;
+    animation:  move-fish  10s infinite;
+}
+
+@keyframes move-fish {
+    0% {
+        left: 60%;
+    }
+    50% {
+        left: 0%;
+        transform: rotate(180deg);
+    }
+}
+
+.moountains {
+    position: absolute;
+    bottom: 35%;
+    height: 20%;
+    width: 50%;
+    left: 9%;
+    overflow: hidden;
+}
+
+.mountain1 {
+    background: linear-gradient(white 0%, white 10%, #dcd8d5 11%, #dcd8d5 100%);
+    width:25%;
+    height: 140%;
+    border-top-right-radius: 70%;
+    border-top-left-radius: 100%;
+    position: absolute;
+    bottom: -50%;
+    border: 2px solid #edebe9;
+}
+
+.mountain2 {
+    background: linear-gradient(white 0%, white 10%, #edebe9 11%, #edebe9 100%);
+    width:20%;
+    height: 120%;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    position: absolute;
+    bottom: -50%;
+    left: 20%;
+    border: 2px solid #edebe9;
+}
+
+
+.trees {
+    position: absolute;
+    bottom: 35%;
+    left: 5%;
+    width: 25%;
+    height: 20%;
+    /* border: 1px dashed red; */
+}
+.tree {
+    position: absolute;
+    background-color: #659f56;
+    height: 10%;
+    width: 5%;
+    border-radius: 50%;
+}
+.tree::after {
+    content: "";
+    background-color: #c3ad9c;
+    height: 35%;
+    width: 15%;
+    border-radius: 20%;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+}
+.tree:nth-child(1) {
+    lefT: 10%;
+    bottom: 3%;
+}
+.tree:nth-child(2) {
+    lefT: 20%;
+    bottom: 8%;
+    background-color: 4e7943;
+    height: 30%;
+    width: 10%;
+}
+.tree:nth-child(3) {
+    lefT: 30%;
+    bottom: 3%;
+}
+.tree:nth-child(4) {
+    lefT: 35%;
+    bottom: 3%;
+    height: 50%;
+    width: 20%;
+    bottom: 15%;
+}
+.tree:nth-child(5) {
+    lefT: 50%;
+    bottom: 3%;
+}
+.tree:nth-child(6) {
+    lefT: 60%;
+    bottom: 3%;
+}
+
+.sun {
+    background-color: #fbcc6e;
+    height: 10%;
+    width: 10%;
+    border-radius: 50%;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    z-index: 3;
+}

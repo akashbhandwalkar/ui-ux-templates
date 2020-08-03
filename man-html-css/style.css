@@ -1,0 +1,286 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+
+.container {
+    width: 800px;
+    height: 800px;
+    margin: 150px auto;
+    background-color: white;
+    position: relative;
+}
+
+
+.face {
+    position: absolute;
+    left: 30%;
+    top: 30%;
+    height: 20%;
+    width: 20%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    background: #eec2a0;
+    z-index: 4;
+    border-bottom: 20px solid #efae99;
+}
+.hair {
+    position: absolute;
+    left: 25%;
+    top: 16%;
+    height: 30%;
+    width: 30%;
+    background-color: #00273f;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.ear {
+    position: absolute;
+    background: #ec9786;
+    width: 26%;
+    height: 3%;
+    top: 40%;
+    left: 27%;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+.ear::after {
+    content: "";
+    position: absolute;
+    background: #e57074;
+    width: 90%;
+    height: 80%;
+    top: 10%;
+    left: 5%;
+    border-radius: 10px;
+    z-index: 3;
+}
+
+.mustashe {
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    width: 70%;
+    height: 30%;
+    /* border: 1px solid red; */
+    display: flex;
+    z-index: 2;
+}
+
+.mustashe div {
+    background-color: #00273f;
+    height: 60%;
+    width: 50%;
+   
+}
+
+.mustashe div:nth-child(1) {
+    border-bottom-right-radius: 70%;
+    border-top-left-radius: 70%;
+}
+
+.mustashe div:nth-child(2) {
+    border-top-right-radius: 70%;
+    border-bottom-left-radius: 70%;
+}
+
+.nose {
+    position: absolute;
+    left: 37%;
+    top: 26%;
+    background-color: #eb9786;
+    width: 27%;
+    height: 27%;
+    border-radius: 50%;
+}
+.nose::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 20%;
+    border-radius: 50%;
+    background-color: #eec2a0;
+}
+
+.eyes {
+    position: absolute;
+    top: 15%;
+    left: 4%;
+    width: 90%;
+    height: 20%;
+    
+}
+
+.eye {
+    position: absolute;
+    height: 45%;
+    width: 30%;
+    top: 10%;
+    background-color: #012741;
+    border-radius: 15px;
+    z-index: 5;
+
+}
+
+.eye::after{
+    content: "";
+    position: absolute;
+    background: #015362;
+    height: 30%;
+    width: 50%;
+    top: 30%;
+    left: 20%;
+    border-radius: 10px;
+
+}
+
+.eye:nth-child(1) {
+    left: 10%;
+}
+.eye:nth-child(2) {
+    left: 60%;
+}
+
+
+
+.eye-brows {
+    position: absolute;
+    top: 22%;
+    left: 4%;
+    width: 90%;
+    height: 20%;
+    /* border: 1px solid red; */
+    z-index: 1;
+}
+
+.eye-brow {
+    position: absolute;
+    height: 46%;
+    width: 30%;
+    top: 10%;
+    background-color: #ec9688;
+    border-radius: 15px;
+    z-index: 5;
+
+}
+
+.eye-brow::after{
+    content: "";
+    position: absolute;
+    background: #000000;
+    height: 80%;
+    width: 30%;
+    top: 60%;
+    left: 50%;
+    border-radius: 50%;
+
+}
+
+.eye-brow:nth-child(1) {
+    left: 10%;
+}
+.eye-brow:nth-child(2) {
+    left: 60%;
+}
+
+.head {
+    position: absolute;
+    top: 1%;
+    width: 100%;
+    height: 5%;
+    lefT: 20%;
+}
+
+.head div {
+    height: 40%;
+    width: 60%;
+    background: #ecb196;
+    margin: 5px;
+}
+
+.mouth {
+    position: absolute;
+    top: 38%;
+    z-index: 1;
+    left: 30%;
+    height: 45%;
+    width: 40%;
+    border-radius: 50%;
+    background: linear-gradient( transparent 0%, transparent 30%, white 41%, white 60%, #a61d3d 66%, #a61d3d 85%, white 86%, white 100%);
+}
+
+.mouth::after {
+    content: "";
+    background-color: #580e23;
+    border-radius: 10px;
+    height: 20%;
+    width: 60%;
+    bottom: 15%;
+    left: 20%;
+
+    position: absolute;
+}
+.neck {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    background: linear-gradient(#e67071 0%, #e67071 50%, #eb9886 51%, #eb9886 100%);
+    width: 10%;
+    height: 8%;
+}
+
+.button {
+    position: absolute;
+    top: 55%;
+    left: 35%;
+    width: 10%;
+    height: 3%;
+}
+
+.button div {
+    height: 120%;
+    width: 60%;
+    background-color: #002743;
+    position: absolute;
+}
+
+.button div:nth-child(1) {
+    left: -20%;
+}
+.button div:nth-child(2) {
+    right: -20%;
+    
+}
+.button div:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    right: 10%;
+    top: 30%;
+    height: 40%;
+    width: 25%;
+    border-radius: 50%;
+    background-color: white;
+}
+.button div:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    height: 40%;
+    width: 25%;
+    border-radius: 50%;
+    background-color: white;
+}

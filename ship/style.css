@@ -1,0 +1,325 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+
+.container {
+    height: 700px;
+    width: 700px;
+    background: #cedb30;
+    margin: 100px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.curves {
+    position: absolute;
+    height: 30%;
+    width: 100%;
+    background-color: #30b656;
+    bottom: 0;
+    width: #30b656;
+    display: flex;
+    z-index: 5;
+}
+
+.curve {
+    height: 15%;
+    width: 10%;
+    border-radius: 50%;
+    margin-top: -2%;
+    background-color: #30b656;
+    z-index: 4;
+}
+
+.ship-container {
+    position: absolute;
+    bottom: 40%;
+    width: 50%;
+    height: 50%;
+    left: 20%;
+    z-index: 4;
+}
+
+.main {
+    position: absolute;
+    height: 40%;
+    width: 40%;
+    background-color: #000001;
+    border-radius: 50%;
+    bottom: 0;
+    left: 40%;
+    z-index: 4;
+}
+.main::after {
+    content: "";
+    position: absolute;
+    width: 8%;
+    left: 40%;
+    top: 40%;
+    height: 15%;
+    background-color: wheat;
+    border-radius: 20% 100% / 60%;
+
+}
+
+.legs {
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    top: 90%;
+    left: 20%;
+    border: 1px solid black;
+    z-index: 4;
+}
+
+.legs div {
+    background-color: #000001;
+    height: 100%;
+    width: 10%;
+    position: absolute;
+}
+
+.legs div:nth-child(1) {
+    left: 0%;
+}
+
+.legs div:nth-child(2) {
+    left: 30%;
+}
+
+.legs div:nth-child(3) {
+    left: 70%;
+}
+
+.legs div:nth-child(4) {
+    left: 100%;
+}
+.mouth-container {
+
+    transform: rotateY(-90deg);
+    transform-origin: right;
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    bottom: 13%;
+    left: 24%;
+    z-index: 1;
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%;
+    background: linear-gradient(90deg, #000002 0%, #000002 70%, #e64746 71%, #e64746 100%);
+    animation: animate-mouth 5s forwards;
+}
+
+@keyframes animate-mouth {
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+.mouth-container::after {
+    content: "";
+    position: absolute;
+    background-color: #000000;
+    height: 20%;
+    width: 30%;
+    transform: rotate(45deg);
+    top: -8px;
+    right:30px;
+    transform-origin: bottom;
+    border-top-left-radius: 40%;
+    border-bottom-left-radius: 40%;
+}
+
+.mouth-container::before {
+    content: "";
+    position: absolute;
+    background-color: #000000;
+    height: 20%;
+    width: 30%;
+    transform: rotate(-45deg);
+    top: -7px;
+    right: 20px;
+    transform-origin: top;
+    border-top-right-radius: 40%;
+    border-bottom-right-radius: 40%;
+}
+
+.eyes {
+    position: absolute;
+    left: 15%;
+    top: 20%;
+    width: 40%;
+    height: 50%;
+    /* background: wheat; */
+}
+.eye {
+    position: absolute;
+    width: 50%;
+    height: 70%;
+    background: white;
+    border-radius: 50%;
+}
+.eye::after {
+    content: "";
+    background-color: black;
+    bottom: 10%;
+    left: 40%;
+    height: 40%;
+    width: 30%;
+    position: absolute;
+    border-radius: 50%;
+
+}
+.eye:nth-child(1) {
+    left: 20%;
+}
+.eye:nth-child(2) {
+    left: 59%;
+}
+
+.mouth {
+    position: absolute;
+    height: 20%;
+    width: 10%;
+    background-color: white;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    left: 35%;
+    bottom: 10%;
+}
+.mouth::after {
+    content: "";
+    background-color: green;
+    height: 260%;
+    width: 160%;
+    position: absolute;
+    top: 0%;
+    border-radius: 10px 50% / 60%;
+}
+
+.left-mountain {
+    position: absolute;
+    left: 0;
+    background-color: #abcd3e;
+    height: 80%;
+    width: 70%;
+    bottom: -5%;
+    left: -10%;
+    border-top-right-radius: 40%;
+    transform: rotate(-45deg);
+    z-index: 2;
+
+}
+
+.right-mountain {
+    position: absolute;
+    background-color: #abcd3e;
+    height: 100%;
+    width: 50%;
+    bottom: -5%;
+    right: -15%;
+    border-top-right-radius: 40%;
+    transform: rotate(-45deg);
+    z-index: 2;
+}
+.sun {
+    background-color: #f8ee00;
+    width: 20%;
+    height: 20%;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    border-radius: 50%;
+    animation: sun 4s forwards;
+}
+
+@keyframes sun {
+    100% {
+        transform: translateY(-50px);
+    }
+}
+
+.circle-around {
+    position: absolute;
+    background-color: #000000;
+    height: 20%;
+    width: 20%;
+    border-radius: 50%;
+}
+
+.circle-around:nth-child(1) {
+    left: 10%;
+    top: -30%;
+}
+.circle-around:nth-child(2) {
+    left: 20%;
+    top: -2%;
+}
+.circle-around:nth-child(3) {
+    left: 30%;
+    top: -4%;
+}
+.circle-around:nth-child(4) {
+    left: 40%;
+    top: -4%;
+}
+.circle-around:nth-child(5) {
+    left: 50%;
+    top: -4%;
+}
+.circle-around:nth-child(6) {
+    left: 60%;
+    top: -1%;
+}
+.circle-around:nth-child(7) {
+    left: 70%;
+    top: 5%;
+}
+.circle-around:nth-child(8) {
+    left: 78%;
+    top: 15%;
+}
+.circle-around:nth-child(9) {
+    left: 82%;
+    top: 24%;
+}
+.circle-around:nth-child(10) {
+    left: 85%;
+    top: 35%;
+}
+.circle-around:nth-child(11) {
+    left: 84%;
+    top: 46%;
+}
+.circle-around:nth-child(12) {
+    left: 82%;
+    top: 55%;
+}
+
+.circle-around:nth-child(13) {
+    left: 12%;
+    top: 2%;
+}
+.circle-around:nth-child(14) {
+    left: 6%;
+    top: 12%;
+}
+.circle-around:nth-child(15) {
+    left: 1%;
+    top: 20%;
+}
+
+.circle-around:nth-child(16) {
+    left: -2%;
+    top: 28%;
+}
