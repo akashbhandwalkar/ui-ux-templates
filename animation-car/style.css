@@ -1,0 +1,344 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+
+.container {
+    width: 800px;
+    height: 800px;
+    background-color: #d1284e;
+    margin: 200px auto;
+    position: relative;
+}
+
+.dumper {
+    position: absolute;
+    background: #0f3441;
+    width: 60%;
+    height: 8%;
+    left: 20%;
+    top: 60%;
+    border-radius: 15px;
+    z-index: 3;
+}
+
+.dumper::before, .dumper::after {
+    content: "";
+    width: 56px;
+    height: 25px;
+    position: absolute;
+    background-color: #002337;
+    z-index: 2;
+    border-radius: 5px;
+}
+.dumper::before {
+    left: -37px;
+    top: -20px;
+}
+.dumper::after {
+    right: -20px;
+    top: -20px;
+}
+.dumper-after {
+    position: absolute;
+    left: 10%;
+    top: 90%;
+    height: 20px;
+    width: 55%;
+    background-color: #002337;
+    top: 67%;
+    left: 22%;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.dumper-after .center{
+    background-color: #d0edfc;
+    width: 30%;
+    height: 150%;
+    position: absolute;
+    top: 10%;
+    left: 36%;
+ }
+
+.dumper .center {
+    position: absolute;
+    left: 5%;
+    top: 18%;
+    width: 90%;
+    height: 60%;
+    border-radius: 25px;
+    border: 2px solid #8fa6b4;
+}
+
+.dumper .center .engine {
+    position: absolute;
+    left: 20%;
+    background-color: #000e22;
+    height: 132%;
+    top: -22%;
+    width: 60%;
+    border: 2px solid #8fa6b4;
+    border-radius: 15px;
+    
+}
+
+.cards { 
+    position: absolute;
+    height: 90%;
+    width: 80%;
+    left: 10%;
+    top: 5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dumper .center .engine .cards div{
+    width: 4px;
+    height: 90%;
+    margin-top: 2%;
+    background: #123545;
+}
+
+.left-headlight {
+    position: absolute;
+    width: 7%;
+    height: 80%;
+    left: 7%;
+    top: 15%;
+}
+
+.right-headlight {
+    position: absolute;
+    width: 7%;
+    height: 80%;
+    right: 7%;
+    top: 15%;
+}
+
+
+.left-headlight::before, 
+.left-headlight::after,
+.right-headlight::before,
+.right-headlight::after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 50%;
+    border: 5px solid #fed883;
+    border-radius: 50%;
+    background-color: #fefffe;
+}
+
+.left-headlight::after, 
+.right-headlight::after {
+    right: -14px;
+    box-shadow: 10px 50px 24px  #d7d7d7,
+                40px 50px 24px  #d7d7d7,
+                10px 50px 24px  #d7d7d7,
+                -10px 50px 24px  #d7d7d7,
+                -40px 50px 24px  #d7d7d7,
+                -10px 50px 24px  #d7d7d7;
+}
+
+.left-headlight::before, 
+.right-headlight::before {
+    left: -14px;
+}
+
+.tyre {
+    background-color: #020001;
+    width: 12%;
+    height: 24%;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 14px;
+    animation: tyre-dance 0.15s infinite;
+}
+
+
+@keyframes tyre-dance  {
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+
+
+.tyre div{
+    background-color: #0b2631;
+    width: 3px;
+    height: 80%;
+    margin-top: 10%;
+}
+.tyre-container {
+    position: absolute;
+    top: 61%;
+    left: 18%;
+    width: 64%;
+    height: 40%;
+}
+
+.tyre-container .tyre:nth-child(1) {
+    left: 4px;
+}
+
+.tyre-container .tyre:nth-child(2) {
+    right: 4px;
+}
+
+.lighting {
+    width: 45%;
+    height: 47%;
+    position: absolute;
+    top: -26px;
+    left: 23%;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #9dd1e9 0% , #9dd1e9 25%, white 26%, white 35%, #9dd1e9 36%, #9dd1e9 46%, white 47%, white 65%, #9dd1e9 66%, #9dd1e9 100%);
+    display: flex;
+    justify-content: space-around;
+    z-index: 7;
+}
+
+.front-glass {
+        position: absolute;
+    width: 89%;
+    height: 90%;
+    left: 3%;
+    bottom: 100%;
+    background: linear-gradient(-45deg,  #7e0729 0%, #7e0729 40%, #a55369 41%, #a55369 70%, #7e0729 71%, #7e0729 100%);
+    border: 3px solid #2c374b;
+    z-index: 1;
+    border-radius: 130px 130px 0% 0;
+    box-shadow: inset 1px 2px 0 0 white, inset -1px 2px 0 0 white;
+}
+
+.lighting div {
+    background: #002337;
+    height: 70%;
+    width: 10%;
+    border-radius: 50%;
+    margin-top: 2%;
+}
+
+.lighting div:nth-child(1) {
+    animation: lighting-blue 0.5s infinite;
+}
+@keyframes lighting-blue {
+    100% {
+        background: blue;
+    }
+}
+.lighting div:nth-child(2) {
+    animation: lighting-red 0.6s infinite;
+}
+@keyframes lighting-red {
+    100% {
+        background: red;
+    }
+}
+.lighting div:nth-child(3) {
+    animation: lighting-green 0.7s infinite;
+}
+@keyframes lighting-green {
+    100% {
+        background: green;
+    }
+}
+
+.lighting div:nth-child(4) {
+    animation: lighting-yellow 0.8s infinite;
+}
+@keyframes lighting-yellow {
+    100% {
+        background: yellow;
+    }
+}
+
+.lighting div:nth-child(5) {
+    animation: lighting-pink 0.9s infinite;
+}
+@keyframes lighting-pink {
+    100% {
+        background: aqua;
+    }
+}
+
+.seat {
+    position: absolute;
+    background-color: #000000;
+    height: 27%;
+    border-radius: 130px 130px 0% 0;
+    width: 74%;
+    top: -32%;
+    z-index: 2;
+    left: 10%;
+}
+.mirror {
+    position: absolute;
+    height: 15px;
+    width: 77px;
+    background-color: black;
+    border-radius: 5px;
+    top: 0px;
+    left: 41%;
+}
+
+.sticker-up {
+    position: absolute;
+    top: -40%;
+    width: 20%;
+    display: flex;
+    height: 100%;
+    left: 4%;
+    /* justify-content: space-between; */
+}
+
+.sticker-up div, .sticker-down div {
+    position: absolute;
+    height: 10px;
+    width: 15px;
+    background-color: #fef200;
+    margin: 0 5px;
+    z-index:10;
+    border-top: 4px solid #fbb217;
+}
+
+.sticker-up div:nth-child(1), .sticker-down div:nth-child(1) {
+    left: 30px;
+}
+
+.sticker-up div:nth-child(2), .sticker-down div:nth-child(2) {
+    left: 0;
+}
+.sticker-down div {
+    border-top: none;
+    border-bottom: 4px solid #fbb217;
+}
+.sticker-down {
+    position: absolute;
+    top: 100%;
+    width: 40%;
+    left: 4%;
+
+}
+
+.shadow {
+    background-color: #7e0729;
+    height: 13px;
+    width: 65%;
+    border-radius: 10px;
+    position: absolute;
+    top: 72%;
+    left: 18%;
+}

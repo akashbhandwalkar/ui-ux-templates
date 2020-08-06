@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box model</title>
+    <link rel="Stylesheet" href="./style.css"> </link>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+ </head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div  class="concept">
+                <i class="fa fa-circle" aria-hidden="true"></i>
+                <label>Pseudo Elements - part 2</label> 
+                
+            </div>
+            <div  class="definition">
+                <i class="fa fa-hand-o-right" aria-hidden="true"></i>
+                <label> A CSS pseudo-element is a keyword added to a selector that lets you style a specific part of the selected elemens</label> 
+            </div>
+        </div>
+        <div class="draw-line-1"></div>
+        <div class="result--container">
+            <div class="input-container first-example">
+                <div class="info">
+                    <code>
+                        input::placeholder { <br/>
+                         &nbsp;&nbsp   color: violet; <br/>
+                        }
+                    </code>
+                <div>
+                </div>
+                
+                    
+                </div>
+                <div class="result">
+                    <input type="text" class="google-search" placeholder="Search Google or type a URL"/>
+                </div>
+            </div>
+            <div class="input-container second-example">
+                <div class="info">
+                    <code>
+                        a::before { <br />
+                            &nbsp;&nbsp content: "→"; <br />
+                        }
+                    </code>
+                <div>
+                </div>
+                
+                    
+                </div>
+                <div class="result">
+                  <a href="#"> click me </a>
+                </div>
+            </div>
+            <div class="input-container third-example">
+                <div class="info">
+                    <code>
+                        a::after { <br />
+                            &nbsp;&nbsp content: "→"; <br />
+                        }
+                    </code>
+                <div>
+                </div>
+                
+                    
+                </div>
+                <div class="result">
+                    <a href="#"> click me </a>
+                  </div>
+            </div>
+
+            <div class="input-container fourth-example">
+                <div class="info">
+                    <code>
+                        p::first-letter { <br />
+                        &nbsp;&nbsp font-size: 200%;<br />
+                        }
+                    </code>
+                   <div>
+
+                </div>   
+                </div>
+                <div class="result">
+                    <p class="first-letter">
+                        This is example of ::first-letter
+                    </p>
+                </div>
+            </div>
+
+           <div class="input-container fifth-example">
+                <div class="info">
+                    <code>
+                        p::first-line { <br />
+                        &nbsp;&nbsp color: blue;<br />
+                        }
+                    </code>
+                   <div>
+
+                </div>   
+                </div>
+                <div class="result">
+                    <p class="first-line">
+                        Lorem Ipsum is simply dummy text of the printing.
+                        Lorem Ipsum is simply dummy text of the printing.
+                        Lorem Ipsum is simply dummy text of the printing.
+                    </p>
+                </div>
+            </div>
+
+            <div class="input-container sixt-example">
+                <div class="info">
+                    <code>
+                        .selection::selection {<br />
+                            &nbsp;&nbsp background: yellow;<br />
+                        }
+                    </code>
+                   <div>
+
+                </div>   
+                </div>
+                <div class="result">
+                    <p class="selection">
+                        Lorem Ipsum is simply dummy text of the printing.
+                     </p>
+                </div>
+            </div>
+            
+        </div>
+     
+        
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,268 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+
+.container {
+    width: 80vw;
+    margin: 200px;
+    display: flex;
+}
+
+
+.border-box {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 40px;
+    padding: 20px;
+    position: absolute;
+    left: 20%;
+
+}
+.content-box {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: content-box;
+    position: absolute;
+
+    left: 30%;
+
+}
+.padding-box {
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    box-sizing: padding-box;
+    margin: 40px;
+    padding: 20px;
+}
+
+.padding-box p::grammar-error{
+    color: red;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ecf0f3;
+    font-family: sans-serif;
+}
+
+.container {
+    height: 80vh;
+    width: 80vw;
+    margin: 10vh auto;
+    background-color: #ecf0f3;
+    position: relative;
+    box-shadow: 7px 7px 10px #d9e0ea, -7px -7px 10px #fbfcfc;
+    position: relative;
+    border-radius: 20px;
+}
+.result--container {
+    height: 80%;
+    width: 100%;
+}
+.input-container {
+    left: 5%;
+    height: 15%;
+    width: 90%;
+    position: absolute;
+    border-bottom: 2px solid #878d98;
+    /* box-shadow: 5px 5px 10px #d9e0ea, -5px -5px 10px #fbfcfc; */
+}
+input {
+    box-shadow: 5px 5px 10px #d9e0ea, -5px -5px 10px #fbfcfc;
+}
+.info {
+    position: absolute;
+    left:  0%;
+    width: 30%;
+    display: flex;
+} 
+.result {
+    position: absolute;
+    left: 35%;
+    width: 60%;
+    height: 100%;
+}
+.example pre {
+    font-size: 10px;
+}
+.first-example {
+    top: 28%;
+    height: 10%;
+
+    /* border-bottom: 1px dashed red; */
+}
+
+.second-example {
+    top: 40%;
+    height: 8%;
+}
+
+.second-example a {
+    position: relative;
+}
+.second-example a::before {
+    content: "→";
+}
+.third-example a::after {
+    content: "→";
+}
+
+.third-example {
+    top: 50%;
+    height: 10%;
+
+}
+
+.fourth-example {
+    top: 63%;
+    height: 10%;
+}
+.fourth-example {
+    top: 60%;
+    height: 10%;
+}
+.fifth-example {
+    top: 72%;
+    height: 10%;
+}
+.sixt-example {
+    top: 86%;
+    height: 8%;
+}
+
+.first-example .example {
+    display: flex;
+}
+.first-example input::placeholder {
+    color: violet;
+    font-style: italic;
+}
+
+
+
+.google-search {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    background-color: #ecf0f3;
+    border: none;
+    padding: 25px;
+    font-size: 18px;
+    color: #878d98;
+    border-radius: 20px;
+}
+
+input:focus, select:focus {
+    outline:none;
+}
+
+.first-letter::first-letter {
+    font-size: 200%;
+}
+
+.first-line::first-line {
+    color: blue;
+}
+.google-search-icon {
+    position: absolute;
+    left: 10%;
+    top: 37%;
+    z-index: 2;
+    font-size: 26px;
+}
+
+.header {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 20%;
+    overflow: hidden;
+}
+
+.concept {
+    left: 0;
+    width: 60%;
+    border: none;
+    padding: 10px 45px 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    /* background-color: #e2e6e9; */
+}
+.concept label {
+    border-bottom: 3px solid violet;
+    margin: 10px;
+}
+.concept i {
+    font-size: 8px;
+}
+
+.definition {
+    position: absolute;
+    left: 0;
+    bottom: 10%;
+    border: none;
+    padding: 10px 45px 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #e2e6e9;
+    display: flex;
+}
+
+.definition i {
+    vertical-align: middle;
+}
+
+label {
+    margin: 0 10px;
+}
+
+@media(max-width: 768px) {
+    .hide-mobile {
+        display: none !important;
+    }   
+    .input-container {
+        width: 80%;
+        left: 10%;
+    }
+}
+
+.icons:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 10px #fbfcfc, -5px -5px 10px #fbfcfc;
+}
+
+.draw-line-1 {
+    height: 3px;
+    width: 100%;
+    background-color: gainsboro;
+    position: absolute;
+    top: 25%;
+}
+.selection::selection {
+    background: yellow;
+    padding: 2px;
+}
