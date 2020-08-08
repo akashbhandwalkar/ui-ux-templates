@@ -1,0 +1,110 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #f2f3f7;
+    font-family: sans-serif;
+}
+
+.container {
+    margin: 200px auto;
+    position: relative;
+    width: 800px;
+    height: 800px;
+}
+
+.calendar {
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    background-color: #f2f3f7;
+    width: 30%;
+    height: 30%;
+    box-shadow: -15px -15px 15px #fbfcfe,
+        15px 15px 15px #e5e7f2,
+        inset -15px -15px 8px #f4f5f9,
+        inset 15px 15px 8px #f4f5f9;
+    border-radius: 15px;
+}
+
+.hit-me-up {
+    position: absolute;
+    top: 50%;
+    background-color: #f2f3f7;
+    width: 30%;
+    height: 10%;
+    left: 20%;
+    box-shadow: -10px -10px 10px #fcfcfe,
+    10px 10px 15px #e5e7f2;
+    border: none;
+    cursor: pointer;
+}
+
+.hit-me-up:focus, .hit-me-up::selection, .hit-me-up:active {
+    border: none;
+    outline:none;
+}
+
+.up-arrow {
+    background-color: #f2f3f7;
+    padding: 24px 26px;
+    border-radius: 50%;
+    
+    box-shadow: -10px -10px 10px #fcfcfe,
+    10px 10px 15px #e5e7f2;
+    border: none;
+    cursor: pointer;
+    
+}
+.one {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+}
+.one i {
+    font-size: 22px;
+}
+
+.years-container {
+    left: 50%;
+    top: 25%;
+    width: 20%;
+    position: absolute;
+    height: 70%;
+}
+
+.line {
+    position: absolute;
+    top: 0%;
+    left: 88%;
+    width: 4px;
+    height: 60%;
+    background-color: #e3e6ed;
+    z-index: 1;
+}
+
+.two  {
+    left: 70%;
+    /* margin: 50px auto; */
+    position: absolute;
+    top: 65%;
+}
+
+.two i {
+    font-size: 14px;
+}
+
+.year {
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    padding: 12px 36px;
+    border-radius: 10px;
+    z-index: 3;
+    box-shadow: -5px -5px 10px #fcfcfe,
+    10px 10px 15px #e5e7f2;
+}
