@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: linear-gradient(#cddeee 0%, #cddeee 50%, #c4d8ea 51%, #c4d8ea 100%);
+    font-family: sans-serif;
+    box-sizing: border-box;
+    background: #c4d8ea;
+}
+
+.container {
+    margin: 200px auto;
+    background: linear-gradient(#cadded, #c0d4e8);
+    width: 450px;
+    height: 800px;
+    box-shadow: 10px 10px 10px #a1bed8,
+                -10px -10px 10px #d4e2ee;
+    border-radius: 60px;
+    position: relative;
+}
+
+.username {
+    color: #325270;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.bell {
+    /* background-color: ; */
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    border: 4px solid #f97251;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: #c7daeb;
+    box-shadow: 4px 4px 10px #afc5dc,
+    -4px -4px 10px #afc5dc;
+}
+
+.bell i {
+    position: absolute;
+    top: 7px;
+    left: 7px;
+
+}
+
+.card {
+    width: 100%;
+    height: 30%;
+    background-color: #c5d8ea;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    border-radius: 30px;
+    box-shadow: 10px 10px 10px #8fb2d2,
+    -10px -10px 10px #d4e2ee;
+}
+
+.left {
+    background-color: #cedfee;
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+
+}
+
+.left::before {
+    content: "";
+    position: absolute;
+    left: -20%;
+    background-color: #d4e2ef;
+    width: 12%;
+    height: 100%;
+    border-radius: 40px;
+}
+
+.card-holder {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+}
+
+.card-name {
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    font-size: 19px;
+}
+
+.logo {
+    display: flex;
+    position: absolute;
+    top: 15%;
+    left: 8%;
+}
+.logo div {
+    width: 30px;
+    height: 30px;
+    background-color: #f8a920;
+    border-radius: 50%;
+    position: absolute;
+}
+.logo div:nth-child(1) {
+    left:0;
+    background: #f61335;
+}
+.logo div:nth-child(2) {
+    left: 20px;
+}
+
+.card-number {
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+    color: #304c6a;
+    font-size: 24px;
+}
+
+.card-type {
+    color: #4d6a85;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
