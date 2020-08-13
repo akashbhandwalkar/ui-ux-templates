@@ -1,19 +1,8 @@
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
-body {
-    /* background: linear-gradient(#f8792d, #f8792d); */
-    font-family: sans-serif;
-}
 
 .container {
     width: 800px;
     height: 500px;
-    /* background-color: white; */
     position: absolute;
     bottom: 15%;
     animation: move-left 10s forwards;
@@ -34,7 +23,7 @@ body {
 
 @keyframes move-left {
     100% {
-        transform: translateX(1000px);
+        transform: translateX(400px);
     }
 }
 
@@ -442,13 +431,10 @@ body {
 .bus-stop {
     position: absolute;
     bottom: 20%;
-    right: 100px;
-    /* right: 100px; */
+    right: 30%;
     width: 200px;
     height: 200px;
     border-radius: 10px;
-    /* border: 1px solid red; */
-    animation: bus-stop 10s infinite;
     z-index: 3;
 
 }
@@ -553,21 +539,8 @@ body {
     position: relative;
     width:  100vw;
     height: 650px;
-    background: #ffffff;
+    background-color: #2395be;
     overflow: hidden;
-    animation: animate-container 15s infinite;
-}
-
-@keyframes animate-container {
-    0% {
-        background-color: #c579a4;
-    }
-    49% {
-        background-color: #f8792d;
-    }
-    100% {
-        background: #c579a4;
-    }
 }
 
 
@@ -836,25 +809,16 @@ body {
 
 .second-layer .third-building {
     position: absolute;
-    width: 15%;
+    width: 400px;
     height: 100%;
     right: 0;
-    background-color: #003f68;
 }
 
-.second-layer .third-building::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 12px;
-    border: 1px solid #003f68;
-    background: linear-gradient(90deg, #003f68 0%, #003f68 2%, transparent 3%, transparent 10%, #003f68 11%, #003f68 13%, transparent 14%, transparent 21%, #003f68 22%, #003f68 25%, transparent 26%, transparent 33%, #003f68 34%, #003f68 37%, transparent 38%, transparent 45%, #003f68 46%, #003f68 49%, transparent 50%, transparent 60%,#003f68 61%, #003f68 64%, transparent 65%, transparent 75%,#003f68 76%, #003f68 79%, transparent 80%, transparent 90%, #003f68 91%, #003f68 94%, transparent 95%, transparent 100%);
-    top: -10px;
-}
+
 
 .second-building {
     position: absolute;
-    left: 45%;
+    left: 40%;
     display: flex;
     width: 33%;
     height: 100%;
@@ -970,7 +934,7 @@ body {
     top: -20px;
     position: absolute;
     z-index: 2;
-    width: 435px;
+    width: 360px;
     height: 40px;
     overflow: hidden;
 }
@@ -995,7 +959,7 @@ body {
     animation: move-train 6s linear infinite;
 }
 .bridge-one .train  {
-  width: 470px;
+  width: 420px;
 }
 
 .bridge-one .train div {
@@ -1139,14 +1103,14 @@ body {
 
 .moon {
     position: absolute;
-    top: 10%;
-    right: 10%;
+    top: 5%;
+    right: 75%;
     width: 130px;
     height: 130px;
     border-radius: 50%;;
     background-color: orange;
     z-index: 6;
-    animation: sun-to-moon 15s infinite;
+    /* animation: sun-to-moon 15s infinite; */
     z-index: 1;
 }
 

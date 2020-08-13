@@ -1,17 +1,4 @@
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
-body {
-    background: linear-gradient(#aabad1, #99badb);
-    height: 100vh;
-    width: 100vw;
-    font-family: sans-serif;
-    position: relative;
-}
 .airplane-container:nth-child(1n) {
     top: 60px;
     left: -500px;
@@ -24,21 +11,6 @@ body {
     top: 100px;
     transform: scale(0.5);
     animation: move-airplane 6s infinite;
-
-}
-.airplane-container:nth-child(3n) {
-    left: -1000px;
-    top: 200px;
-    transform: scale(0.5);
-   animation: move-airplane 8s infinite;
-
-}
-.airplane-container:nth-child(4n) {
-    left: -800px;
-    top: 0px;
-    transform: scale(0.5);
-   animation: move-airplane 10s infinite;
-
 }
 
 .airplane-container {
@@ -236,4 +208,165 @@ body {
     background-color: #f6f6f6;
     border-radius: 50%;
     transform: rotate(15deg)
+}
+
+.cloud {
+	background: #fff;
+	background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	border-radius: 100px;
+	
+	-webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+
+	height: 120px;
+	position: absolute;
+    width: 350px;
+    top: 10px;
+}
+
+.cloud {
+    border-radius: 20px;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    height: 40px;
+    position: relative;
+    width: 100px;
+    z-index: 100;
+}
+
+.cloud::after, .cloud::before {
+	content: '';
+	position: absolute;
+    z-indeX: -1;
+    z-index: 10;
+    background: #fff;
+	background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+}
+
+.cloud::after {
+    border-radius: 50%;
+    height: 60px;
+    right: 6px;
+    top: -20px;
+    width: 60px;
+    z-index: 14;
+}
+
+.cloud::before {
+    border-radius: 50%;
+    height: 60px;
+    left: -10px;
+    top: -30px;
+    width: 60px;
+    z-index: 14;
+    
+}
+
+.clouds {
+    position: absolute;
+    top: 2%;
+    left: 40%;
+    width: 100%;
+    height: 100%;
+
+}
+.cloud-one {
+    position: absolute;
+    top: 0%;
+    left: 20%;
+    animation: move-cloud 5s infinite;
+
+}
+.cloud-two {
+    position: absolute;
+    top: 7%;
+    left: 30%;
+    animation-delay: 2s;
+    animation: move-cloud 5s infinite;
+
+}
+.cloud-three {
+    left: 40%;
+    position: absolute;
+    top: 5%;
+    animation: move-cloud 5s infinite;
+
+}
+
+.ambulance-container2 {
+    position: absolute;
+    left: 60%;
+    top: -90%;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    /* transform: rotate(270deg); */
+}
+
+.light {
+    position: absolute;
+    background-color: blue;
+    height: 4px;
+    width: 10px;
+    left: 35%;
+    top: -3%;
+
+    z-index: 15;
+}
+
+.tower {
+    position: absolute;
+    left:40%;
+    bottom: 29%;
+    width: 50px;
+    height: 50%;
+    border: 1px dashed red;
+    clip-path: polygon(30% 0, 60% 0, 100% 100%, 0% 100%);
+    background: linear-gradient(0deg, #ff335f 0%, #ff335f 16%, #ffffff 17%, #ffffff 32%, #ff335f 33%, #ff335f 48%, #ffffff 49%, #ffffff 64%, #ff335f 65%, #ff335f 80%, #ffffff 81%, #ffffff 90%, #ff335f 91%, #ff335f 100%);
+}
+
+
+.tower-after{
+    position: absolute;
+    top: 35%;
+    z-index: 99;
+    background: linear-gradient( transparent 0%, transparent 50%, white 51%, white 100%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    left: 39%;
+    z-index: 1;
+}
+
+.tower-after::after {
+    content: "";
+    position: absolute;
+    top: 60%;
+    left: 15%;
+    background: #4964d8;
+    width: 70%;
+    height: 10px;
+    border-radius: 10%;
+}
+
+.tower-after1{
+    content: "";
+    position: absolute;
+    top: 31%;
+    z-index: 99;
+    background: linear-gradient( #ff6686 0%, #ff6686 50%, white 51%, white 100%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    left: 39%;
+}
+.tower-above {
+    position: absolute;
+    left:40%;
+    bottom: 59%;
+    width: 40px;
+    height: 20%;
+    border: 1px dashed red;
+    clip-path: polygon(30% 0, 60% 0, 100% 100%, 0% 100%);
+    background: linear-gradient(0deg, #ff335f 0%, #ff335f 25%, #ffffff 26%, #ffffff 50%, #ff335f 51%, #ff335f 75%, #ffffff 76%, #ffffff 100%);
 }
