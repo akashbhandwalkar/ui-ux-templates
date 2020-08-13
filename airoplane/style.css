@@ -1,0 +1,201 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: linear-gradient(#aabad1, #99badb);
+    height: 100vh;
+    width: 100vw;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.airplane-container {
+     position: relative;
+   /* margin: 100px; */
+   margin: 200px 0;
+}
+
+.airplane {
+    position: absolute;
+    top: 30%;
+    left: 200px;
+    width: 400px;
+    height: 60px;
+    background-color: #f6f6f6;
+    clip-path: polygon(0 0 , 100% 0, 100% 100%, 30% 100%, 0% 20%);
+    border-bottom: 10px solid #f2b714;
+    z-index: 2;
+    overflow: visible;
+}
+
+.airplane-before {
+    /* content: ""; */
+    position: absolute;
+    background-color: #565656;
+    left: 195px;
+    width: 7px;
+    height: 14px;
+}
+
+.airplane-header {
+    position: absolute;
+    left: 600px;
+    top: 30%;
+    width: 100px;
+    height: 60px;
+    background-color: #f6f6f6;
+    border-top-right-radius: 100%;
+    border-bottom: 10px solid #f2b714;
+    overflow: hidden;
+}
+
+.airplane-header::before {
+    content: "";
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    width: 15px;
+    height: 20px;
+    background: #565656;
+    transform: rotate(-20deg);
+    border-top-right-radius: 100%;
+    /* border-radius: 5px; */
+}
+/* .airplane-header::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    width: 15px;
+    top: 30%;
+
+    height: 22px;
+   border: 3px solid #d1d1d2;
+    border-radius: 5px;
+} */
+
+.airoplane-down {
+    position: absolute;
+    top: calc(30% + 70px);
+    height: 10px;
+    width: 380px;
+    left: 100px;
+    background: linear-gradient(#b48e2e,#b48e2e);
+    clip-path: polygon(0 0 , 100% 0, 80% 100%, 0% 100%);
+    border-bottom-left-radius: 50%;
+}
+
+.window1 {
+    position: absolute;
+    right: 10px;
+    top: 20%;
+    display: flex;
+}
+
+.window2 {
+    position: absolute;
+    left: 100px;
+    top: 20%;
+    display: flex;
+}
+
+.window3 {
+    position: absolute;
+    left: 200px;
+    top: 20%;
+    display: flex;
+}
+
+.window {
+    height: 6px;
+    width: 6px;
+    border-radius: 2px;
+    background-color: #565656;
+    margin: 0 1px;
+}
+
+.wing {
+    position: absolute;
+
+}
+
+.wing-1{
+    clip-path: polygon(0 0 , 100% 0, 100% 100%, 0% 30%);
+    background-color: #f6f6f6;
+    width: 100px;
+    height: 50px;
+    left: 430px;
+    top: calc(30% + 70px);
+    z-index: 5;
+    transform: rotate(-45deg) skewX(44deg);
+}
+
+.wing-2 {
+    clip-path: polygon(0 0 , 100% 0, 100% 100%, 0% 20%);
+    background-color: #e4e0dd;
+    width: 100px;
+    height: 50px;
+    left: 430px;
+    top: -20px;
+    z-index: 1;
+    transform: rotate(35deg) skewX(44deg);
+    overflow: visible;
+}
+
+.wing-2::after{
+    content: "";
+    position: absolute;
+    top: -20px;
+    height: 50px;
+    width: 20px;
+    background: #f44e3f;
+    clip-path: polygon(0 0 , 100% 0, 100% 100%, 0% 100%); 
+}
+.wing-1::after{
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: -0px;
+    z-index: 10;
+    height: 50px;
+    width: 20px;
+    background: #f44e3f;
+    clip-path: polygon(0 0 , 100% 0, 100% 100%, 0% 100%); 
+}
+
+.wing-3{
+    clip-path: polygon(0 0 , 100% 0, 100% 100%, 0% 30%);
+    background-color: #f6f6f6;
+    width: 80px;
+    height: 40px;
+    left: 180px;
+    top: 20px;
+    z-index: 9;
+    transform: rotate(-35deg) skewX(44deg);
+}
+
+.wing-4 {
+    clip-path: polygon(0 0 , 100% 0, 100% 100%, 0% 20%);
+    background-color: #f6f6f6;
+    width: 80px;
+    height: 30px;
+    left: 180px;
+    top: -20px;
+    z-index: 1;
+    transform: rotate(35deg) ;
+}
+
+.back-circle {
+    z-index: 10;
+    position: absolute;
+    left: 230px;
+    top: 35px;
+    width: 80px;
+    height: 20px;
+    background-color: #f6f6f6;
+    border-radius: 50%;
+    transform: rotate(15deg)
+}
