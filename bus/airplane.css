@@ -3,21 +3,19 @@
     top: 60px;
     left: -500px;
     transform: scale(0.5);
-   animation: move-airplane 5s infinite;
+   animation: move-airplane 10s infinite;
 
 }
 .airplane-container:nth-child(2n) {
     left: -600px;
     top: 100px;
     transform: scale(0.5);
-    animation: move-airplane 6s infinite;
+    animation: move-airplane 12s infinite;
 }
 
 .airplane-container {
     top: 10%;
     position: absolute;
-   /* margin: 100px; */
-   /* margin: 200px 0; */
 }
 
 @keyframes move-airplane {
@@ -25,9 +23,6 @@
         transform: scale(0.5) translateX(5000px);
     }
 }
-
-
-
 
 .airplane {
     position: absolute;
@@ -43,7 +38,6 @@
 }
 
 .airplane-before {
-    /* content: ""; */
     position: absolute;
     background-color: #565656;
     left: 195px;
@@ -73,19 +67,7 @@
     background: #565656;
     transform: rotate(-20deg);
     border-top-right-radius: 100%;
-    /* border-radius: 5px; */
 }
-/* .airplane-header::after {
-    content: "";
-    position: absolute;
-    right: 0px;
-    width: 15px;
-    top: 30%;
-
-    height: 22px;
-   border: 3px solid #d1d1d2;
-    border-radius: 5px;
-} */
 
 .airoplane-down {
     position: absolute;
@@ -98,30 +80,30 @@
     border-bottom-left-radius: 50%;
 }
 
-.window1 {
+.airplane-window {
     position: absolute;
-    right: 10px;
-    top: 20%;
-    display: flex;
+    top: 30%;
+    width: 30%;
+    height: 15%;
+    background: linear-gradient(90deg,black 0%, black 5%, white 6%, white 10%, black 11%, black 15% ,white 16%, white 20%,black 21%, black 25%, white 26%, white 30%, black 31%, black 35%, white 36%, white 40%, black 41% ,black 45%,white 46%, white 50%,black 51%, black 55%, white 56%, white 60%, black 61%,black 65%,white 66%, white 70%,black 71%,black 75%,white 76%, white 80%,black 81%,black 85%,white 86%, white 90%,black 91%,black 95%,white 96%, white 100%);
+
+}
+.airplane-window-one {
+    left: 20%;
+    
 }
 
-.window2 {
-    position: absolute;
-    left: 100px;
-    top: 20%;
-    display: flex;
+.airplane-window-two {
+    left: 50%;
 }
 
-.window3 {
-    position: absolute;
-    left: 200px;
-    top: 20%;
-    display: flex;
+.airplane-window-three {
+    left: 80%;
 }
 
 .window {
-    height: 6px;
-    width: 6px;
+    height: 8px;
+    width: 8px;
     border-radius: 2px;
     background-color: #565656;
     margin: 0 1px;
@@ -155,21 +137,10 @@
     overflow: visible;
 }
 
-.wing-2::after{
+.wing-2::after, .wing-1::after{
     content: "";
     position: absolute;
     top: -20px;
-    height: 50px;
-    width: 20px;
-    background: #f44e3f;
-    clip-path: polygon(0 0 , 100% 0, 100% 100%, 0% 100%); 
-}
-.wing-1::after{
-    content: "";
-    position: absolute;
-    top: -20px;
-    left: -0px;
-    z-index: 10;
     height: 50px;
     width: 20px;
     background: #f44e3f;

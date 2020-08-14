@@ -4,7 +4,7 @@
     position: relative;
     width:  100vw;
     height: 650px;
-    background-color: #2395be;
+    background-color: #6ECEDA;
     overflow: hidden;
 }
 
@@ -31,14 +31,13 @@
     height: 100%;
     width: 100%;
     z-index: 2;
-    /* -webkit-box-reflect: below 5px linear-gradient(transparent, white); */
 }
 
 .second-layer .element-container .first-building {
     position: absolute;
     width: 25%;
     height: 100%;
-    background: #003f68;
+    background: #39686e;
     clip-path: polygon(0% 0%, 70% 0%, 70% 25%, 100% 25%, 100% 100%, 0% 100%);
     z-index:3;
 }
@@ -48,7 +47,7 @@
     top: 19%;
     width: 7%;
     height: 10px;
-    border: 2px solid #003f68;
+    border: 2px solid #39686e;
     z-index: 4;
     display: flex;
 }
@@ -287,14 +286,13 @@
     display: flex;
     width: 33%;
     height: 100%;
-    /* background: red; */
 }
 .second-building .first {
     position: absolute;
     bottom: 0;
     width: 40%;
     height: 20%; 
-    background: #003f68;
+    background: #39686e;
 }
 .second-building .second {
     position: absolute;
@@ -302,8 +300,7 @@
     width: 40%;
     left: 40%;
     height: 100%; 
-    background: #003f68;
-    /* z-index: 5; */
+    background: #39686e;
 }
 .second-building .third {
     position: absolute;
@@ -311,8 +308,7 @@
     width: 20%;
     left: 80%;
     height: 80%; 
-    background: #003f68;
-    /* z-index: 5; */
+    background: #39686e;
 
 }
 
@@ -322,8 +318,7 @@
     width: 10%;
     left: 30%;
     height: 40%; 
-    background: #003f68;
-    /* z-index: 5; */
+    background: #39686e;
 
 }
 .second-window-container1 {
