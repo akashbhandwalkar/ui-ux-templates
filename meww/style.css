@@ -1,0 +1,131 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #f7f6f7;
+    font-family: sans-serif;
+}
+
+.cat-container {
+    width: 300px;
+    height: 500px;
+    border: 1px dashed red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cat-main-body {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    width: 40%;
+    height: 30%;
+    background-color: #725b6b;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    z-index: 2;
+}
+
+.cat-main-body::after {
+    content: "";
+    position: absolute;
+    bottom:-12%;
+    left: -10%;
+    height: 12%;
+    width: 120%;
+    background-color: #725b6b;
+    border-radius: 10px;
+}
+
+.cat-central-body {
+    position: absolute;
+    background-color: #998995;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    height: 40%;
+    border-radius: 50%;
+
+}
+
+.cat-central-body::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 50%;
+    border-radius: 50%;
+    bottom: -15%;
+    left: 35%;
+    background-color: #998995;
+
+}
+
+.cat-legs {
+    position: absolute;
+    width: 25%;
+    height: 17%;
+    /* border: 1px dashed red; */
+    top: 60%;
+    left: 37%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cat-legs .leg {
+    width: 30%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #866f81;
+    position: relative;
+}
+
+.cat-legs .leg::after {
+    content: "";
+    position: absolute;
+    background-color: #a2909e;
+    height: 30%;
+    width: 180%;
+    left: -40%;
+    bottom: -5%;
+    border-radius: 40px;
+}
+
+.cat-leg {
+    position: absolute;
+    top: 60%;
+    left: 8%;
+    width: 30%;
+    height: 5%;
+    border: 15px solid #634e60;
+    border-radius: 50px;
+    z-index: 1;
+}
+
+.cat-leg::after {
+    content: "";
+    background: #f7f6f7;
+    width: 65px;
+    height: 20px;
+    position: absolute;
+    top: -20px;
+    right: 0;
+}
+
+.cat-face {
+    position: absolute;
+    top: 25%;
+    left: 32%;
+    width: 35%;
+    height: 20%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    background-color: #886e81;
+}
