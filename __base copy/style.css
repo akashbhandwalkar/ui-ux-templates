@@ -1,0 +1,62 @@
+.sphere-container {
+    position: relative;
+}
+
+.sphere-container .sphere1 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 100px;
+    left: 200px;
+
+    background: radial-gradient(circle at 200px 80px, 
+                                #ff7778 0%, #ff7778 20%, 
+                                #3c0000 20%, 
+                                red 20%, red 40%, 
+                                #3c0000, 
+                                blue 40%, blue 60%, 
+                                green 60%, green 80%, 
+                                #3c0000 81%, #3c0000 100%);
+                                animation: sphere 2s infinite;
+    
+}
+
+.sphere-container .sphere2 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 100px;
+    left: 500px;
+    background: radial-gradient(circle at 130px 80px, #c993ef, #3c1c4c);
+    animation: sphere 2s infinite;
+}
+
+@keyframes sphere {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+   40% {transform: translateY(15px);} 
+   60% {transform: translateY(10px);}
+}
+
+.shadow {
+    position: absolute;
+    bottom: 25px;
+    left: -11px;
+    width: 225px;
+    height: 225px;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+    transform: rotateX(84deg) translateZ(-150px);
+    z-index: -1;
+}
+
+.sphare-two-shadow {
+    top: 58px;
+    left: 494px;
+    
+}
+.sphare-one-shadow {
+    top: 58px;
+    left: 185px;
+}
+
