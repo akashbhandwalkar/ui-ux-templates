@@ -14,7 +14,7 @@ body {
     position: absolute;
     bottom: 5%;
     animation: move-left 20s forwards;
-    z-index: 3;
+    z-index: 4;
     transform: scale(0.5);
 
 }

@@ -11,10 +11,8 @@
     left: 200px;
 
     background: radial-gradient(circle at 200px 80px, 
-                                #ff7778 0%, #ff7778 20%, 
-                                #3c0000 20%, 
-                                red 20%, red 40%, 
-                                #3c0000, 
+                                #ff7778 0%, #ff7778 20%,
+                                red 20%, red 40%,
                                 blue 40%, blue 60%, 
                                 green 60%, green 80%, 
                                 #3c0000 81%, #3c0000 100%);
@@ -29,8 +27,8 @@
     border-radius: 50%;
     top: 100px;
     left: 500px;
-    background: radial-gradient(circle at 130px 80px, #c993ef, #3c1c4c);
-    animation: sphere 2s infinite;
+    background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+        animation: sphere 2s infinite;
 }
 
 @keyframes sphere {
@@ -59,4 +57,31 @@
     top: 58px;
     left: 185px;
 }
+.sphare-three-shadow {
+    top: 58px;
+    left: 785px;
+}
 
+
+.sphere-container .sphere3 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 100px;
+    left: 800px;
+    /* background: black; */
+    background: radial-gradient(circle at 130px 100px, white, black);
+    /* animation: sphere 2s infinite; */
+}
+
+.sphere-container .sphere4 {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    top: 500px;
+    left: 500px;
+    background: radial-gradient(ellipse at top, #e66465, transparent),
+            radial-gradient(ellipse at bottom, #4d9f0c, transparent);
+}

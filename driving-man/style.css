@@ -1,363 +1,16 @@
 
-.airplane-container:nth-child(1n) {
-    top: 60px;
-    left: -500px;
-    transform: scale(0.5);
-   animation: move-airplane 10s infinite;
-
-}
-.airplane-container:nth-child(2n) {
-    left: -600px;
-    top: 100px;
-    transform: scale(0.5);
-    animation: move-airplane 12s infinite;
-}
-
-.airplane-container {
-    top: 10%;
-    position: absolute;
-}
-
-@keyframes move-airplane {
-    100% {
-        transform: scale(0.5) translateX(5000px);
-    }
-}
-
-.airplane {
-    position: absolute;
-    top: 30%;
-    left: 200px;
-    width: 400px;
-    height: 60px;
-    background-color: #f6f6f6;
-    clip-path: polygon(0 0 , 100% 0, 100% 100%, 30% 100%, 0% 20%);
-    border-bottom: 10px solid #f2b714;
-    z-index: 2;
-    overflow: visible;
-}
-
-.airplane-before {
-    position: absolute;
-    background-color: #565656;
-    left: 195px;
-    width: 7px;
-    height: 14px;
-}
-
-.airplane-header {
-    position: absolute;
-    left: 600px;
-    top: 30%;
-    width: 100px;
-    height: 60px;
-    background-color: #f6f6f6;
-    border-top-right-radius: 100%;
-    border-bottom: 10px solid #f2b714;
-    overflow: hidden;
-}
-
-.airplane-header::before {
-    content: "";
-    position: absolute;
-    right: 20px;
-    top: 30%;
-    width: 15px;
-    height: 20px;
-    background: #565656;
-    transform: rotate(-20deg);
-    border-top-right-radius: 100%;
-}
-
-.airoplane-down {
-    position: absolute;
-    top: calc(30% + 70px);
-    height: 10px;
-    width: 380px;
-    left: 100px;
-    background: linear-gradient(#b48e2e,#b48e2e);
-    clip-path: polygon(0 0 , 100% 0, 80% 100%, 0% 100%);
-    border-bottom-left-radius: 50%;
-}
-
-.airplane-window {
-    position: absolute;
-    top: 30%;
-    width: 30%;
-    height: 15%;
-    background: linear-gradient(90deg,black 0%, black 5%, white 6%, white 10%, black 11%, black 15% ,white 16%, white 20%,black 21%, black 25%, white 26%, white 30%, black 31%, black 35%, white 36%, white 40%, black 41% ,black 45%,white 46%, white 50%,black 51%, black 55%, white 56%, white 60%, black 61%,black 65%,white 66%, white 70%,black 71%,black 75%,white 76%, white 80%,black 81%,black 85%,white 86%, white 90%,black 91%,black 95%,white 96%, white 100%);
-
-}
-.airplane-window-one {
-    left: 20%;
-    
-}
-
-.airplane-window-two {
-    left: 50%;
-}
-
-.airplane-window-three {
-    left: 80%;
-}
-
-.window {
-    height: 8px;
-    width: 8px;
-    border-radius: 2px;
-    background-color: #565656;
-    margin: 0 1px;
-}
-
-.wing {
-    position: absolute;
-
-}
-
-.wing-1{
-    clip-path: polygon(0 0 , 100% 0, 100% 100%, 0% 30%);
-    background-color: #f6f6f6;
-    width: 100px;
-    height: 50px;
-    left: 430px;
-    top: calc(30% + 70px);
-    z-index: 5;
-    transform: rotate(-45deg) skewX(44deg);
-}
-
-.wing-2 {
-    clip-path: polygon(0 0 , 100% 0, 100% 100%, 0% 20%);
-    background-color: #e4e0dd;
-    width: 100px;
-    height: 50px;
-    left: 430px;
-    top: -20px;
-    z-index: 1;
-    transform: rotate(35deg) skewX(44deg);
-    overflow: visible;
-}
-
-.wing-2::after, .wing-1::after{
-    content: "";
-    position: absolute;
-    top: -20px;
-    height: 50px;
-    width: 20px;
-    background: #f44e3f;
-    clip-path: polygon(0 0 , 100% 0, 100% 100%, 0% 100%); 
-}
-
-.wing-3{
-    clip-path: polygon(0 0 , 100% 0, 100% 100%, 0% 30%);
-    background-color: #f6f6f6;
-    width: 80px;
-    height: 40px;
-    left: 180px;
-    top: 20px;
-    z-index: 9;
-    transform: rotate(-35deg) skewX(44deg);
-}
-
-.wing-4 {
-    clip-path: polygon(0 0 , 100% 0, 100% 100%, 0% 20%);
-    background-color: #f6f6f6;
-    width: 80px;
-    height: 30px;
-    left: 180px;
-    top: -20px;
-    z-index: 1;
-    transform: rotate(35deg) ;
-}
-
-.back-circle {
-    z-index: 10;
-    position: absolute;
-    left: 230px;
-    top: 35px;
-    width: 80px;
-    height: 20px;
-    background-color: #f6f6f6;
-    border-radius: 50%;
-    transform: rotate(15deg)
-}
-
-.cloud {
-	background: #fff;
-	background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
-	border-radius: 100px;
-	
-	-webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
-	-moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
-	box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
-
-	height: 120px;
-	position: absolute;
-    width: 350px;
-    top: 10px;
-}
-
-.cloud {
-    border-radius: 20px;
-    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
-    height: 40px;
-    position: relative;
-    width: 100px;
-    z-index: 100;
-}
-
-.cloud::after, .cloud::before {
-	content: '';
-	position: absolute;
-    z-indeX: -1;
-    z-index: 10;
-    background: #fff;
-	background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
-}
-
-.cloud::after {
-    border-radius: 50%;
-    height: 60px;
-    right: 6px;
-    top: -20px;
-    width: 60px;
-    z-index: 14;
-}
-
-.cloud::before {
-    border-radius: 50%;
-    height: 60px;
-    left: -10px;
-    top: -30px;
-    width: 60px;
-    z-index: 14;
-    
-}
-
-.clouds {
-    position: absolute;
-    top: 2%;
-    left: 40%;
-    width: 100%;
-    height: 100%;
-
-}
-.cloud-one {
-    position: absolute;
-    top: 0%;
-    left: 20%;
-    animation: move-cloud 5s infinite;
-
-}
-.cloud-two {
-    position: absolute;
-    top: 7%;
-    left: 30%;
-    animation-delay: 2s;
-    animation: move-cloud 5s infinite;
-
-}
-.cloud-three {
-    left: 40%;
-    position: absolute;
-    top: 5%;
-    animation: move-cloud 5s infinite;
-
-}
-
-.ambulance-container2 {
-    position: absolute;
-    left: 60%;
-    top: -90%;
-    width: 100%;
-    height: 100%;
-    transform-origin: left;
-    /* transform: rotate(270deg); */
-}
-
-.light {
-    position: absolute;
-    background-color: blue;
-    height: 4px;
-    width: 10px;
-    left: 35%;
-    top: -3%;
-
-    z-index: 15;
-}
-
-.tower {
-    position: absolute;
-    left:40%;
-    bottom: 29%;
-    width: 50px;
-    height: 50%;
-    border: 1px dashed red;
-    clip-path: polygon(30% 0, 60% 0, 100% 100%, 0% 100%);
-    background: linear-gradient(0deg, #ff335f 0%, #ff335f 16%, #ffffff 17%, #ffffff 32%, #ff335f 33%, #ff335f 48%, #ffffff 49%, #ffffff 64%, #ff335f 65%, #ff335f 80%, #ffffff 81%, #ffffff 90%, #ff335f 91%, #ff335f 100%);
+* {
+    margin: 0;
+    padding: 0;
 }
 
 
-.tower-after{
-    position: absolute;
-    top: 35%;
-    z-index: 99;
-    background: linear-gradient( transparent 0%, transparent 50%, white 51%, white 100%);
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    left: 39%;
-    z-index: 1;
+body {
+    background: #0ec3af;
+    font-family: sans-serif;
+    padding: 100px;
 }
 
-.tower-after::after {
-    content: "";
-    position: absolute;
-    top: 60%;
-    left: 15%;
-    background: #4964d8;
-    width: 70%;
-    height: 10px;
-    border-radius: 10%;
-}
-
-.tower-after1{
-    content: "";
-    position: absolute;
-    top: 31%;
-    z-index: 99;
-    background: linear-gradient( #ff6686 0%, #ff6686 50%, white 51%, white 100%);
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    left: 39%;
-}
-.tower-above {
-    position: absolute;
-    left:40%;
-    bottom: 59%;
-    width: 40px;
-    height: 20%;
-    border: 1px dashed red;
-    clip-path: polygon(30% 0, 60% 0, 100% 100%, 0% 100%);
-    background: linear-gradient(0deg, #ff335f 0%, #ff335f 25%, #ffffff 26%, #ffffff 50%, #ff335f 51%, #ff335f 75%, #ffffff 76%, #ffffff 100%);
-}
-
-.boy-car-container {
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    bottom: -9%;
-    right: 10%;
-    z-index: 30;
-    transform: scale(0.5);
-    animation: move-my-boy 20s infinite;
-}
-@keyframes move-my-boy {
-    100% {
-        transform: scale(0.5);
-        right: 80%
-    }
-}
 .car-container {
     position: absolute;
     width: 600px;
@@ -684,7 +337,7 @@
     transform-origin: top;
 }
 
-._seat-container{
+.seat-container{
     position: absolute;
     background-color: #bbc8d3;
     height: 8%;
@@ -693,7 +346,7 @@
     left: 50%;
     z-index: -1;
 }
-._seat-container::after {
+.seat-container::after {
     content: "";
     position: absolute;
     background-color: #dfe8f0;
@@ -724,7 +377,7 @@
     border-radius: 20px;
     z-index: 5;
 }
-._tyre-container {
+.tyre-container {
     position: absolute;
     width: 80%;
     height: 20%;
@@ -738,7 +391,7 @@
     z-index: -1;
 }
 
-._tyre-container ._tyre {
+.tyre-container .tyre {
     position: absolute;
     width: 80px;
     height: 80px;
@@ -753,13 +406,13 @@
     }
 }
 
-._tyre-container ._tyre:nth-child(1) {
+.tyre-container .tyre:nth-child(1) {
     z-index: -1;
     left: 10%;
     background-color: #284855;
     
 }
-._tyre-container ._tyre:nth-child(2) {
+.tyre-container .tyre:nth-child(2) {
     left: 45%;
     z-index: 10;
     background: radial-gradient(circle at 40px 40px, 
@@ -769,7 +422,7 @@
     );
 
 }
-._tyre-container ._tyre:nth-child(3) {
+.tyre-container .tyre:nth-child(3) {
     left: 75%;
     z-index: 10;
     background: radial-gradient(circle at 40px 40px, 
@@ -779,7 +432,7 @@
     );
 }
 
-._tyre-container ._tyre::after {
+.tyre-container .tyre::after {
     content: "";
     position: absolute;
     top: 45%;
@@ -788,7 +441,7 @@
     height: 10px;
     background-color: black;
 }
-._tyre-container ._tyre::before {
+.tyre-container .tyre::before {
     content: "";
     position: absolute;
     top: 49%;
@@ -799,7 +452,7 @@
 }
 
 
-._tyre-container .back-plate-after{
+.tyre-container .back-plate-after{
     content: "";
     position: absolute;
     left: 87%;
