@@ -821,3 +821,165 @@
     left: 0%;
     top: 73%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.--ship--container {
+    bottom: -25%;
+    position: absolute;
+    margin: 200px auto;
+    width: 100vw;
+    height: 20%;
+    background: linear-gradient( #4490d0 0%, #142d56 100% );
+}
+
+@keyframes move {
+    0% {
+
+    }
+    100% {
+        opacity: 0.1;
+        transform: translate(600px, 200px);
+    }
+}
+
+.ship {
+    position: absolute;
+    bottom: 100px;
+    left: 10%;
+    top: 60%;
+    animation: ship 10s forwards;
+    z-index: 30;
+    transform: scale(0.5);
+}
+
+
+@keyframes ship {
+    100% {
+        bottom: 100px;
+        left: 70%;
+    }
+}
+.ship .middle {
+    position: absolute;
+    bottom: 40px;
+    width: 200px;
+    height: 40px;
+    clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
+    background: #202834;
+}
+
+/* .ship .bottom {
+    position: absolute;
+    width: 160px;
+    left:20px;
+    height: 40px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    background: #202834;
+    bottom: 0;
+} */
+
+.ship .top {
+    position: absolute;
+    bottom: 80px;
+    left: 20px;
+    background-color: #ffffff;
+    width: 160px;
+    height: 40px;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+}
+
+.circle {
+    background-color: #8b949c;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 2px;
+}
+
+.circles {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    display: flex;
+}
+
+
+.chimnes {
+    position: absolute;
+    bottom: 100px;
+    display: flex;
+    left: 40px;
+    transform: skew(-15deg);
+    transform-origin: top;
+}
+
+.chimne {
+    position: abolute;
+    height: 70px;
+    width: 20px;
+    background-color: #d65954;
+    margin: 0 26px;
+}
+.chimne:before {
+    content: "";
+    position: absolute;
+    background-color: #242834;
+    width: 20px;
+    height: 15px;
+}
+
+/* .chimnes .chimne .bubble1 {
+    position: absolute;
+    background-color: #dee3eb;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: -20px;
+    opacity: 0.5;
+    animation: bubble 2s infinite;
+    animation-delay: 1s;
+} */
+
+.chimnes .chimne .bubble2 {
+    position: absolute;
+    background-color: #dee3eb;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: -20px;
+    opacity: 0.5;
+    animation: bubble 2s infinite;
+    animation-delay: 0.5s;
+}
+
+.chimnes .chimne .bubble3 {
+    position: absolute;
+    background-color: #dee3eb;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    top: -20px;
+    opacity: 0.5;
+    animation: bubble 2s infinite;
+}
+
+
+@keyframes bubble {
+    100% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+}
