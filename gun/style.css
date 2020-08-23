@@ -110,9 +110,16 @@ body {
     left: 4px;
     top: -1px;
     position: absolute;
+    animation: triggerAnimation 0.3s infinite;
+    transform-origin: top;
+    animation-delay: 5s;
 }
 
-
+@keyframes triggerAnimation {
+    100% {
+        transform: rotateX(20deg);
+    }
+}
 
 
 
@@ -430,7 +437,7 @@ body {
 .back .top .light {
     background-color: #00ceed;
     width: 15px;
-    height: 2px;
+    height: 4px;
     position: absolute;
     top: 3px;
     left: 5px;
@@ -449,74 +456,106 @@ body {
 
 .amo-leaving {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    right: 460px;
+    width: 6px;
+    height: 8px;
+    left: 460px;
     display: flex;
+    background-color: #6e4535;
+    animation: amoLeaving 1s infinite;
+    animation-delay: 5s;
+    opacity: 0;
+    z-index: -1;
    
     
 }
 .amo-leaving.one {
-    animation: amoLeaving 3s ease-in forwards;
 }
 
 .amo-leaving.two {
-    animation: amoLeaving 3s ease-in forwards;
-    animation-delay: 0.5s;
+    animation-delay: 5.5s;
 }
 .amo-leaving.three {
-    animation: amoLeaving 3s ease-in forwards;
-    animation-delay: 1s;
+    animation-delay: 6s;
 }
 .amo-leaving.four {
-    animation: amoLeaving 3s ease-in forwards;
-    animation-delay: 1.5s;
+    animation-delay: 6.5s;
 }
 .amo-leaving.five {
-    animation: amoLeaving 3s ease-in forwards;
-    animation-delay: 2s;
+    animation-delay: 7s;
 }
 .amo-leaving.six {
-    animation: amoLeaving 3s ease-in forwards;
-    animation-delay: 2.5s;
+    animation-delay: 7.5s;
 }
 .amo-leaving.seven {
-    animation: amoLeaving 4s ease-in forwards;
-    animation-delay: 2.6s;
+    animation-delay: 8s;
 }
 
 
 
 @keyframes amoLeaving {
+    0% {
+        opacity: 1;
+    }
     100% {
-        transform: translateX(500px);
+        transform: translateX(2500px);
         opacity: 0;
     }
 }
 
 
-.amo-leaving-front {
+.amo-leaving:before {
+    content: "";
     background-color: black;
-    height: 3px;
-    width: 4px;
+    height: 4px;
+    width: 6px;
     position: absolute;
     top: 3px;
     position: absolute;
-    left: 24px;
-
+    left: 6px;
+    top: 1px;
 }
-.amo-leaving-middle {
-    background-color: #6e4535;
-    height: 6px;
-    width: 8px;
-    position: absolute;
-    top: 2px;
-    position: absolute;
-    left: 16px;
-
-}
-.amo-leaving-back {
+.amo-leaving:after {
+    content: "";
     background-color: #6e4535;
     height: 10px;
     width: 16px;
+    left: -16px;
+    top: -1px;
+    position: absolute;
+}
+
+/* 
+
+
+ */
+
+.back, .middle-first, .amo, .middle-second, .front {
+    opacity: 0;
+}
+
+
+@keyframes backAnimation {
+    100% {
+        opacity: 1;
+    }
+}
+
+.back {
+    animation: backAnimation 2s forwards;
+}
+.middle-first {
+    animation: backAnimation 1s forwards;
+    animation-delay: 1s;
+}
+.amo {
+    animation: backAnimation 1s forwards;
+    animation-delay: 2s;
+}
+.middle-second {
+    animation: backAnimation 1s forwards;
+    animation-delay: 3s;
+}
+.front {
+    animation: backAnimation 1s forwards;
+    animation-delay: 4s;
 }
