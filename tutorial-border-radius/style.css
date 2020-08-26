@@ -1,0 +1,108 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-around;
+}
+
+.demo {
+    width: 45vw;
+    height: 100vh;
+    border: 1px solid pink;
+}
+
+.demo .step {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.demo .step2 {
+    border: 1px solid red;
+    opacity: 0;
+    animation: 4s step2Demo;
+    -moz-animation-delay: 4s;
+    animation-delay: 1s;
+}
+
+@keyframes step2Demo {
+    50% {
+        opacity: 1;
+    }
+}
+.demo .step3 {
+    border: 1px solid red;
+    opacity: 0;
+    animation: 2s step2Demo;
+    animation-delay: 4s;
+    border-radius: 50%;
+}
+
+@keyframes step3Demo {
+    50% {
+        opacity: 1;
+    }
+}
+.demo .step4 {
+    border: 1px solid red;
+    opacity: 0;
+    animation: 2s step4Demo;
+    animation-delay: 5s;
+    border-radius: 50%;
+    background-color: black;
+}
+
+@keyframes step4Demo {
+    50% {
+        opacity: 1;
+    }
+}
+
+.code {
+    padding: 50px 0;
+    width: 45vw;
+    height: 100vh;
+    border: 1px solid pink;
+    text-align: center;
+    font-size: 24px;
+}
+
+.code .step2 {
+    opacity: 0;
+    animation: 0.1s step2Code forwards;
+    animation-delay: 1s;
+}
+@keyframes step2Code {
+    100% {
+        opacity: 1;
+    }
+}
+.code .step3 {
+    opacity: 0;
+    animation: 0.1s step3Code forwards;
+    animation-delay: 4s;
+}
+@keyframes step3Code {
+    100% {
+        opacity: 1;
+    }
+}
+.code .step4 {
+    opacity: 0;
+    animation: 2s step4Code forwards;
+    animation-delay: 5s;
+}
+@keyframes step4Code {
+    50% {
+        opacity: 1;
+    }
+}
