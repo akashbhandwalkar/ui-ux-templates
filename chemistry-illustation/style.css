@@ -1,0 +1,414 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #ffffff;
+    font-family: sans-serif;
+}
+
+.container {
+    position: relative;
+    margin: 100px auto;
+    width: 800px;
+    height: 600px;
+    background-color: #091921;
+    overflow: hidden;
+    overflow: hidden;
+}
+
+.tube-container {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+
+    height: 50%;
+    width: 20%;
+}
+
+.tube {
+    position: absolute;
+    height: 90%;
+    width: 40%;
+    right: 10%;
+    bottom: 8%;
+    border-radius: 0 0 70px 70px;
+    background: #eaf6f8;
+}
+.tube-container .tube {
+    bottom: -200%;
+    animation: animate-tube 1.5s forwards;
+    animation-delay: 4s;
+}
+.tube::after {
+    content: "";
+    position: absolute;
+    top: -7%;
+    left: -10%;
+    height: 7%;
+    width: 120%;
+    background-color: #e6eef0;
+}
+.left-filled, .right-filled {
+    position: absolute;
+    bottom: 0;
+    /* height: 70%; */
+    
+
+}
+
+.right-filled {
+    width: 80%;
+    right: 0;
+    bottom: 0%;
+    height: 80%;
+    background: #cc74ab;
+    border-radius: 70px 0 50px 22px;
+}
+
+.left-filled {
+    width: 50%;
+    left: 0;
+    height: 80%;
+    background: #c971aa;
+    border-radius: 0 50px 0 70px;
+}
+.base {
+    position: absolute;
+    left: -100%;
+    top: 80%;
+    height: 6%;
+    width: 90%;
+    border-radius: 30px;
+    background: linear-gradient(#e0d187, #d8cb87);
+    animation: animate-base 1s forwards;
+}
+
+.tube-stand {
+    position: absolute;
+    width:90%;
+    height: 140%;
+    bottom: -10%;
+    left: 20%;
+}
+.tube-stand .left-stand {
+    position: absolute;
+    bottom: 200%;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    background-color: #c2c1c2;
+    animation: animate-left-stand 1s forwards;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.tube-stand .base-stand {
+    position: absolute;
+    width: 100%;
+    height: 7%;
+    left: -10%;
+    bottom: 150%;
+    background: #b6b5b3;
+    animation: animate-left-stand 1s forwards;
+    animation-delay: 2s;
+}
+.holder-1 {
+    position: absolute;
+    width: 80%;
+    height: 3%;
+    left: -200%;
+    top: 22%;
+    background: #b5b7b7;
+    z-index: 3;
+    animation: animate-holder 1s forwards;
+    animation-delay: 3s;
+
+}
+
+.holder-2 {
+    position: absolute;
+    width: 90%;
+    height: 3%;
+    left: -200%;
+    top: 72%;
+    background: #b5b7b7;
+    z-index: 3;
+    animation: animate-holder 1s forwards;
+    animation-delay: 3s;
+
+}
+
+.holder-2::before {
+    content: "";
+    position: absolute;
+    height: 300%;
+    width: 10%;
+    top: -100%;
+    border-radius: 10px;
+    left: -10%;
+    background: #c0bdbf;
+}
+
+.measurement {
+    width: 20%;
+    height: 59%;
+    background: #efdbef;
+    z-index: 2;
+    bottom: 18%;
+    left: 10%;
+    position: absolute;
+}
+
+.bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.bubbles div {
+    position: absolute;
+    background-color: #ce98ca;
+
+}
+.bubbles div:nth-child(1) {
+    width: 10px;
+    height: 10px;
+    bottom: 30%;
+    left: 40%;
+}
+.bubbles div:nth-child(2) {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    bottom: 60%;
+    left: 50%;
+}
+.bubbles div:nth-child(3) {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    bottom: 50%;
+    left: 70%;
+    border-radius: 50%;
+}
+
+.bubbles div:nth-child(4) {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    bottom: 10%;
+    left: 70%;
+    border-radius: 50%;
+}
+.bubbles div:nth-child(5) {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    border-radius: 50%;
+}
+
+
+
+
+/*
+* vessle container
+*/
+
+.vessle-container {
+    position: absolute;
+    top: -200%;
+    left: 35%;
+    height: 30%;
+    width: 20%;
+    background: #eaf6f8;
+    border-radius: 0 0 10px 10px;
+    animation: animate-vessle 1s forwards;
+    animation-delay: 5s;
+}
+
+.vessle-container::after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    height: 10%;
+    width: 120%;
+    left: -10%;
+    background: #eff6f9;
+}
+.vessle-container::before {
+    content: "";
+    position: absolute;
+    top: -8%;
+    height: 6%;
+    width: 23%;
+    right: 0%;
+    background: white;
+    z-index: 2;
+}
+
+.vessle-container .white-line {
+    position: absolute;
+    left: 10%;
+    top: 20%;
+    height: 60%;
+    width:7%;
+    background: #fdffff;
+}
+.vessle-measurement {
+    height: 60%;
+    width: 30%;
+    position: absolute;
+    right: 0%;
+    top: 20%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: right;
+}
+.vessle-measurement div {
+    background: #7b8689;
+}
+.vessle-measurement div:nth-child(1),
+.vessle-measurement div:nth-child(4) {
+    width: 100%;
+    height: 5%;
+} 
+.vessle-measurement div:nth-child(2) ,.vessle-measurement div:nth-child(5) {
+    width: 60%;
+    height: 5%;
+    margin-left: auto;
+} 
+.vessle-measurement div:nth-child(3) ,.vessle-measurement div:nth-child(6) {
+    width: 50%;
+    height: 5%;
+    margin-left: auto;
+} 
+
+.multi-tube-container {
+    box-sizing: border-box;
+    position: absolute;
+    right: 5%;
+    width: 35%;
+    height: 40%;
+    top: 40%;
+    
+}
+
+.multi-tube-container .right-stand {
+    background:  #efa74a;
+    height: 100%;
+    width: 5%;
+    position: absolute;
+    right: -100%;
+    border-radius: 10px 10px 0 0;
+    animation: right-stand-animation 1s forwards;
+    animation-delay: 9s;
+}
+.multi-tube-container .bottom-stand {
+    background:  #e3a659;
+    height: 12%;
+    width: 90%;
+    position: absolute;
+    bottom: -100%;
+    animation: bottom-stand-animation 1s forwards;
+    animation-delay: 10s;
+}
+
+.multi-tube-container .tubes .tube {
+    position: relative;
+    width: 10%;
+    height: 70%;
+    bottom: 200%;
+    margin-top: auto;
+    animation: animate-multi-tube 0.5s forwards;
+
+}
+
+.multi-tube-container .tubes .tube:nth-child(1){
+    animation-delay: 6s;
+    background: linear-gradient(#eaf7f9 0%,#eaf7f9 20%, #524569 21%, #3F51B5 100%);
+}
+.multi-tube-container .tubes .tube:nth-child(2){
+    animation-delay: 6.5s;
+    background: linear-gradient(#eaf7f9 0%,#eaf7f9 20%, #2196F3 21%, #1e2f3d 100%);
+}
+.multi-tube-container .tubes .tube:nth-child(3){
+    animation-delay: 7s;
+    background: linear-gradient(#eaf7f9 0%,#eaf7f9 20%, #f2f4fc 21%, #f2f4fc 100%);
+}
+.multi-tube-container .tubes .tube:nth-child(4){
+    animation-delay: 7.5s;
+    background: linear-gradient(#eaf7f9 0%,#eaf7f9 20%, #FF5722 21%, #a9654f 100%);
+}
+
+
+.measurement-2  {
+    position: absolute;
+    width: 40%;
+    height: 70%;
+    z-index: 3;
+    right:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top: 10%;
+}
+.measurement-2 div {
+    background: #7b8689;
+    height: 3%;
+}
+.measurement-2 div:nth-child(1),
+.measurement-2 div:nth-child(4),
+.measurement-2 div:nth-child(7) {
+    width: 100%;
+} 
+.measurement-2 div:nth-child(2),
+.measurement-2 div:nth-child(5),
+.measurement-2 div:nth-child(8)  {
+    width: 60%;
+    margin-left: auto;
+} 
+.measurement-2 div:nth-child(3),
+.measurement-2 div:nth-child(6),
+.measurement-2 div:nth-child(9) {
+    width: 50%;
+    margin-left: auto;
+} 
+
+
+.multi-tube-container .tubes  {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+}
+.upper-holder {
+    position: absolute;
+    top: 30%;
+    height: 5%;
+    background: #e6a441;
+    z-index: 3;
+    width: 100%;
+    right: -200%;
+    animation: animate-holder-right 1s forwards;
+    animation-delay: 8s;
+}
+
+.down-holder {
+    background-color: #eca755;
+    position: absolute;
+    top: 60%;
+    height: 5%;
+    z-index: 3;
+    width: 100%;
+    right: -200%;
+    animation: animate-holder-right 1s forwards;
+    animation-delay: 8.5s;
+}

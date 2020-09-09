@@ -1,0 +1,65 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+   
+    font-family: sans-serif;
+}
+.container {
+    position: relative;
+    margin: 200px auto;
+    width: 1200px;
+    height: 60vh;
+    background: linear-gradient(90deg, #10d3ff, #9f30fe);
+}
+
+.mobile {
+    top: 20%;
+    left: 100px;
+    height: 200px;
+    width: 100px;
+    position: absolute;
+    background: linear-gradient(#2178ff, #0d93ff);
+    border-radius: 20px;
+    box-shadow: -4px -4px 10px #3694e9,
+    -4px 4px 10px #3694e9;
+}
+
+.ipad {
+    top: 20%;
+    left: 250px;
+    height: 200px;
+    width: 300px;
+    position: absolute;
+    background: linear-gradient(90deg, #1656d5, #7a43e4);
+    border-radius: 20px;
+    box-shadow: -1px -5px 5px #709cf5,
+    -5px -1px 5px #709cf5;
+}
+
+.laptop {
+    position: relative;
+    top: 18%;
+    left: 650px;
+    height: 230px;
+    width: 350px;
+    position: absolute;
+    background: linear-gradient(90deg, #ef005f, #b40047);
+    border-radius: 20px;
+    box-shadow: -1px -5px 5px #977cff,
+    -5px -1px 5px #977cff;
+}
+
+.laptop::after {
+    content: "";
+    position: absolute;
+    bottom: -50px;
+    height: 30px;
+    width: 100%;
+    background: #e8015c;
+    border-radius: 20px;
+}

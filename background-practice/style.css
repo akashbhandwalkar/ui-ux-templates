@@ -1,0 +1,22 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+.background {
+    margin: 200px auto;
+    width: 600px;
+    height: 600px;
+        /* border-radius: 50%; */
+    background: 
+     url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTI47lfhYUe2m4xskGt_0VbRvLxZkfwb1Oiyg&usqp=CAU");    
+     background-size: cover;
+
+}

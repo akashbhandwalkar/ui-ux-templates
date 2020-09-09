@@ -1,0 +1,265 @@
+
+body {
+    background: linear-gradient(#58a1da, white);
+    height: 100vh;
+}
+
+.clouds {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    left: -30%;
+}
+.cloud {
+    background-color: #f89728;
+    width: 15%;
+    height: 8%;
+    border-radius: 50%;
+}
+
+
+.one {
+    position: absolute;
+    top: 10%;
+    opacity: 0.7;
+    z-index: 1;
+    animation: 2s cloud-animation infinite;
+}
+
+
+@keyframes cloud-animation {
+    0% {
+        left: 0%;
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    100% {
+        left: 80%;
+    }
+}
+
+.two {
+    position: absolute;
+    top: 20%;
+    opacity: 0.7;
+    animation: 2s cloud-animation infinite;
+    animation-delay: 0.5s;
+}
+
+.three {
+    position: absolute;
+    top: 10%;
+    opacity: 0.7;
+    animation: 2s cloud-animation infinite;
+    animation-delay: 1.2s;
+}
+
+.four {
+    position: absolute;
+    top: 7%;
+    opacity: 0.7;
+    animation: 2s cloud-animation infinite;
+    animation-delay: 1.4s;
+}
+
+.five {
+    position: absolute;
+    top: 18%;
+    opacity: 0.7;
+    animation: 2s cloud-animation infinite;
+    animation-delay: 1.8s;
+}
+
+.six {
+    position: absolute;
+    top: 15%;
+    opacity: 0.7;
+    animation: 2s cloud-animation infinite;
+    animation-delay: 0.8s;
+}
+
+
+
+.cycle-wrapper{
+    margin: 230px auto;
+    width: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+
+.cycle{
+    height: 220px;
+    width: 220px;
+    border-radius: 100%;
+    position: relative;
+    left: 0;
+    animation: spinner 20s infinite;
+
+}
+
+.inner-circle{
+    height: 203px;
+    width: 203px;
+    top: 1px;
+    border-radius: 100%;
+    border: 8px solid green;
+    position: absolute;
+    left: 0;
+    animation: spinner 20s infinite;
+
+}
+
+.stroke{
+    list-style: none;
+    border-right: 1px solid #666;
+    height: 204px;
+    width: 1px;
+    position: absolute;
+    left: 109px;
+    top: 8px;
+}
+
+
+.stick1 {
+    background: #f99077;
+    width: 270px;
+    height: 10px;
+    transform: rotate(-60deg);
+    left: 230px;
+    top: -10px;
+    position: absolute;
+    border-radius: 10px;
+}
+.stick1:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+.stick2:after{ 
+    content: "";
+    width: 80px;
+    height: 10px;
+    background-color: #f99077;
+    position: absolute;
+    /* top: -370px; */
+    transform: none;
+    left: -52px;
+    top: -50px;
+    border-radius: 10px;
+}
+
+.stick2 {
+    background: #f99077;
+    width: 220px;
+    height: 10px;
+    /* transform: rotate(-60deg); */
+    left: 408px;
+    top: -75px;
+    border-radius: 10px;
+    position: absolute;
+}
+.stick3 {
+    background: #f99077;
+    width: 195px;
+    height: 10px;
+    transform: rotate(65deg);
+    right: 243px;
+    top: 13px;
+    border-radius: 10px;
+    position: absolute;
+}
+.stick4 {
+       background: #f99077;
+    width: 188px;
+    height: 10px;
+    transform: rotate(65deg);
+    left: 355px;
+    top: 9px;
+    border-radius: 10px;
+    position: absolute;
+}
+.stick5 {
+    background: #f99077;
+    width: 220px;
+    height: 10px;
+    right: 297px;
+    border-radius: 10px;
+    top: 98px;
+    position: absolute;
+  transform: rotate(4deg);
+}
+
+.paddle {
+    width: 60px;
+    height: 60px;
+    border: 3px solid #f99077;
+    border-radius: 50%;
+    position: absolute;
+    left: 453px;
+    top: 68px;
+}
+.paddle-chain1 {
+    width: 216px;
+    height: 2px;
+    background: #f99077;
+    position: absolute;
+    left: 483px;
+    top: 68px;
+    transform: rotate(8deg);
+    transform-origin: left;
+}
+.paddle-chain2 {
+      width: 216px;
+    height: 2px;
+    background: #f99077;
+    position: absolute;
+    left: 483px;
+    top: 132px;
+    transform: rotate(-3deg);
+    transform-origin: left;
+}
+
+.seat {
+    height: 50px;
+    width: 10px;
+    background-color: #f99077;
+    position: absolute;
+    top: -115px;
+    right: 372px;
+}
+
+.seat:after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 10px;
+    background: #f99077;
+    top: 0px;
+    left: -19px;
+
+}
+
+
+@keyframes spinner {
+    
+    100% {
+        transform: rotate(-3600deg);
+    }
+    
+}
+
+.wheel-center1 {
+position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #f99077;
+    left: 95px;
+    top: 96px;
+    z-index: 3;
+    border-radius: 50%;
+}

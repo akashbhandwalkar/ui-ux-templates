@@ -1,0 +1,16 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+#some-element-you-want-to-animate {
+    width: 200px;
+    height: 200px;   
+    background-color: rebeccapurple;
+}

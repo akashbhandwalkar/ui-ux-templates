@@ -1,0 +1,55 @@
+@keyframes animate-base {
+    100% {
+        left: 5%;
+    }
+}
+
+@keyframes animate-left-stand {
+    100% {
+        bottom: 0;
+    }
+}
+
+
+@keyframes animate-holder  {
+    100% {
+        left: 10%;
+    }
+}
+
+@keyframes animate-tube {
+    100% {
+        bottom: 8%;
+    }
+}
+
+@keyframes animate-vessle {
+    100% {
+        top: 50%;
+    }
+}
+
+@keyframes animate-multi-tube {
+    100% {
+        bottom: 12%;
+    }
+}
+
+@keyframes animate-holder-right {
+    100% {
+        right: 5%;
+    }
+}
+
+
+@keyframes right-stand-animation {
+    100% {
+        right: 5%;
+    }
+}
+
+@keyframes bottom-stand-animation {
+    100% {
+        bottom: 0;
+    }
+}

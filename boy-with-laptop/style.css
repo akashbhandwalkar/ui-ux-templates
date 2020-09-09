@@ -1,0 +1,548 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+.boy-with-laptop-container {
+    background-color: white;
+    width: 800px;
+    height: 800px;
+    margin: 200px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.face {
+    height: 20%;
+    width: 15%;
+    background: #f3c4a7;
+    position: absolute;
+    border-bottom-left-radius: 40%;
+    border-bottom-right-radius: 40%;
+    z-index: 2;
+}
+
+.face .mouth {
+    width: 40%;
+    height: 30%;
+    background: linear-gradient(white 0%, white 25%, #041e2b 26%, #041e2b 100%);
+    position: absolute;
+    border-radius: 50%;
+    border-top-left-radius: 0%;
+    overflow: hidden;
+}
+
+.face .tounge {
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    background: #d61864;
+}
+
+.face .nose {
+    position: absolute;
+    background: #d7446b;
+    height: 20%;
+    width: 15%;
+    border-radius: 20px;
+}
+
+.face .eyes {
+    position: absolute;
+    /* left: 20%; */
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.face .eye  {
+    background: black;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+
+
+.face .lense {
+    position: absolute;
+    height: 40%;
+    width: 90%;
+    top: -400%;
+    animation: animation-face-lense 1s forwards;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+}
+
+@keyframes animation-face-lense {
+    100% {
+        top: 10%;
+    }
+}
+
+
+.face .lense::after {
+    content: "";
+    position: absolute;
+    width: 30%;
+    left: 35%;
+    height: 20%;
+    border-radius: 50%;
+    border-top: 5px solid white;
+}
+
+.ear  {
+    position: absolute;
+    background-color: #edbea2;
+    height: 3%;
+    /* background-color: rebeccapurple; */
+    width: 19%;
+    top: 25%;
+    left: 38%;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+
+.laptop {
+    position: absolute;
+    width: 30%;
+    height: 20%;
+    background: #152b35;
+    border-radius: 20px;;
+}
+
+.laptop::after {
+    content: "";
+    background: #031a25;
+    height: 10px;
+    width: 100%;
+    position: absolute;
+    bottom: -10px;
+}
+
+.laptop .sticker-1 {
+    position: absolute;
+    width: 20%;
+    height: 10%;
+    border-radius: 15px;
+    background: #40c1d2;
+    transform: rotate(-45deg);
+    animation: animation-laptop-sticker-1 1s forwards;
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+    opacity: 0;
+}
+
+@keyframes animation-laptop-sticker-1 {
+    100% {
+    opacity: 1;
+    }
+}
+
+.laptop .sticker-2 {
+    position: absolute;
+    width: 30%;
+    height: 30%;
+    border-radius: 5px;
+    background: #40c1d2;
+    transform: rotate(45deg);
+    background: #c4175b;
+    animation: animation-laptop-sticker-1 1s forwards;
+    -webkit-animation-delay: 9s;
+    animation-delay: 9s;
+    opacity: 0;
+
+}
+.laptop .sticker-3 {
+    position: absolute;
+    width: 20%;
+    height: 30%;
+    border-radius: 50%;
+    background: #f5f398;
+    transform: rotate(45deg);
+    z-index: 1;
+    animation: animation-laptop-sticker-1 1s forwards;
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+    opacity: 0;
+}
+.tshirt {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    background: #0c78ab;
+    position: absolute;
+    left: 37%;
+    top: -300%;
+
+    animation: animation-tshirt 1s forwards;
+    -webkit-animation-delay: 3.5s;
+    animation-delay: 3.5s;
+}
+
+@keyframes animation-tshirt {
+    100% {
+        top: 30%;
+
+    }
+}
+
+.tshirt .left-hand {
+    position: absolute;
+    width: 130%;
+    height: 17%;
+    left: -500%;
+
+    top: 5%;
+    border-radius: 20px;
+    background: #0c78ab;
+    transform: rotate(225deg);
+    transform-origin: left;
+    animation: animation-face-left-hand 1s forwards;
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;   
+}
+
+@keyframes animation-face-left-hand  {
+    100% {
+        left: 10%;
+
+    }
+}
+
+
+.tshirt .left-hand::after, .tshirt .right-hand::after  {
+    content: "";
+    left: 40%;
+    top:20px;
+    width: 30px;
+    height: 30px;
+    top: -10px;
+    position: absolute;
+    background: #0c78ab;
+    border-radius: 50%;
+}
+.tshirt .right-hand::after {
+    top: 10px;
+    left: 50%;
+}
+.tshirt .right-hand {
+    position: absolute;
+    width: 160%;
+    height: 17%;
+    left: 600%;
+    top: 17%;
+    border-radius: 20px;
+    background: #0c78ab;
+    transform: rotate(-35deg);
+    transform-origin: left;
+    animation: animation-face-right-hand 1s forwards;
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s; 
+}
+@keyframes animation-face-right-hand  {
+    100% {
+        left: 60%;
+    }
+}
+.div-fingure {
+    background: #f0bd9d;
+    width: 30%;
+    height: 160%;
+    position: absolute;
+    right: -30%;
+    top: -30%;
+    border-radius: 15px;
+}
+
+.div-fingure::after {
+    content: "";
+    background-color: #e38b83;
+    height: 70%;
+    width: 40%;
+    position: absolute;
+    bottom: 15%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    left: -33%;
+}
+
+.div-fingure::before {
+    content: "";
+    background-color: #f0be9b;
+    position: absolute;
+    width: 53%;
+    height: 35%;
+    top: -20%;
+}
+.left-hand .div-fingure::before {
+   
+    width: 53%;
+    height: 35%;
+    border-radius: 10px;
+    top: 87%;
+    transform: rotate(40deg);
+
+
+}
+.right-hand .div-fingure::before {
+    width: 53%;
+    height: 35%;
+    border-radius: 10px;
+    transform: rotate(-40deg);
+
+}
+
+
+.table {
+    position: absolute;
+    height: 30px;
+    width: 70%;
+    background: #0fa392;
+    border-radius: 20px;
+}
+
+.table .drink {
+    position: absolute;
+    background: #971047;
+    height: 70px;
+    width: 50px;
+    top: -70px;
+    left: -400px;
+    animation: animation-drink 2s forwards;
+    -webkit-animation-delay: 10s;
+    animation-delay: 10s;
+}
+@keyframes animation-drink {
+    100% {
+        left: 40px;
+    }
+}
+
+.table .drink::after {
+    content: "";
+    background: #dfdd8c;
+    width: 25px;
+    height:  25px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
+
+.table .drink::before {
+    content: "";
+    width: 130%;
+    height: 30%;
+    top: -20%;
+    left: -15%;
+    position: absolute;
+    background: #c3185d;
+    box-shadow: 0px 7px 0px #760634;
+}
+
+
+.hair-container {
+    width: 20%;
+    height: 15%;
+    position: absolute;
+    opacity: 0;
+    animation: animation-face-hair 2s forwards;
+    -webkit-animation-delay: 4s;
+    animation-delay: 4s;
+   
+}
+
+@keyframes animation-face-hair  {
+    100% {
+        opacity: 1;
+    }
+}
+.hair-container div:nth-child(1) {
+    top: 10%;
+    left: 0;
+    position: absolute;
+    width: 60%;
+    height: 94%;
+    border-radius: 50%;
+    background-color: #18303b;
+}
+
+.hair-container div:nth-child(2) {
+    top: -10%;
+    left: 20%;
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: #18303b;
+}
+.hair-container div:nth-child(3) {
+    top: -10%;
+    left: 40%;
+    position: absolute;
+    width: 60%;
+    height: 80%;
+    border-radius: 50%;
+    background-color: #18303b;
+}
+.hair-container div:nth-child(4) {
+    top: 10%;
+    left: 50%;
+    position: absolute;
+    width: 60%;
+    height: 94%;
+    border-radius: 50%;
+    background-color: #18303b;
+}
+
+
+
+
+
+
+.hair-container {
+    left: 37%;
+    top: 11%;
+}
+
+
+.laptop .sticker-1  {
+    top: 30%;
+    left: 5%;
+}
+
+.laptop .sticker-2  {
+    top: 40%;
+    right: 10%;
+    z-index: 2;
+}
+.laptop .sticker-3  {
+    top: 20%;
+    right: 10%;
+}
+
+.table {
+    left: 10%;
+    top: 61%;
+}
+
+
+.laptop {
+    top: 400%;
+    left: 32%;
+    animation: animation-laptop 1s forwards;
+    -webkit-animation-delay: 7s;
+    animation-delay: 7s;
+}
+
+@keyframes animation-laptop  {
+    100% {
+        top: 40%;
+    }
+}
+
+.face .lense .one {
+    position: absolute;
+    left: 0%;
+    height: 70%;
+    width: 40%;
+    border: 5px solid white;
+    border-radius: 50%;;
+}
+.face .lense .two {
+    position: absolute;
+    right: 0%;
+    height: 70%;
+    width: 40%;
+    border: 5px solid white;
+    border-radius: 50%;;
+}
+
+.face .lense {
+    left: 5%;
+}
+
+.face .one {
+    left: 15%;
+}
+.face .two {
+    right: 15%;
+}
+
+.face .eyes {
+    top: -300%;
+    left: 5%;
+    animation: animation-face-eyes 1s forwards;
+    -webkit-animation-delay: 3s;
+    animation-delay: 3s;
+}
+@keyframes animation-face-eyes {
+    100% {
+        top: 30%;
+    }
+}
+
+.face .nose {
+    top: 20%;
+    left: -345%;
+    animation: animation-face-nose 1s forwards;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+@keyframes animation-face-nose {
+    100% {
+        left: 45%;
+    }
+}
+
+.face .tounge {
+    bottom: -20%;
+    right: -20%;
+}
+
+.face .mouth {
+    bottom: 20%;
+    left: -320%;
+    animation: animation-face-mouth 1s forwards;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+@keyframes animation-face-mouth {
+    100% {
+        left: 30%;
+    }
+}
+
+
+
+
+
+
+
+
+
+.face {
+    left: -40%;
+    top: 20%;
+    animation: animate-face 1s forwards
+}
+
+@keyframes animate-face {
+    100% {
+        left: 40%;
+        top: 20%;
+    }
+}

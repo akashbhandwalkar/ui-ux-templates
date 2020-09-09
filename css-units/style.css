@@ -1,0 +1,35 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+.dom {
+    margin: 300px auto;
+    display: flex;
+
+}
+.cm {
+    width: 1cm;
+    height: 1cm;
+    background-color: orangered;
+}
+.pt {
+    margin: 20px;
+    width: 100pt;
+    height: 100pt;
+    background-color: orangered;
+
+}
+.pc {
+    margin: 20px;
+    width: 10pc;
+    height: 10pc;
+    background-color: orangered;
+}
