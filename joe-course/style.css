@@ -1,0 +1,98 @@
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+    padding: 100px;
+}
+
+.button-wrapper {
+    padding: 10px 30px;
+    align-items: center;
+    display: flex;
+    background-color: #607d8b;
+    margin-left: 50%;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px gray;
+    border: 0;
+}
+button:active {
+    outline: none;
+    box-shadow: 0 0 0 0 hsl(0, 0%, 0%);
+}
+
+.button-wrapper:focus {
+    outline: none;
+}
+.button-wrapper:hover {
+    background: black;
+}
+
+svg {
+    width:24px;
+    fill: transparent;
+    stroke: white;
+    stroke-width: 10px;
+    margin-right:12px;
+}
+
+.button-wrapper.active svg {
+    fill: red;
+    stroke-width: 0px;
+}
+
+span {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+.bad-button-wrapper {
+    padding: 10px 30px;
+    align-items: center;
+    display: flex;
+    background-color: #607d8b;
+    margin-left: 50%;
+    cursor: pointer;
+    border: 0;
+}
+.bad-button-wrapper:active {
+    outline: none;
+    transform: scale(1.1);
+}
+
+.bad-button-wrapper:focus {
+    outline: none;
+}
+.bad-button-wrapper:hover {
+    background: black;
+    padding: 12px 30px;
+}
+
+bad-button-wrapper svg {
+    width:24px;
+    fill: transparent;
+    stroke: white;
+    stroke-width: 10px;
+    margin-right:12px;
+}
+
+.bad-button-wrapper.active svg {
+    fill: red;
+    stroke-width: 0px;
+}
+
+.bad-button-wrapper span {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+
+}
+
+
+
+.demo-buttons {
+    display: flex;
+    width: 400px;
+    justify-content: space-evenly;
+}
