@@ -1,0 +1,59 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+.container {
+    text-align: center;
+    color: #009688;
+    font-weight: 300;
+    font-size: 20px;
+    position: relative;
+    margin: 100px auto;
+    height: 800px;
+    width: 500px;
+    background: linear-gradient(#b1f5d0 0%, #b1f5d0 85%, #78d7b0 85%, #78d7b0 100%);
+}
+
+.chair-container {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    bottom: 15%;
+    left: 25%;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+}
+
+.boy-container {
+    position: absolute;
+    bottom: 50%;
+    width: 30%;
+    height: 40%;
+    left: 35%;
+    border: 1px solid blue;
+}
+.wheels-base-container {
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    height: 40%;
+    border: 1px solid red;
+    left: 20%;
+}
+.chair-upper-container {
+    position: absolute;
+    bottom: 40%;
+    width: 80%;
+    height: 60%;
+    border: 1px solid black;
+    left: 10%;
+}
