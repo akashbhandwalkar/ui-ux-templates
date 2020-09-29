@@ -1,0 +1,72 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --base-color: #edf2f5;
+    --base-color-after: #72c695;
+    --top-color: #cdf7f1;
+}
+
+body {
+    background: #f7b38e;
+    font-family: sans-serif;
+}
+
+.washing-machine-container {
+    position: relative;
+    top: 300px;
+    left: 40%;
+    /* animation: animate-washing-machine 0.3s infinite; */
+    transform-origin: left;
+    transform: rotateX(-5deg);
+}
+@keyframes animate-washing-machine {
+    50% {
+        transform: rotate(-5deg);
+    }
+}
+
+.washing-machine-container .right {
+    position: absolute;
+    left: 200px;
+    transform-origin: 0 0;
+    width: 200px;
+    height: 200px;
+    background-color: #F44336;
+    transform: rotateY(60deg) skewY(-20deg);
+}
+.washing-machine-container .front {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background-color: #9C27B0;
+    /* transform: rotateY(60deg) skewY(-20deg); */
+}
+.washing-machine-container .right::after, .washing-machine-container .front::after {
+    position: absolute;
+    content: "";
+    height: 30px;
+    top: -30px;
+    width: 100%;
+}
+.washing-machine-container .right::after {
+    background-color: #009688;
+}
+.washing-machine-container .front::after {
+    background-color: #8bc34a;
+}
+
+.washing-machine-container .top {
+    position: absolute;
+    left: 0;
+    top: -230px;
+    width: 200px;
+    height: 200px;
+    background-color: #d51959;
+    transform: skewX(-54deg) rotateX(69deg);
+    transform-origin: bottom;
+}
