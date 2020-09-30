@@ -1,0 +1,76 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+    background: #dedede;
+}
+
+ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+ul li a {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: block;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    transition: 0.5s;
+    padding: 8px;
+    background: linear-gradient(0deg, #ddd, #fff);
+}
+ul li a:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+ul li a .fa {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: linear-gradient(0deg, #fff, #ddd);
+
+    border-radius: 50%;
+    line-height: calc(80px - 16px);
+    font-size: 24px;
+    color: #262626;
+    transition: 0.5s;
+}
+
+ul li:nth-child(1) .fa:hover {
+    color: #1877f2;
+}
+ul li:nth-child(2) .fa:hover {
+    color: #1da1f2;
+}
+ul li:nth-child(3) .fa:hover {
+    color: #007bb5;
+}
+ul li:nth-child(4) .fa:hover {
+    color: #f46f30;
+}
+ul li:nth-child(5) .fa:hover {
+    color:  #db4437;
+}
+ul li:nth-child(6) .fa:hover {
+    color: #25d366;
+}
