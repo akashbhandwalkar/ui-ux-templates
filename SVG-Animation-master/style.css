@@ -1,0 +1,115 @@
+body {
+  background: url("https://www.gwsportsapp.in/media/ground-images/gallery/MC4xMzk4OTAwMCAxNTA4NTE4NDY4.jpeg");
+}
+.svg-animation-container {
+  width: 500px;
+  padding: 24px;
+  margin: 0 auto;
+  border-radius: 20%;
+  /* height: 500px; */
+  position: relative;
+}
+
+.svg-animation-container svg {
+  width: 100%;
+}
+
+#BGElement {
+  animation: changeColor 3s infinite alternate;
+}
+
+@keyframes changeColor {
+  0% {
+    fill: red;
+  }
+  100% {
+    fill: blue;
+  }
+}
+
+#SoccerBall {
+  animation: bounce 10s infinite ease-out alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(20px);
+  }
+  10% {
+    transform: translate(40px, -500px) ;
+  }
+  20% {
+    transform: translateY(20px);
+  }
+  30% {
+    transform: translate(30px, -400px)
+  }
+  40% {
+    transform: translateY(20px);
+  }
+  50% {
+    transform: translateY(-300px);
+  }
+  60% {
+    transform: translateY(20px);
+  }
+  70% {
+    transform: translateY(-200px);
+  }
+  80% {
+    transform: translateY(20px);
+  }
+  90% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(2px);
+  }
+}
+
+#Shoe {
+  animation: rotate 2s infinite alternate;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(10deg);
+  }
+  70% {
+    transform: rotate(-5deg);
+  }
+}
+
+#RightHand {
+  animation: rotateHand 2s infinite alternate;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+
+#LeftHand {
+  animation: rotateLHand 2s infinite alternate;
+  transform-origin: top left;
+  transform-box: fill-box;
+}
+
+@keyframes rotateHand {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  70% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes rotateLHand {
+  0% {
+    transform: rotate(5deg);
+  }
+
+  50% {
+    transform: rotate(0deg);
+  }
+}
