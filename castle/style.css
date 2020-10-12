@@ -13,6 +13,10 @@
     --window-color: #947f74;
     --gate-left: #bc6732;
     --gate-right:#d07d34;
+    --mud-color: #7c5334;
+    --bridge-color: #c5b99f;
+    --bridge-color-1: #827b5e;
+    --background-color: #3a5c90;
   }
 
 body {
@@ -22,9 +26,9 @@ body {
 
 
 .container {
-    background-color: #3a5c90;
-    width: 600px;
-    height: 600px;
+    background-color: var(--background-color);
+    width: 700px;
+    height: 700px;
     margin: 100px auto;
     position: relative;
     overflow: hidden;
@@ -39,7 +43,6 @@ body {
 }
 
 .base-line {
-    border-radius: 5px;
     width: 100%;
     height: 9px;
     background-color: var( --green);
@@ -54,15 +57,11 @@ body {
     position: absolute;
     left: 10%;
     display: flex;
-    bottom: 9px;
+    bottom: 150px;
     z-index: 3; 
 }
 
-@keyframes bottom-animation {
-    0% {
-        transform: translateY(1000px);
-    }
-}
+
 
 
 
@@ -75,35 +74,53 @@ body {
     background-color: var(--wallcolor);
     height: 100px;
     left: 0;
+    bottom: -400px;
     animation: bottom-animation 1s forwards;
+    animation-delay: 1s;
 }
 .bottom .wall.two {
     width:70px;
     background-color: var(--wallcolor-second);
     height: 200px;
     left: 70px;
+    bottom: -400px;
     animation: bottom-animation 2s forwards;
+    animation-delay: 1.5s;
+
+}
+.two-duplicate {
+    left: 324px !important;
 }
 .bottom .wall.three{
     width:130px;
     background-color: var(--wallcolor-third);
     height: 110px;
     left: 140px;
-    animation: bottom-animation 3s forwards;
+    bottom: -400px;
+    animation: bottom-animation 3.5s forwards;
+    animation-delay: 2s;
+
 }
 .bottom .wall.four {
     width:70px;
     background-color: var(--wallcolor-second);
     height: 200px;
     left: 270px;
-    animation: bottom-animation 4s forwards;
+    bottom: -400px;
+    animation: bottom-animation 2s forwards;
+    animation-delay: 3s;
+
+
 }
 .bottom .wall.five {
     width: 70px;
     background-color: var(--wallcolor);
     left: 340px;
     height: 100px;
-    animation: bottom-animation 5s forwards;
+    bottom: -400px;
+    animation: bottom-animation 2s forwards;
+    animation-delay: 3.5s;
+
 }
 
 .bottom .wall.one .after-wall {
@@ -205,7 +222,7 @@ body {
     position: absolute;
     left: 24%;
     display: flex;
-    bottom: 9px;
+    bottom: 150px;
     z-index: 2;
 }
 .middle-layer .wall {
@@ -217,32 +234,31 @@ body {
     width: 70px;
     background-color: var(--wallcolor);
     height: 300px;
+    bottom: -700px;
     left: 0;
-    -webkit-animation-delay: 4s;
-    animation: middle-animation 4s forwards;
+    animation: middle-animation 2.5s forwards;
+    animation-delay: 5s;
 }
 .middle-layer .wall.two {
     width: 100px;
     background-color: var(--wallcolor-second);
     height: 400px;
     left: 70px;
-    animation-delay: 4s;
-    animation: middle-animation 6s forwards;
+    bottom: -700px;
+    animation: middle-animation 2s forwards;
+    animation-delay: 5.5s;
 }
 .middle-layer .wall.three{
     width: 70px;
     background-color: var(--wallcolor);
     height: 300px;
     left: 170px;
-    animation-delay: 4s;
-    animation: middle-animation 4s forwards;
+    bottom: -700px;
+    animation: middle-animation 3s forwards;
+    animation-delay: 6s;
 }
 
-@keyframes middle-animation {
-    0% {
-        transform: translateY(2000px);
-    }
-}
+
 
 .middle-layer .wall.one .top, .middle-layer .wall.three .top {
    position: absolute;
@@ -302,12 +318,7 @@ body {
     animation: animate-flag 6s infinite;
 }
 
-@keyframes animate-flag {
-    
-    50% {
-        transform: rotateY(-45deg);
-    }
-}
+
 .middle-layer .wall.two .top .flag {
     left: 48px;
 }
@@ -394,4 +405,175 @@ body {
     position: absolute;
     top: 10%;
     left: 38%;
+}
+
+.mountain {
+    position: absolute;
+    bottom: -400px;
+    left: 30px;
+    width: 650px;
+    height: 140px;
+    background-color: var(--mud-color);
+    clip-path: polygon(40px 0, 600px 0, 100% 100%, 0% 100%);
+    animation: animate-mountain 1s forwards;
+}
+
+@keyframes animate-mountain {
+    100% {
+        bottom: 10px;
+    }
+}
+
+.bridge {
+    width: 80px;
+    height: 20px;
+    border: 4px solid var(--bridge-color);
+    bottom: 145px;
+    position: absolute;
+    z-index: 5;
+    left: 411px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, transparent 0, transparent 10%, var(--bridge-color) 10%, var(--bridge-color) 15%, transparent 15%, transparent 25%, var(--bridge-color) 25%, var(--bridge-color) 30%, 
+    transparent 30%, transparent 40%, var(--bridge-color) 40%, var(--bridge-color) 45%, transparent 45%, transparent 55%, var(--bridge-color) 55%, var(--bridge-color) 60%,
+    transparent 60%, transparent 70%, var(--bridge-color) 70%, var(--bridge-color) 75%, transparent 75%, transparent 85%, var(--bridge-color) 85%, var(--bridge-color) 90%,
+    transparent 90%, transparent 100%);
+    opacity: 0;
+    animation: bridge 2s forwards;
+    animation-delay: 7s;
+}
+
+@keyframes bridge {
+    100% {
+        opacity: 1;
+    }
+}
+
+.bridge::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    background: var(--bridge-color-1);
+    height: 20px;
+    width: 80px;
+    left: -4px;
+}
+.bridge::after {
+    content: "";
+    position: absolute;
+    bottom: -45px;
+    border-radius: 50%;
+    background: var(--background-color);
+    height: 40px;
+    width: 80px;
+    left: -4px;
+}
+
+.valley {
+    position: absolute;
+    background: var(--background-color);
+    bottom: -120px;
+    height: 100px;
+    width: 80px;
+    left: -5px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 50% 100%, 0% 70%);
+}
+
+.stepper {
+    position: absolute;
+    bottom: 0;
+}
+
+.stepper-border {
+    border: 3px solid #827b5e; 
+    background-color: #b2a48b;
+    display: flex;
+    justify-content: space-around;
+    animation: animate-steps 1s forwards;
+    animation-delay: 7s;
+    opacity: 0;
+}
+
+@keyframes animate-steps  {
+    100% { 
+        opacity: 1;
+    }
+}
+
+.stepper-border div {
+    height: 15px;
+    width: 5px;
+    background-color: #c7bd9b;
+    z-index: 5;
+    margin-top: -4px;
+}
+.stepper-border div::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 5px;
+    background-color: #f2eaca;
+    z-index: 5;
+    top: -6px;
+    /* margin-top: -3px; */
+}
+
+
+.stepper-1 {
+    width: 130px;
+    height: 10px;
+    position: absolute;
+    left: 180px;
+    bottom: 8px;
+    transform: rotate(-20deg);
+    transform-origin: 0 0;
+}
+.stepper-2 {
+    width: 60px;
+    height: 10px;
+    position: absolute;
+    left: 312px;
+    bottom: 55px;
+
+}
+.stepper-3 {
+    width: 130px;
+    height: 10px;
+    position: absolute;
+    left: 180px;
+    bottom: 100px;
+    transform: rotate(15deg);
+    transform-origin: 0 0;
+}
+.stepper-4 {
+    width: 60px;
+    height: 10px;
+    position: absolute;
+    left: 175px;
+    bottom: 125px;
+    transform: rotate(-25deg);
+}
+.stepper-5 {
+    width: 80px;
+    height: 10px;
+    position: absolute;
+    left: 93px;
+    bottom: 107px;
+}
+@keyframes bottom-animation {
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes middle-animation {
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes animate-flag {
+    
+    50% {
+        transform: rotateY(-45deg);
+    }
 }

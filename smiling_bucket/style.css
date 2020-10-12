@@ -1,0 +1,290 @@
+
+:root {
+    --background-color: #1b131a;
+    --bucket-body: #f3bcc3;
+    --bucket-top: #d56186;
+    --eyes-color: #2b151b;
+    --chick-dots: #cb5c80;
+    --tounge-color: #c4597b;
+    --leg-color: #a84c6d;
+    --paint-color: #9e4866;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: var(--background-color);
+    font-family: sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: shake-bucket 2s;
+    animation-delay: 7s;
+}
+
+@keyframes  shake-bucket {
+    50% {
+        transform: translate(-50%, -50%) rotate(15deg);
+    }
+}
+
+.bucket-body {
+    position: absolute;
+    bottom: 200%;
+    left: 25%;
+    width: 50%;
+    height: 55%;
+    border-radius: 30px;
+    background-color: var(--bucket-body);
+    z-index: 3;
+    animation: bucket-body 1s forwards;
+}
+@keyframes bucket-body{
+    100% {
+        bottom: 0;
+    }
+}
+.bucket-body::after {
+    content: "";
+    position: absolute;
+    background-color: var(--bucket-top);
+    border-radius: 30px;
+    top: -200%;
+    left: -10%;
+    width: 120%;
+    height: 20%;
+    overflow: hidden;
+    animation: bucket-body-after 1s forwards;
+    animation-delay: 1s;
+}
+@keyframes bucket-body-after{
+    100% {
+        top: -5%;
+    }
+}
+
+.bucket-handle{
+    position: absolute;
+    border-radius: 50%;
+    width: 55%;
+    height: 50%;
+    border: 10px solid var(--bucket-top);
+    bottom: 35%;
+    left: -300%;
+    z-index: 2;
+    animation: bucket-handle 1s forwards;
+    animation-delay: 2s;
+}
+@keyframes bucket-handle {
+    100% {
+        left: 22%;
+    }
+}
+.bucket-body .chicks {
+    position: absolute;
+    bottom: 20%;
+    left: 5%;
+    width: 90%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between; 
+    animation: bucket-chicks 1s forwards;
+    animation-delay: 5s;
+    opacity: 0;
+}
+@keyframes bucket-chicks {
+    100% {
+        opacity: 1;
+    }
+}
+
+.bucket-body .chicks .dot{
+    background-color: var(--chick-dots);
+    width: 10%;
+    height: 80%;
+    border-radius: 50%;
+}
+.bucket-body .eyes {
+    position: absolute;
+    bottom: 40%;
+    left: 515%;
+    width: 70%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+    animation: bucket-eyes 1s forwards;
+    animation-delay: 3s;
+}
+@keyframes bucket-eyes {
+    100% {
+        left: 15%;
+    }
+}
+
+.bucket-body .eyes .eye {
+    background-color: var(--eyes-color);
+    width: 15%;
+    height: 100%;
+    border-radius: 50%;
+}
+.bucket-body .mouth {
+    position: absolute;
+    opacity: 0;
+    bottom: -215%;
+    left: 30%;
+    width: 40%;
+    height: 35%;
+    border-radius: 50%;
+    overflow: hidden;
+    background: linear-gradient(180deg, transparent 0, transparent 50%, var(--eyes-color) 50%, var(--eyes-color) 100%);
+    animation: bucket-mouth 1s forwards;
+    animation-delay: 4s;
+}
+@keyframes bucket-mouth {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        bottom: 15%;
+        opacity: 1;
+    }
+}
+
+
+.bucket-body .mouth::after {
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 70%;
+    border-radius: 50%;
+    background: var(--tounge-color);
+    bottom: -34%;
+    left: 10%;
+}
+.legs1 {
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    bottom: -5%;
+    left: 280%;
+    overflow: hidden;
+    animation: bucket-legs 1s forwards;
+    animation-delay: 6s;
+}
+@keyframes bucket-legs {
+    100% {
+        left: 18%;
+    }
+}
+
+.legs1::after {
+    content: "";
+    position: absolute;
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    bottom: -39%;
+    border: 20px solid var(--leg-color);
+}
+.legs2 {
+    position: absolute;
+    height: 30%;
+    width: 30%;
+    bottom: -10%;
+    left: -235%;
+    overflow: hidden;
+    animation: bucket-legs-2 1s forwards;
+    animation-delay: 6s;
+}
+@keyframes bucket-legs-2 {
+    100% {
+        left: 35%;
+    }
+}
+
+.legs2::after {
+    content: "";
+    position: absolute;
+    height: 70%;
+    width: 70%;
+    border-radius: 50%;
+    bottom: -39%;
+    border: 20px solid var(--leg-color);
+}
+.paint {
+    position: absolute;
+    height: 20%;
+    width: 25%;
+    left: 48%;
+    top: 47%;
+    z-index: 5;
+    display: flex;
+   
+}
+
+.paint div {
+    position: relative;
+    width: 33%;
+    height: 100%;
+    background-color: var(--paint-color);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.paint div:nth-child(3) {
+    height: 0%;
+    animation: animation-paint 3s forwards;
+    animation-delay: 9s;
+}
+@keyframes animation-paint {
+    100% {
+        height: 80%;
+    }
+}
+.paint div:nth-child(1) {
+    height: 0%;
+    animation: animation-paint-1 3s forwards;
+    animation-delay: 9s;
+}
+@keyframes animation-paint-1 {
+    100% {
+        height: 100%;
+    }
+}
+.paint div:nth-child(2) {
+    height: 0%;
+    animation: animation-paint-2 3s forwards;
+    animation-delay: 10s;
+}
+@keyframes animation-paint-2 {
+    100% {
+        height: 100%;
+    }
+}
+.paint div:nth-child(2)::before {
+    content: "";
+    bottom: 10%;
+    width: 105%;
+    height: 50%;
+    position: absolute;
+    
+    bottom: -3px;
+    left: 1px;
+
+    background-color: var(--bucket-body);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 23px;
+}

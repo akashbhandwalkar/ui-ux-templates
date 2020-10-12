@@ -1,0 +1,21 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+#result {
+    text-align: center;
+    position: absolute;
+    width: 100px;
+    margin: 200px;
+    background-color: purple;
+    color: white;
+    padding: 10px 20px;
+}
