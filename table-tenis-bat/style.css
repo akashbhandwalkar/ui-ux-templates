@@ -1,0 +1,144 @@
+
+
+:root {
+    --blue-shade-bg: #8cb8f2;
+    --red-shade-bg: #e26150;
+    --bottom-color: #d8b299;
+    --blue-dark-color: #73a2d7;
+    --red-dark-color: #ca4e40;
+    --ball-color: #f5f5f5;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+.container {
+    width: 400px;
+    height: 400px;
+    margin: 200px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.table {
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.table .base {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0;
+    animation: animate-base 2s forwards;
+}
+
+@keyframes animate-base {
+    100% { opacity: 1;}
+}
+.blue .base {
+    background:  linear-gradient(var(--blue-shade-bg) 0, var(--blue-shade-bg) 85%, transparent 85%);
+}
+.red .base {
+    background:  linear-gradient(var(--red-shade-bg) 0, var(--red-shade-bg) 85%, transparent 85%);
+}
+.table .bottom {
+    background: var(--bottom-color);
+    width: 36px;
+    height: 100px;
+    position: absolute;
+    top: 119px;
+    left: 50px;
+    opacity: 0;
+    animation: animate-base 2s forwards;
+    animation-delay: 1s;
+    border-radius: 20px;
+
+}
+.table .bottom::after {
+    content: "";
+    width: 102px;
+    height: 40px;
+    position: absolute;
+    top: -1px;
+    background: var(--bottom-color);
+    left: -31px;
+    clip-path: polygon(0% 0%, 100% 0%, 45% 100%, 0% 0%);
+}
+.base div {
+    height: 28%;
+    width: 100%;
+    opacity: 0;
+    
+}
+.blue .base div:nth-child(2) {
+    background: linear-gradient(90deg, var(--blue-dark-color) 0%, var(--blue-dark-color) 33%, transparent 33%, transparent 66%, var(--blue-dark-color) 67%, var(--blue-dark-color) 100%);
+    animation: animate-base 2s forwards;
+    animation-delay: 2s;
+}
+
+.blue .base div:nth-child(1), .blue .base div:nth-child(3) {
+    background: linear-gradient(90deg, transparent 0%, transparent 33%, var(--blue-dark-color) 34%, var(--blue-dark-color) 66%, transparent 67%, transparent 100%);
+    animation: animate-base 2s forwards;
+    animation-delay: 2s;
+}
+.red .base div:nth-child(2) {
+    background: linear-gradient(90deg, var(--red-dark-color) 0%, var(--red-dark-color) 33%, transparent 33%, transparent 66%, var(--red-dark-color) 67%, var(--red-dark-color) 100%);
+    animation: animate-base 2s forwards;
+    animation-delay: 2s;
+}
+
+.red .base div:nth-child(1), .red .base div:nth-child(3) {
+    background: linear-gradient(90deg, transparent 0%, transparent 33%, var(--red-dark-color) 34%, var(--red-dark-color) 66%, transparent 67%, transparent 100%);
+    animation: animate-base 2s forwards;
+    animation-delay: 2s;
+}
+.red {
+    transform: rotate(-35deg);
+    transform-origin: 38% 54%;
+    position: relative;
+    left: 200px;
+    top: -20px;
+    
+}
+
+.red .base {
+    box-shadow: -5px 2px 0 0 #2b3c50;
+}
+.ball {
+    position: absolute;
+    top: 40px;
+    left: 600px;
+    width: 40px;
+    height: 40px;
+    background: var(--ball-color);
+    border-radius: 50%;
+    box-shadow: -10px 2px 0 #4d1d17;
+    animation: animate-ball 2s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes  animate-ball {
+    100% {
+        left: 60px;
+    }
+}
+
+.red {
+    animation: animate-blue 2s forwards;
+    left: -200px;
+}
+
+@keyframes animate-blue {
+    100% {
+        left: -136px;
+    }
+}
