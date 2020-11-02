@@ -26,10 +26,18 @@ body {
     width: 60%;
     height: 8%;
     left: 20%;
-    top: 60%;
+    top: -600%;
     border-radius: 15px;
     z-index: 3;
+    animation: dumper 1s forwards;
+  
 }
+@keyframes dumper {
+    100% {
+        top: 60%;
+    }
+}
+
 
 .dumper::before, .dumper::after {
     content: "";
@@ -42,23 +50,45 @@ body {
 }
 .dumper::before {
     left: -37px;
-    top: -20px;
+    top: -800px;
+    animation: dumper-after 1s forwards; 
+    animation-delay: 4s;
+}
+@keyframes dumper-after {
+    100% {
+        top: -20px;
+    }
 }
 .dumper::after {
     right: -20px;
-    top: -20px;
+    top: -800px;
+    animation: dumper-before 1s forwards; 
+    animation-delay: 4s;
+}
+@keyframes dumper-before {
+    100% {
+        top: -20px;
+    }
 }
 .dumper-after {
     position: absolute;
-    left: 10%;
+    left: 100%;
     top: 90%;
     height: 20px;
     width: 55%;
     background-color: #002337;
     top: 67%;
-    left: 22%;
+    left: 220%;
     border-radius: 20px;
     z-index: 1;
+    animation: dumper-after-bg 1s forwards;
+    animation-delay: 3s;
+}
+
+@keyframes dumper-after-bg {
+    100% {
+        left: 22%;
+    }
 }
 
 .dumper-after .center{
@@ -66,9 +96,17 @@ body {
     width: 30%;
     height: 150%;
     position: absolute;
-    top: 10%;
+    top: -500%;
     left: 36%;
+      animation: center 1s forwards; 
+    animation-delay: 2s;
  }
+
+ @keyframes center {
+    100% {
+        top: 10%;
+    }
+}
 
 .dumper .center {
     position: absolute;
@@ -78,6 +116,14 @@ body {
     height: 60%;
     border-radius: 25px;
     border: 2px solid #8fa6b4;
+
+
+
+}
+@keyframes center {
+    100% {
+        left: 5%;
+    }
 }
 
 .dumper .center .engine {
@@ -85,11 +131,17 @@ body {
     left: 20%;
     background-color: #000e22;
     height: 132%;
-    top: -22%;
+    top: -2200%;
     width: 60%;
     border: 2px solid #8fa6b4;
-    border-radius: 15px;
-    
+    border-radius: 15px;  
+    animation: engine 1s forwards; 
+}
+
+@keyframes engine {
+    100% {
+         top: -22%;
+    }
 }
 
 .cards { 
@@ -113,18 +165,33 @@ body {
     position: absolute;
     width: 7%;
     height: 80%;
-    left: 7%;
+    left: -700%;
     top: 15%;
+    animation: left-headlight 1s forwards;
+    animation-delay: 3s;
 }
 
 .right-headlight {
     position: absolute;
     width: 7%;
     height: 80%;
-    right: 7%;
+    right: -700%;
     top: 15%;
+    animation: right-headlight 1s forwards;
+    animation-delay: 3s;
+
 }
 
+@keyframes left-headlight {
+    100% {
+        left: 7%;
+    }
+}
+@keyframes right-headlight {
+    100% {
+        right: 7%;
+    }
+}
 
 .left-headlight::before, 
 .left-headlight::after,
@@ -162,14 +229,15 @@ body {
     position: absolute;
     display: flex;
     justify-content: space-around;
+    transform: translateY(500px);
     border-radius: 14px;
-    animation: tyre-dance 0.15s infinite;
+    animation: tyre 1s forwards;
 }
 
 
-@keyframes tyre-dance  {
-    50% {
-        transform: translateY(20px);
+@keyframes tyre  {
+    100% {
+        transform: translateY(5px);
     }
 }
 
@@ -214,13 +282,21 @@ body {
         position: absolute;
     width: 89%;
     height: 90%;
-    left: 3%;
+    left: 300%;
     bottom: 100%;
     background: linear-gradient(-45deg,  #7e0729 0%, #7e0729 40%, #a55369 41%, #a55369 70%, #7e0729 71%, #7e0729 100%);
     border: 3px solid #2c374b;
     z-index: 1;
     border-radius: 130px 130px 0% 0;
     box-shadow: inset 1px 2px 0 0 white, inset -1px 2px 0 0 white;
+    animation: front-glass 1s forwards;
+    animation-delay: 2s;
+}
+
+@keyframes front-glass  {
+    100% {
+        left: 3%;
+    }
 }
 
 .lighting div {
@@ -340,5 +416,13 @@ body {
     border-radius: 10px;
     position: absolute;
     top: 72%;
-    left: 18%;
+    left: 280%;
+    animation: shadow 1s forwards;
+    animation-delay: 1s;
+}
+
+@keyframes shadow {
+    100% {
+        left: 18%;
+    }
 }
