@@ -1,0 +1,170 @@
+
+:root {
+    --green: #3b6f48;
+    --green-before: #237449;
+    --green-after: rgba(44, 160, 79, 1);
+    --green-parent: #5bb26b;
+
+    --red: #5c1313;
+    --red-before: rgb(128,0,0);
+    --red-after: #812727;
+    --red-parent: #c73131;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+div {
+    width: 500px;
+    height: 50px;
+    position: relative;
+    box-shadow: 5px 5px 5px rgb(0,0,0, 0.3);
+    margin: 40px;
+}
+
+div:nth-child(1) {
+    transform: translate(45vh, 20vw);
+    background: var(--green-parent);
+    background-image: 
+                        radial-gradient(ellipse at top,
+                                        rgba(0,0,0,0.6) 100px,
+                                        transparent 110px),
+                        linear-gradient(to right,
+                                        var(--green) 0px,
+                                        var(--green) 25px,
+                                        transparent 25px,
+                                      rgba(0,0,0,0.6) 25px,
+                                        transparent 25px,
+                                        transparent 50px,
+                                        rgba(0,0,0,0.6) 50px,
+                                        rgba(0,0,0,0.6) 55px,
+                                        transparent 55px,
+                                        transparent 70px,
+                                        rgba(0,0,0,0.6) 70px,
+                                        rgba(0,0,0,0.6) 75px,
+                                        transparent 75px,
+                                        transparent 420px,
+                                        rgba(0,0,0,0.6) 420px,
+                                        rgba(0,0,0,0.6) 425px,
+                                        transparent 425px,
+                                        transparent 440px,
+                                        rgba(0,0,0,0.6) 440px,
+                                        rgba(0,0,0,0.6) 445px,
+                                        transparent 445px,
+                                        transparent 475px,
+                                        var(--green) 475px,
+                                        var(--green) 500px
+
+    );
+}
+
+
+div:nth-child(1)::before {
+    content: "";
+    position: absolute;
+    left: -59px;
+    top: 5px;
+    height: 40px;
+    width: 60px;
+    background: var(--green-before);
+    clip-path: polygon(0 15px, 100% 0%, 100% 100%, 0% 25px);
+}
+
+
+div:nth-child(1)::after {
+    content: 'Green';
+    position: absolute;
+    text-align: right;
+    width: 96%;
+    left: -12%;
+    height: 100%;
+    padding-right: 83px;
+    padding-top: 14px;
+    font-size: 20px;
+    /* top: 20px; */
+    color: var(--green-after);
+    font-weight: bolder;
+    background-image: linear-gradient(to bottom,
+                                    rgba(255,255,255, 0) 20px,
+                                    rgba(255,255,255, 0.2) 25px,
+                                    rgba(255,255,255, 0.2) 27px,
+                                    rgba(255,255,255, 0) 32px);
+}
+
+
+div:nth-child(2) {
+    transform: translate(45vh, 20vw);
+    background: var(--red-parent);
+    background-image: 
+                        radial-gradient(ellipse at top,
+                                        rgba(0,0,0,0.6) 100px,
+                                        transparent 110px),
+                        linear-gradient(to right,
+                                        var(--red) 0px,
+                                        var(--red) 25px,
+                                        transparent 25px,
+                                      rgba(0,0,0,0.6) 25px,
+                                        transparent 25px,
+                                        transparent 50px,
+                                        rgba(0,0,0,0.6) 50px,
+                                        rgba(0,0,0,0.6) 55px,
+                                        transparent 55px,
+                                        transparent 70px,
+                                        rgba(0,0,0,0.6) 70px,
+                                        rgba(0,0,0,0.6) 75px,
+                                        transparent 75px,
+                                        transparent 420px,
+                                        rgba(0,0,0,0.6) 420px,
+                                        rgba(0,0,0,0.6) 425px,
+                                        transparent 425px,
+                                        transparent 440px,
+                                        rgba(0,0,0,0.6) 440px,
+                                        rgba(0,0,0,0.6) 445px,
+                                        transparent 445px,
+                                        transparent 475px,
+                                        var(--red) 475px,
+                                        var(--red) 500px
+
+    );
+}
+
+
+div:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    left: -59px;
+    top: 5px;
+    height: 40px;
+    width: 60px;
+    background: var(--red-before);
+    clip-path: polygon(0 15px, 100% 0%, 100% 100%, 0% 25px);
+}
+
+
+div:nth-child(2)::after {
+    content: 'Red';
+    position: absolute;
+    text-align: right;
+    width: 96%;
+    left: -12%;
+    height: 100%;
+    padding-right: 83px;
+    padding-top: 14px;
+    font-size: 20px;
+    /* top: 20px; */
+    color: var(--red-after);
+    font-weight: bolder;
+    background-image: linear-gradient(to bottom,
+                                    rgba(255,255,255, 0) 20px,
+                                    rgba(255,255,255, 0.2) 25px,
+                                    rgba(255,255,255, 0.2) 27px,
+                                    rgba(255,255,255, 0) 32px);
+}
