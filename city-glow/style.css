@@ -68,55 +68,120 @@ body {
     position: absolute;
     bottom: 0;
 }
-
+@keyframes building1 {
+    100% {
+        height: 10%;
+    }
+}
 .building:nth-child(1) {
-    height: 10%;
+    height: 0%;
     width: 10%;
+    animation: 1s building1 forwards;
 }
 .building:nth-child(2) {
-    height: 10%;
+    height: 0%;
     width: 10%;
+    animation: 1s building1 forwards;
+    animation-delay: 1s;
+}
+@keyframes building3 {
+    100% {
+        height: 17%;
+    }
 }
 .building:nth-child(3) {
-    height: 17%;
+    height: 0%;
     width: 20%;
     left: 10%;
+    animation: 1s building3 forwards;
+    animation-delay: 2s;
 }
-
+@keyframes building4 {
+    100% {
+        height: 57%;
+    }
+}
 .building:nth-child(4) {
-    height: 57%;
+    height: 0%;
     width: 20%;
     left: 27%;
+    animation: 1s building4 forwards;
+    animation-delay: 3s;
+}
+
+@keyframes building5 {
+    100% {
+        height: 80%;
+    }
 }
 .building:nth-child(5) {
-    height: 80%;
+    height: 0%;
     width: 10%;
     left: 40%;
+    animation: 1s building5 forwards;
+    animation-delay: 4s;
+}
+@keyframes building6 {
+    100% {
+        height: 20%;
+    }
 }
 .building:nth-child(6) {
-    height: 20%;
+    height: 0%;
     width: 10%;
     left: 45%;
+    animation: 1s building6 forwards;
+    animation-delay: 5s;
+}
+@keyframes building7 {
+    100% {
+        height: 40%;
+    }
 }
 .building:nth-child(7) {
-    height: 40%;
+    height: 0%;
     width: 10%;
     left: 60%;
+    animation: 1s building7 forwards;
+    animation-delay: 6s;
+}
+@keyframes building8 {
+    100% {
+        height: 50%;
+    }
 }
 .building:nth-child(8) {
-    height: 50%;
+    height: 0%;
     width: 10%;
     left: 70%;
+    animation: 1s building8 forwards;
+    animation-delay: 6s;
+}
+
+@keyframes building9 {
+    100% {
+        height: 70%;
+  
+    }
 }
 .building:nth-child(9) {
-    height: 70%;
+    height: 0%;
     width: 10%;
     left: 90%;
+    animation: 1s building9 forwards;
+    animation-delay: 1s;
+}
+@keyframes building10 {
+    100% {
+        height: 40%;
+    }
 }
 .building:nth-child(10) {
-    height: 40%;
+    height: 0%;
     width: 10%;
     left: 85%;
+    animation: 1s building10 forwards;
+    animation-delay: 2s;
 } 
 
 .building:nth-child(11) {
@@ -124,41 +189,80 @@ body {
     width: 15%;
     left: 17%;
 } 
-
+@keyframes building12 {
+    100% {
+        height: 40%;
+    }
+}
 .building:nth-child(12) {
-    height: 40%;
+    height: 0%;
     width: 10%;
     left: 27%;
+    animation: 1s building12 forwards;
+    animation-delay: 3s;
 } 
 
-
+@keyframes building13 {
+    100% {
+        height: 10%;
+    }
+}
 .building:nth-child(13) {
-    height: 10%;
+    height: 0%;
     width: 15%;
     left: 47%;
+    animation: 1s building13 forwards;
+    animation-delay: 4s;
 } 
 
+
+@keyframes building14 {
+    100% {
+        height: 30%;
+    }
+}
 .building:nth-child(14) {
-    height: 30%;
+    height: 0%;
     width: 5%;
     left: 59%;
+    animation: 1s building14 forwards;
+    animation-delay: 5s;
 } 
-
+@keyframes building15 {
+    100% {
+        height: 30%;
+    }
+}
 .building:nth-child(15) {
-    height: 30%;
+    height: 0%;
     width: 10%;
     left: 70%;
+    animation: 1s building15 forwards;
+    animation-delay: 6s;
 } 
-
+@keyframes building16 {
+    100% {
+        height: 10%;
+    }
+}
 .building:nth-child(16) {
     height: 10%;
     width: 7%;
     left: 78%;
+    animation: 1s building16 forwards;
+    animation-delay: 7s;
 } 
+@keyframes building17 {
+    100% {
+        height: 40%;
+    }
+}
 .building:nth-child(17) {
-    height: 10%;
+    height: 0%;
     width: 10%;
     left: 88%;
+    animation: 1s building17 forwards;
+    animation-delay: 8s;
 } 
 
 
@@ -287,24 +391,25 @@ body {
 }
 
 .stars  {
-    height: 70%;
-    width: 80%;
+    height: 60%;
+    width: 100%;
     position: absolute;
-    bottom: 10%;
-    left: 10%;
+    top: -70%;
+    left: 0%;
 }
 .stars div {
     height: 1px;
     width: 1px;
     background: white;
     position: absolute;
-    bottom: 0;
-    animation: star 4s infinite;
+    /* bottom: -500px; */
+    animation: star 2s infinite;
     transform: rotate(45deg);
 }
 
 @keyframes star {
-    100% {
-        transform: translateY(-500px);
+    50% {
+        /* transform: translateY(-500px); */
+        opacity: 0;
     }
 }

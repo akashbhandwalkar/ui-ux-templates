@@ -1,0 +1,40 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    /* background: #e3edf7; */
+    font-family: sans-serif;
+}
+.frog-svg {
+    fill: #03a9f4;
+}
+
+.frog {
+    position: relative;
+    top: 40vh;
+    left: 20vw;
+}
+
+.frog-html {
+    position: relative;
+    top: 10vh;
+    left: 20vw;
+}
+
+.frog-css {
+    
+    animation: animate 5s forwards;
+}
+
+/**
+* x: 500, y: 100, rotation: 1800, duration: 5
+*/
+@keyframes animate {
+    100% {
+        transform: translate(500px, 100px) rotate(360deg);
+    }
+}
