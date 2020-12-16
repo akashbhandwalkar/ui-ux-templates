@@ -1,0 +1,21 @@
+
+:root {
+    --bg-start: #3e92b4;
+    --bg-end: #57c8f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    position: relative;
+    height: 800px;
+    width: 1600px;
+    background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
+    overflow: hidden;
+    
+}
+

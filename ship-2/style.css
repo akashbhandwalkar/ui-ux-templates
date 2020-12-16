@@ -2,10 +2,121 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-1: #d2eef6;
+    --bg-2: #b8d1d8;
+    --base: #565656;
+    --base-border: #383638;
+    --compound: #b35f60;
+    --compond-border: #3a3b41;
+    --first-floor: #f2f2f2;
+}
+body {
+    background: linear-gradient(to bottom, var(--bg-1) 0%, var(--bg-1) 50%, var(--bg-2) 50%);
+    font-family: sans-serif;
+    height: 100vh;
+    position: relative;
+    
+}
+.container {
+    bottom: 20%;
+    height: 50%;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid black;
+}
+
+.container *, .container {
+    position: absolute;
 }
 
 
-body {
-    background: #e3edf7;
-    font-family: sans-serif;
+.base {
+    background: var(--base);
+    border: 3px solid var(--base-border);
+    width: 100%;
+    height: 40px;
+}
+
+
+
+
+.compound1 {
+    bottom: 40px;
+    background: var(--compound);
+     border: 3px solid var(--compond-border);
+     border-right: none;
+    border-bottom: none;
+
+    width: 50%;
+    height: 40px;
+    z-index: 2;
+}
+.compound2 {
+    content: "";
+    position: absolute;
+   
+    
+    height: 200px;
+    width: 50%;
+    transform: skew(-25deg);
+    transform-origin: left bottom;
+   
+    background: var(--compound);
+    border: 3px solid var(--compond-border);
+    border-bottom: none;
+    z-index: 1;
+    border-top-right-radius: 10px;
+}
+.compound2::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 26%;
+    background: inherit;
+    transform: skew(25deg);
+    border-right: 3px solid var(--compond-border);
+}
+
+.floor-one {
+    width: 70%;
+    height: 40%;
+    background: var(--first-floor);
+}
+.floor-one::after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 120%;
+    background: var(--compound);
+    border: 3px solid var(--base-border);
+}
+/** positions*/
+.base {
+    bottom: 0;
+}
+
+.compound2 { 
+    left: 46%;
+    bottom: 39px;
+}
+
+.compound2::after {
+    right: -5%;
+    bottom: 0;
+}
+
+.floor-one {
+    bottom: 80px;
+    left: 20%;
+    border: 4px solid var(--base-border);
+}
+
+.floor-one::after {
+    top: -40px;
+    left: -10%;
 }
