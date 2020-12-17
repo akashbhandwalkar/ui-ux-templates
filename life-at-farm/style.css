@@ -4,6 +4,10 @@
     --bg-end: #57c8f5;
 }
 
+html {
+    /* overflow: hidden; */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,10 +16,9 @@
 
 body {
     position: relative;
-    height: 800px;
-    width: 1600px;
+    height: 100vh;
+    width: 100vw;
     background: linear-gradient(to bottom, var(--bg-start), var(--bg-end));
     overflow: hidden;
-    
 }
 

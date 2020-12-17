@@ -4,37 +4,40 @@
     --grass-two: #74b956;
     --grass-three:#0f8f47;
     --road: #c8a557;
+    --leaf: #31a742;
+    --leaf-2: #006941;
+    --tree: #6e5807;
 }
 html {
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .grass-one {
     position: absolute;
     background: linear-gradient(to bottom, var(--grass-one-start), var(--grass-one-end));
-    top: 285px;
+    top: 50%;
     left: -1000px;
-    height: 1600px;
-    width: 3000px; 
+    height: 200%;
+    width: 200%; 
     border-radius: 50%;
     z-index: 2;
 }
 .grass-two {
     position: absolute;
     background: linear-gradient(to bottom, var(--grass-two), var(--grass-two));
-    top: 285px;
+    top: 35%;
     right: -1000px;
-    height: 1600px;
-    width: 3200px; 
+    height: 200%;
+    width: 200%; 
     border-radius: 50%;
     z-index: 1;
 }
 .grass-three {
     position: absolute;
     background: linear-gradient(to bottom, var(--grass-three), var(--grass-three));
-    bottom: -1200px;
-    height: 1500px;
-    width: 3000px;
+    top: 70%;
+    height: 200%;
+    width: 200%;
     border-radius: 50%;
     left: -892px;
     z-index: 2;
@@ -68,4 +71,89 @@ html {
     background: var(--road);
     transform: rotate(-26deg);
     transform-origin: top left;
+}
+.tree-farm-2, .tree-farm {
+    position: absolute;
+    right: 300px;
+    top: 200px;
+    height: 400px;
+    width: 200px;
+    z-index: 3;
+}
+.tree-farm-2 {
+    top: 200px;
+    /* top: 300px; */
+    right: 500px;
+    transform: scale(0.7);
+}
+
+.tree-farm .leaf, .tree-farm-2 .leaf {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: var(--leaf);
+    border-radius: 50%;
+    transform: scale(0.6);
+    left: -10px;
+    z-index: 3;
+}
+
+.tree-farm .leaf:nth-child(1), .tree-farm-2 .leaf:nth-child(1) {
+    left: -10px;
+    z-index: 4;
+}
+.tree-farm .leaf:nth-child(2), .tree-farm-2 .leaf:nth-child(2)  {   
+    left: 100px;
+    transform: scale(0.5);
+    z-index: 5;
+}
+.tree-farm .leaf:nth-child(3), .tree-farm-2 .leaf:nth-child(3)  {
+    top: 20px;
+    left: 50px;
+    transform: scale(0.9);
+    background: var(--leaf-2);
+}
+.leaf div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: var(--leaf);
+    border-radius: 50%;
+}
+.leaf div:nth-child(1) {
+    left: -10px;
+    top: -10px;
+}
+ .leaf div:nth-child(2) {
+    left: 26px;
+    top: -21px;
+}
+.leaf div:nth-child(3) {
+    left: -24px;
+    top: 39px;
+
+}
+.leaf div:nth-child(4) {
+    right: -19px;
+    top: 27px;
+}
+.leaf div:nth-child(5) {
+    left: 23px;
+    bottom: -25px;
+}
+.leaf:nth-of-type(3) div {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: var(--leaf-2);
+    border-radius: 50%;
+}
+.tree-farm .base, .tree-farm-2 .base {
+    position: absolute;
+    top: 100px;
+    left: 66px !important;
+    height: 200px;
+    width: 50px;
+    background: var(--tree);
+    clip-path: polygon(20px 0%, 40px 0%, 100% 100%, 0% 100%);
 }

@@ -1,0 +1,35 @@
+:root {
+    --water-from: #4eb7e0;
+    --water-to: #44a1c6;
+}
+
+.lake {
+    z-index: 2;
+    position: absolute;
+    right: 7%;
+    bottom: -5%;
+    width: 40%;
+    height: 30%;
+    border-radius: 50%;
+    background: radial-gradient(50% 50%, var(--water-from), var(--water-from));
+}
+.lake div {
+    position: absolute;
+    background: radial-gradient(50% 50%, var(--water-from), var(--water-from));
+    border-radius: 50%;
+
+}
+
+/* .lake .first {
+    width: 100px;
+    height: 100px;
+    left: -10px;
+    top: 13%; 
+} */
+
+.lake .second {
+    width: 200px;
+    height: 200px;
+    left: 15%;  
+    top: -10%;  
+}
