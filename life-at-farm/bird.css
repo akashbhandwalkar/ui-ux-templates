@@ -15,9 +15,16 @@
     position: absolute;
     transform: scale(0.5);
     bottom: -5%;
-    right: 21%;
+    right: 200%;
     width: 40%;
     z-index: 7;
+    animation: bird-container 3s forwards;
+}
+
+@keyframes bird-container {
+    100% {
+        right: 21%;
+    }
 }
 
  .body,  .mouth,  .feather,  .tail, .beak, .mouth::before, .mouth::after, .leg, .leg::after, .leg::before {
@@ -134,3 +141,148 @@
     z-index: -1;
 }
 
+
+.bee-collection {
+    position: absolute;
+    left: 120%; 
+    animation: bee-aniamtion 2s forwards;
+}
+
+@keyframes bee-aniamtion {
+    100% {
+        left: 50%; 
+    }
+}
+
+.bee-container {
+    margin: 0px auto;
+    width: 600px;
+    height: 400px;
+    z-index: 7;
+    transform: scale(0.1);
+    position: absolute;
+}
+.bee-container:nth-child(1) {
+    left: 200px;
+}
+.bee-container:nth-child(2) {
+    left: 100px;
+    top: 100px;
+}
+.bee-container:nth-child(3) {
+    left: 0px;
+}
+
+.bee {
+    width: 340px;
+    height: 180px;
+    background: linear-gradient(#fdca2a 0%,#fdca2a 60%, #f29d0f 61%, #f29d0f 100%);
+    border-radius: 100px;
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    overflow: hidden;
+
+}
+
+.bee .pat div {
+    background-color: #000000;
+    width: 60px;
+    height: 100%;
+    position: absolute;
+    /* z-index: 3; */
+}
+
+.bee .pat div:nth-child(1), .bee-top div:nth-child(1) {
+    right: -5px;
+}
+
+.bee .pat div:nth-child(2),  .bee-top div:nth-child(2) {
+    right: 90px;
+}
+
+.bee .pat div:nth-child(3),  .bee-top div:nth-child(3) {
+    right: 185px;
+    
+}
+
+.bee-container .top {
+    position: absolute;
+    top: 20px;
+    right: 70px;
+    width: 50%;
+    height: 20%;
+    background-color: #fce39f;
+    z-index: 1;
+    border-radius: 30px;
+}
+
+.bee-container .eye {
+    left: 10%;
+    bottom: 50%;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #001b2e;
+}
+
+.bee-container .legs {
+    position: absolute;
+    bottom: -30px;
+    display: flex;
+    width: 15%;
+    left: 20%;
+    justify-content: space-between;
+    border: none !important;
+   
+}
+
+.bee-container .legs div {
+    background-color: #001b2e;
+    width: 20px;
+    height: 50px;
+    border-radius: 10px;
+    transform-origin: top;
+    transform: rotate(-20deg)
+}
+
+.bee-container .tail {
+    width: 40px;
+    height: 15px;
+    border-radius: 8px;
+    position: absolute;
+    left: 340px;
+    bottom: 90px;
+    background-color: black;
+}
+
+.top-up {
+    position: absolute;
+    bottom: 185px;
+    left: 80px;
+    width: 200px;
+    height: 40px;
+    background-color: #f098c2;
+    border-radius: 30px;
+    transform: scale(0.8);
+}
+
+.top-up div:nth-child(1) {
+    position: absolute;
+    bottom: -0px;
+    left:-30px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #f098c2;
+}
+.top-up div:nth-child(2) {
+    position: absolute;
+    bottom: -0px;
+    right:-30px;
+    width: 140px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #f098c2;
+}

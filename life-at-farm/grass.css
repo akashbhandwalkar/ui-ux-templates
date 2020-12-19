@@ -157,3 +157,63 @@ html {
     background: var(--tree);
     clip-path: polygon(20px 0%, 40px 0%, 100% 100%, 0% 100%);
 }
+
+.sun-moon {
+    background: linear-gradient(#FF9800, #FF5722);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: 30%;
+    box-shadow:
+    2px 2px 2px #FFEB3B,
+    -2px 2px 2px #FFEB3B,
+    2px -2px 2px #FFEB3B,
+    -2px -2px 2px #FFEB3B;
+    position: absolute;
+    top: 60px;
+    /* left: 230px; */
+    z-index: -1;
+    animation: animate-sun 10s infinite;
+}
+
+@keyframes animate-sun {
+    0% {
+        left: 1%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+.moon {
+    background: linear-gradient(#fcfaff, #ede4f5);
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+   right: -10%;
+    position: absolute;
+    top: 60px;
+    /* left: 230px; */
+    z-index: -1;
+    animation: animate-moon 10s infinite;
+    /* animation-delay: 5s; */
+}
+
+@keyframes animate-moon {
+    50% {
+        right: -10%;
+    }
+    100% {
+        right: 100%;
+    }
+}
+
+.nature-tree-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
