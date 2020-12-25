@@ -145,12 +145,22 @@
 .bee-collection {
     position: absolute;
     left: 120%; 
-    animation: bee-aniamtion 2s forwards;
+    animation: bee-aniamtion 10s infinite;
 }
 
 @keyframes bee-aniamtion {
-    100% {
+    20% {
         left: 50%; 
+    }
+    50% {
+         left: 45%;
+    }
+    60% {
+        left: 35%;
+    }
+   
+    100% {
+        left: -300%;
     }
 }
 

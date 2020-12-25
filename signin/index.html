@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="Stylesheet" href="./style.css"> </link>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+ </head>
+<body>
+    <div class="sign-in-wrapper">
+        <div class="signin-form">
+            <div class="welcome-box">
+                <h1> Sign In </h1>
+                <label class="welcome">Welcome, we missed you!</label>
+            </div>
+            
+            <form>
+                    <div class="input-container email-container">
+                        <label class="input-label" >Email</label>
+                        <input type="text" placeholder="Enter your email" onChange="onchangeEmail(this)" class="email-input">
+                    </div>
+                    <div class="input-container password-container">
+                        <label class="input-label">Password</label>
+                        <input type="password" placeholder="Enter your password" class="password-input">
+                    </div>
+                    <div class="post-form-action">
+                        <div class="remember-me">
+                            <input type="checkbox" class="rememebr-me" /> <span>Remember Me</span>
+                        </div>
+
+                        <a href="#" class="forgot-password"> Forgot Password </a>
+                        
+                    </div>
+                    <button class="submit"> Sign In</button>
+            </form>
+            <div class="continue"></div>
+            <div class="other-signin-ways"></div>
+        </div>
+        <div class="company-information"></div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

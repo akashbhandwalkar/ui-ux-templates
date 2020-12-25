@@ -1,0 +1,125 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --background: #1d1d20;
+    --modal: #3d3d40;
+    --modal-footer: #313033;
+    --text-color: #f9f9f9;
+    --input-color: #9a97a5;
+    --active-color: #4d4b52;
+    --red: #f9371c;
+    --orange: #f97c1c;
+    --yellow: #f9c81c;
+    --green: #41d0b6;
+    --blue: #2cadf6;
+    --purple: #6562fc
+}
+
+
+body {
+    background: var(--background);
+    font-family: sans-serif;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--text-color);
+}
+
+.modal {
+    position: relative;
+    translate: transform(-50%, -50%);
+    height: 70vh;
+    width: 40vh;
+    background-color: var(--modal);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 60px 20px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background: var(--modal-footer);
+}
+.content .title .label {
+    font-size: 20px;
+    margin: 20px 0;
+}
+.input-title {
+    background: var(--modal);
+    border: none;
+    border-bottom: 2px solid var(--modal-footer);
+    outline: none;
+    color: var(--input-color);
+    padding: 5px 10px;
+    font-size: 16px;
+    margin: 20px 0;
+}
+.tabs {
+    background: var(--modal-footer);
+    height: 40px;
+    width: 80%;
+    border-radius: 20px;
+    display: flex;
+    padding: 5px 20px;
+    justify-content: space-around;
+    font-family: 12px;
+}
+.tabs .tab {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.tabs .active {
+    background: var(--active-color);
+    border-radius: 15px;
+}
+.colors {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+.colors .label {
+    flex: 0.2;   
+}
+.color-pallete {
+    display: flex;
+    justify-content: space-between;
+    flex: 0.6;
+}
+
+.color {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: red;
+}
+
+.red {
+    background: var(--red);
+}
+.orange {
+    background: var(--orange);
+}
+.yellow {
+    background: var(--yellow);
+}
+.green {
+    background: var(--green);
+}
+.blue {
+    background: var(--blue);
+}
+.purple {
+    background: var(--purple);
+}
