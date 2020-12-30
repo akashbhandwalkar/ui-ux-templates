@@ -1,0 +1,544 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #4b113d;
+    --dark-red: #b31e4a;
+    --light-red: #d33f4c;
+    --window-before: #ffce8d;
+    --border-color: #200b19;
+    --roof-light: #f3e2cc;
+    --roof-dark: #e3b6af;
+    --light-bg: #6e1944;
+    --window: #390b32;
+}
+body {
+    background: var(--bg);
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-container {
+    width: 600px;
+    height: 600px;
+    position: relative;
+}
+
+.home-container .top {
+    position: relative;
+    height: 40%;
+    width: 100%;
+}
+ .home-container .bottom {
+    position: relative;
+    height: 60%;
+    width: 100%;
+}
+.home-container .bottom .block1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 90%;
+    width: 20%;
+    background: linear-gradient(to bottom,
+    var(--dark-red) 0%,
+    var(--dark-red) 91%,
+    var(--light-bg) 91%
+    );
+}
+.home-container .top .block1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 45%;
+    width: 15%;
+    background: linear-gradient(to bottom,
+    var(--dark-red) 0%,
+    var(--dark-red) 91%,
+    var(--light-bg) 91%
+    );
+}
+.home-container .top .block1::after {
+    content: "";
+    position: absolute;
+    width: 130%;
+    height: 15px;
+    background: var(--border-color);
+    top: -40px;
+    left: -15%;
+}
+.block-one-top{ 
+    position: absolute;
+    bottom: 61%;
+    left: -2%;
+    width: 19%;
+    height: 45%;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+    background: linear-gradient(to right, var( --roof-light) 0%, var( --roof-light) 50%,  var( --roof-dark) 50%);
+    /* animation: block-one-top 1.5s ease-in infinite; */
+}
+
+/**/
+
+/* @keyframes block-one-top {
+    100% {
+        transform: translateX(500px) rotate(360deg) scale(0.1);
+     }
+} */
+
+.block-one-top-after {
+    content: "";
+    position: absolute;
+    top: -21px;
+    left: 7.5%;
+    transform: translateX(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--roof-light);
+}
+.home-container .bottom .block2 {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    height: 90%;
+    width: 10%;
+}
+.home-container .bottom .block3 {
+    position: absolute;
+    bottom: 0;
+    left: 30%;
+    height: 90%;
+    width: 45%;
+    background: linear-gradient(to right, var(--light-red) 0%, var(--light-red) 5%, var( --dark-red) 5%, var( --dark-red) 95%  , var(--light-red) 95%);
+}
+.home-container .bottom .block1::before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    height: 90%;
+    width: 20%;
+    bottom: 0;
+    background: linear-gradient(to bottom, 
+                        var(--light-red) 0%, 
+                        var(--light-red) 10%,
+                        var(--bg) 10%,
+                        var(--bg) 30%,
+                        var(--dark-red) 30%,
+                        var(--dark-red) 35%,
+                        var(--light-red) 35%, 
+                        var(--light-red) 50%,
+                        var(--bg) 50%,
+                        var(--bg) 70%,
+                        var(--light-red) 70%, 
+                        var(--light-red) 90%,
+                        var(--dark-red) 90%,
+                        var(--dark-red) 100%
+                        );
+
+}
+.home-container .bottom .block1::after {
+    content: "";
+    position: absolute;
+    left: 20%;
+    height: 90%;
+    width: 20%;
+    bottom: 0;
+    background: linear-gradient( 
+        to bottom,
+        var(--light-red) 0%,
+        var(--light-red) 90%,
+        var(--dark-red) 90%,
+        var(--dark-red) 100%) 
+}
+.home-container .bottom .block4 {
+    position: absolute;
+    bottom: 0;
+    left: 74%;
+    height: 90%;
+    width: 25%;
+    background: linear-gradient(to right, var(--light-bg) 0%, var(--light-bg) 10%, var( --bg) 10%, var( --bg) 90%  , var(--light-bg) 90%);
+}
+.window {
+    height: 40px;
+    width: 20px;
+    background: linear-gradient(to bottom, 
+    var(--window) 0%,
+    var(--window) 75%,
+    var(--light-bg) 75%);
+}
+.window::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: var(--window-before);
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.window1 {
+    position: absolute;
+    right: 20%;
+    top: 15%;
+}
+
+.window2 {
+    position: absolute;
+    right: 20%;
+    top: 55%;
+}
+.window3 {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+}
+
+.large-window {
+    height: 30px;
+    width: 40px;
+    background: var(--light-bg);
+}
+.large-window::after {
+    content: "";
+    position: absolute;
+    height: 120%;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(to bottom, 
+    var(--window) 0%,
+    var(--window) 80%,
+    var(--light-bg) 80%
+    );
+}
+.large-window::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: var(--window-before);
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.window4 {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+}
+.window5 {
+    position: absolute;
+    left: 40%;
+    top: 10%;
+}
+.window6 {
+    position: absolute;
+    left: 70%;
+    top: 10%;
+}
+.window7 {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.window8 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.top-floor {
+    position: absolute;
+    top: -79px;
+    left: 50%;
+    transform:  translateX(-50%);
+    height: 80px;
+    width: 80px;
+    background: var(--dark-red);
+    z-index: 2;
+    clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+    z-index: 3;
+}
+.top-floor-2 {
+    position: absolute;
+    top: -97px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 98px;
+    width: 100px;
+    background: var(--bg);
+    z-index: 2;
+    clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+}
+.bottom-gate {
+    width: 120%;
+    height: 50%;
+    border: 10px solid var(--border-color);
+    border-top: 0;
+    position: absolute;
+    bottom: 0;
+    left: -22%;
+    background: var(--bg);
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-gate .pillar {
+    position: relative;
+    width: 20%;
+    height: 100%;
+    border-right: 10px solid var(--border-color);
+}
+.bottom-gate .pillar:nth-child(2) {
+    width: 40%;
+}
+.bottom-gate .pillar:nth-child(1):after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 25px;
+    bottom: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    background: linear-gradient(to right, var(--light-red) 0%, var(--light-red) 50%, var(--light-bg) 50%);
+}
+.bottom-gate .pillar:nth-child(1):before, .bottom-gate .pillar:nth-child(3):before  {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 15px;
+    width: 100%;
+    background: var(--border-color);
+}
+.bottom-gate .pillar:nth-child(4) {
+    background: linear-gradient(to bottom, var(--window) 0%, var(--window) 65%, var(--border-color) 65%);
+}
+.bottom-gate .pillar:nth-child(4)::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 16px;
+    background: var(--bg);
+}
+.bottom-gate .pillar:nth-child(4)::after {
+    content: "";
+    position: absolute;
+    top: 16px;
+    right: 0;
+    height: 80px;
+    width: 16px;
+    background: var(--light-bg);
+}
+.bottom-gate .pillar:nth-child(2) {
+    background: linear-gradient(to right, var(--bg) 0%, var(--bg) 80%, var(--window) 80%);
+}
+.bottom-gate .pillar:nth-child(2)::after {
+    box-sizing: border-box;
+    content: "";
+   left: 0;
+    width: 80%;
+   height: 85%;
+   position: absolute;
+   bottom: 0;
+   background: linear-gradient(to bottom,  var(--border-color) 0%,  var(--border-color) 80%,  var(--bg) 80%);
+   border-right: 15px solid var(--light-bg) ;
+   border-bottom: 15px solid var(--light-bg) ;
+}
+.bottom-gate::after{ 
+    position: absolute;
+    content: "";
+    top: -30px;
+    width: 120%;
+    left: -15%;
+    height: 30px;
+    background-color: var(--border-color);
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+}
+.bottom-gate::before{ 
+    position: absolute;
+    content: "";
+    top: -30px;
+    width: 80%;
+    left: -11%;
+    height: 20px;
+    background-color: var(--roof-light);
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0% 100%);
+    z-index: 2;
+}
+
+.window-light {
+    width: 8px;
+    height: 8px;
+    background: var(--roof-dark);
+}
+
+.light1 {
+    top: 20%;
+    left: 36%;
+    position: absolute;
+}
+
+.light2 {
+    bottom: 20%;
+    right: 16%;
+    position: absolute;
+}
+.light3 {
+    top: 40%;
+    left: 36%;
+    position: absolute;
+    z-index: 2;
+}
+.light4 {
+    top: 15%;
+    left: 36%;
+    position: absolute;
+    z-index: 2;
+}
+.light5 {
+    top: 25%;
+    left: 36%;
+    position: absolute;
+    z-index: 2;
+}
+.light6 {
+    top: 35%;
+    left: 36%;
+    position: absolute;
+    z-index: 2;
+}
+.light7 {
+    top: 45%;
+    left: 36%;
+    position: absolute;
+    z-index: 2;
+}
+.snow-down div {
+    background: var(--roof-light);
+   border-radius: 10px;
+    position: absolute;
+}
+
+.snow-down div:nth-child(1) {
+    width: 8px;
+    height: 20px;
+    left: 20px;
+    top: -25px;
+    z-index: 3;
+}
+.snow-down div:nth-child(2) {
+    width: 8px;
+    height: 25px;
+    left: 40px;
+    top: -20px;
+    z-index: 3;
+}
+.snow-down div:nth-child(3) {
+    width: 8px;
+    height: 30px;
+    left: 140px;
+    top: -20px;
+    z-index: 3;
+}
+.snow-down div:nth-child(4) {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    left: 140px;
+    top: -40px;
+    z-index: 3;
+}
+.snow-down div:nth-child(5) {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    left: 100px;
+    top: -40px;
+    z-index: 3;
+}
+.bottom-border {
+    position: absolute;
+    bottom: 0;
+    height: 15px;
+    width: 100%;
+    background: linear-gradient(to right, var(--light-red) 0%, var(--light-red) 15%, var(--dark-red) 15%, var(--dark-red) 40%, var(--light-red) 40%, var(--light-red) 55%, var(--dark-red) 55%, var(--dark-red) 85%, var(--light-red) 85%, var(--light-red) 99%, transparent 98%);
+}
+
+.border-top {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60%;
+    /* background: red; */
+}
+
+.white-roof {
+    background: var(--roof-light);
+    width: 60%;
+    height: 80%;
+    transform: skewX(-25deg);
+    position: absolute;
+    bottom: -15px;
+    left: 0%;
+    transform-origin: bottom right;
+}
+.patch-top-roof-1 {
+    position: absolute;
+    bottom: 45%;
+    left: 50px;
+    width: 65px;
+    height: 25px;
+    background: var(--bg);
+}
+.patch-top-roof-1::before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 133px;
+    background: var(--bg);
+    right: -5px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 30% 100%, 0% 100%);
+}
+.block-top-border-square-one {
+    border-bottom: 10px solid var(--border-color);
+    border-right: 10px solid var(--border-color);
+    width: 46.5%;
+    height: 38%;
+    transform: skewX(-27deg);
+    position: absolute;
+    bottom: -24px;
+    left: -1%;
+    transform-origin: bottom right;
+}
+.block-top-border-square-two {
+    border-bottom: 10px solid var(--border-color);
+    border-right: 10px solid var(--border-color);
+    border-left: 10px solid var(--border-color);
+    width: 41.5%;
+    height: 38%;
+    transform: skewX(27deg);
+    position: absolute;
+    bottom: -24px;
+    right: -1%;
+    transform-origin: bottom right;
+}
+
+/* .block-top-border-square-two::after {
+    content: "";
+    width: 30px;
+    height: 100%;
+    background: red;
+    position: absolute;
+    left: -30px;
+} */
