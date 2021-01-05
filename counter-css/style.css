@@ -1,0 +1,47 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+ol {
+    counter-reset: section;
+    list-style-type: none;
+    background: white;
+    margin: 5px 0;
+    border-radius: 10px;
+}
+.parent {
+    box-shadow: 2px 2px 2px gray;
+    padding: 20px 60px;
+    color: black;
+    font-weight: 600;
+}
+
+li::before {
+    counter-increment: section; 
+    content: counters(section, ".") " "; 
+}
+
+li {
+    margin-left: 20px;
+}
+
+.first-child {
+    font-weight: 400;
+}
+.second-child {
+    font-weight: 100;
+}
+.titlte {
+    margin: 5px 0; 
+}
