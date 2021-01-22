@@ -1,0 +1,216 @@
+
+:root {
+    --face-1: #eebd9b;
+    --eye-brows-1: #d74c42;
+    --eyes-1: #1a2f36;
+    --moustache-1: #d94b42;
+    --ear-outer-1: #f4b9a0;
+    --ear-inner-1: #cd6e6a;
+    --mouth-inner-1: #a71749;
+    --mouth-outer-1: #212d36;
+    --white: white;
+    --nose-1: #e08a7f;
+}
+
+.mustache-man {
+    width: 400px;
+    height: 400px;
+    background: orangered;
+    position: absolute;
+    left: 40%;
+}
+.man-1 .face {
+    position: relative;
+    top: 200px;
+    left: 15%;
+    height: 200px;
+    width: 150px;
+    background: var(--face-1);
+    border-radius: 100px;
+}
+
+.man-1 .face .eye-brows , .man-1 .face .eyes {
+    position: absolute;
+    width: 80%;
+    height: 10%;
+    left: 15%;
+   
+}
+.man-1 .face .eye-brows {
+    top: -125%;
+    z-index: 7;
+    animation: eyes-brows 1s forwards; 
+    animation-delay: 3s;
+}
+.man-1 .face .eye-brows::before, .man-1 .face .eye-brows::after {
+    content: "";
+    position: absolute;
+    width: 34px;
+    height: 14px;
+    background: var(--eye-brows-1);
+    border-radius: 10px;
+}
+
+.man-1 .face .eye-brows::before {
+    left: 10%;
+}
+.man-1 .face .eye-brows::after {
+    right: 20%;
+}
+
+.man-1 .face .eyes {
+    top: 125%;
+    z-index: 8;
+    animation: eyes 1s forwards; 
+    animation-delay: 3s;
+}
+.man-1 .face .eyes::before, .man-1 .face .eyes::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: var(--eyes-1);
+    border-radius: 50%;
+}
+.man-1 .face .eyes::before {
+    left: 18%;
+}
+.man-1 .face .eyes::after {
+    right: 29%;
+}
+
+.man-1 .face .nose {
+    z-index: 10;
+    position: absolute;
+    top: 101%;
+    left: 150%;
+    transform: translateX(-50%);
+    height: 62px;
+    width: 25px;
+    border-radius: 30px;
+    background: var(--nose-1);
+    animation: nose 1s forwards;
+    animation-delay: 3s;
+}
+.man-1 .face .moustache {
+    position: absolute;
+    width: 60%;
+    height: 40%;
+    top: -40%;
+    left: 120%;
+    z-index: 9;
+    animation: moustache 1s forwards;
+    animation-delay: 3s;
+}
+
+.man-1 .face .moustache::before, .man-1 .face .moustache::after {
+    content: "";
+    position: absolute;
+    background: var(--moustache-1);
+    height: 80%;
+    width: 25%;
+    border-radius: 10px;
+}
+.man-1 .face .moustache::before {
+    top: 0;
+    left: 10%;
+    transform: rotate(45deg);
+}
+.man-1 .face .moustache::after {
+    top: 0;
+    right: 10%;
+    transform: rotate(-45deg);
+}
+.man-1 .face .mouth {
+    overflow: hidden;
+    position: absolute;
+    top: -55%;
+    left: -20%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, white 0%, white 50%, var(--mouth-outer-1) 50%, var(--mouth-outer-1) 100%);
+    animation: mouth 1s forwards;
+    animation-delay: 3s;
+}
+.man-1 .face .mouth::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: var(--mouth-inner-1);
+    position: absolute;
+    top: 75%;
+    border-radius: 50%;
+}
+
+.man-1 .face .ear {
+    background: var(--ear-outer-1);
+    width: 120%;
+    height: 10%;
+    position: absolute;
+    left: 150%;
+    top: 25%;
+    border-radius: 10px;
+    animation: ear 1s forwards;
+    animation-delay: 3s;
+}
+
+.man-1 .face .ear::before, .man-1 .face .ear:after {
+    content: "";
+    width: 20px;
+    height: 80%;
+    top: 10%;
+    border-radius: 50%;
+    position: absolute;
+}
+.man-1 .face .ear::before {
+    left: 3%;
+    background: linear-gradient(to left, transparent 0%,  transparent 50%, var(--ear-inner-1) 50%, var(--ear-inner-1) 100%);
+
+}
+.man-1 .face .ear::after {
+    right: 3%;
+    background: linear-gradient(to right, transparent 0%,  transparent 50%, var(--ear-inner-1) 50%, var(--ear-inner-1) 100%);
+
+}
+
+
+/**
+* Keyframes
+*/
+
+@keyframes eyes {
+    100% {
+        top: 25%;
+    }
+}
+@keyframes eyes-brows {
+    100% {
+        top: 15%;
+    }
+}
+@keyframes ear {
+    100% {
+        left: -10%;
+    }
+}
+@keyframes nose {
+    100% {
+        top: 21%;
+        left: 50%;
+    }
+}
+@keyframes moustache {
+    100% {
+        top: 40%;
+        left: 20%;
+    }
+}
+@keyframes mouth {
+    100% {
+        top: 45%;
+        left: 50%;
+    }
+}
+

@@ -16,6 +16,7 @@
 .airplane-container {
     top: 10%;
     position: absolute;
+    z-index: 2;
 }
 
 @keyframes move-airplane {

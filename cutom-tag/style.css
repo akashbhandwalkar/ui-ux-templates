@@ -1,0 +1,22 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+custom-p {
+    color: purple;
+    font-size: 40px;
+    font-family: monospace;
+    font-weight: 900;
+}

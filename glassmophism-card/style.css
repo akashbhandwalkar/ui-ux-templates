@@ -1,0 +1,24 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background: #121d54;
+    font-family: sans-serif;
+}
+.card {
+    background-color: white;
+    width: 600px;
+    height: 360px;
+    background:rgba(255,255,255, 0.1);
+    border: 2px solid white;
+    backdrop-filter: blur(0px);
+    border-radius: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

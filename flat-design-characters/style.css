@@ -12,23 +12,34 @@ body {
 
 }
 
+.boy-on-bench {
+    position: absolute;
+    left: 100px;
+    top: 400px;
+    z-index: 2;
+}
 
-.container{
-    background-color: #8545b8;
+
+.boy-on-bench .container{
+    /* background-color: #8545b8; */
     width: 600px;
     height: 600px;
     padding: 10%;
     /* margin: 200px; */
 }
 
-.character {
-    position: relative;
-    height: 100%;
-    width: 100%;
+.boy-on-bench .character {
+    position: absolute;
+    height: 700px;
+    width: 702px;
+    bottom:200px;
+    z-index: 2;
 }
 
+
+
 /* animation 1 */
-.face {
+.boy-on-bench .face {
     background-color: #ecb1a4;
     position: absolute;
     top: 20%;
@@ -36,11 +47,11 @@ body {
     width: 15%;
     height: 20%;
     z-index: 2;
-    animation: come-form-left 2s;
+    animation: come-form-left 1s;
 }
 
 /* animation 2 */
-.eyes {
+.boy-on-bench .eyes {
     position: absolute;
     top: 13%;
     width: 100%;
@@ -50,7 +61,7 @@ body {
 }
 
 
-.eyes div {
+ .boy-on-bench .eyes div {
     position: absolute;
     background-color: white;
     height: 23%;
@@ -60,7 +71,7 @@ body {
     
 }
 
-.eyes div::after {
+ .boy-on-bench .eyes div::after {
     content: "";
     position: absolute;
     bottom: 7px;
@@ -70,16 +81,16 @@ body {
     border-radius: 50%;
     left: 40%;
 }
-.eyes .left {
+ .boy-on-bench .eyes .left {
     left: 10%;
 }
-.eyes .right {
+ .boy-on-bench .eyes .right {
     left: 39%;
 }
 
 /* animation 3*/
 
-.mouth {
+.boy-on-bench .mouth {
     position: absolute;
   
     height: 30%;
@@ -89,8 +100,8 @@ body {
     border-bottom-right-radius: 60%;
     background-color: #002842;
     overflow: hidden;
-    animation:  mounth 2s forwards;
-    -webkit-animation-delay: 2s;
+    animation:  mounth 1s forwards;
+    -webkit-animation-delay: 1s;
     opacity: 0;
     /* display: none; */
 }
@@ -110,7 +121,7 @@ body {
 }
 
 /* animation 4*/
-.teeth {
+.boy-on-bench .teeth {
     position: absolute;
     top: 0;
     width: 70%;
@@ -119,7 +130,7 @@ body {
 }
 
 /* animation 5*/
-.tounge {
+.boy-on-bench .tounge {
     position: absolute;
     top: 45%;
     right: 40%;
@@ -131,14 +142,14 @@ body {
 
 
 /*animation 6 */
-.hairs {
+.boy-on-bench .hairs {
     position: absolute;
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
     animation: hairs 1s forwards;
-    -webkit-animation-delay: 4s;
+    -webkit-animation-delay: 2s;
     opacity: 0;
 }
 
@@ -154,7 +165,7 @@ body {
 }
 
 /*animation 7 */
-.hairs .left, .hairs .right  {
+.boy-on-bench .hairs .left, .boy-on-bench .hairs .right  {
     position: absolute;
     
     width: 15%;
@@ -163,17 +174,17 @@ body {
     border-radius: 0 0 50% 0 / 0 0 10% 0;
 }
 
-.hairs .left{
+.boy-on-bench .hairs .left{
     left: -15%;
 }
-.hairs .right  {
+.boy-on-bench .hairs .right  {
     right: -15%;
     border-radius: 0% 0% 0% 50% / 0% 0% 0% 10%;
 }
 
 
 /*animation 8 */
-.hairs  .top  {
+.boy-on-bench .hairs  .top  {
     width: 85%;
     height: 20%;
     background-color: #002842;
@@ -185,7 +196,7 @@ body {
 }
 
 
-.head {
+.boy-on-bench .head {
     position: absolute;
     
     width: 20%;
@@ -209,7 +220,7 @@ body {
 }
 
 
-.head .base {
+.boy-on-bench .head .base {
     background-color: #32d379;
     width: 100%;
     height: 20%;
@@ -218,7 +229,7 @@ body {
     z-index: 2;
 }
 
-.head .middle {
+.boy-on-bench .head .middle {
     background-color: #e429a1;
     height: 10%;
     bottom: 20%;
@@ -227,7 +238,7 @@ body {
     position: absolute;
     z-index: 2;
 }
-.head .top {
+.boy-on-bench .head .top {
     left: 10%;
     position: absolute;
     width: 80%;
@@ -239,7 +250,7 @@ body {
 }
 
 
-.ear {
+.boy-on-bench .ear {
     width: 23%;
     border-radius: 10px;
     height: 15px;
@@ -248,7 +259,7 @@ body {
     background-color: #ee9792;
     left: 26%;
     animation: ear 1s forwards;
-    -webkit-animation-delay: 5s;
+    -webkit-animation-delay: 4s;
     opacity: 0;
 }
 
@@ -263,7 +274,7 @@ body {
 
     }
 }
-.neck {
+.boy-on-bench .neck {
     position: absolute;
     background-color: #ed9892;
     height: 2%;
@@ -271,7 +282,7 @@ body {
     left: 30%;
     background-color: #ed9892;
     animation: neck 1s forwards;
-    -webkit-animation-delay: 5.5s;
+    -webkit-animation-delay: 4.5s;
     opacity: 0;
 }
 
@@ -286,7 +297,7 @@ body {
 
     }
 }
-.neck::after {
+.boy-on-bench .neck::after {
     content: "";
     top: 100%;
     position: absolute;
@@ -294,7 +305,7 @@ body {
     width: 100%;
     background-color: #2395f7;
 }
-.tshirt {
+.boy-on-bench .tshirt {
     position: absolute;
     background-color: #f1cf24;
     width: 30%;
@@ -304,7 +315,7 @@ body {
    opacity: 0;
     z-index: 2;
     animation: tshirt 1s forwards;
-    -webkit-animation-delay: 6s;
+    -webkit-animation-delay: 5s;
 }
 
 @keyframes tshirt {
@@ -318,7 +329,7 @@ body {
 
     }
 }
-.right-hand {
+.boy-on-bench .right-hand {
     position: absolute;
     left: 90%;
     top: 10%;
@@ -329,7 +340,7 @@ body {
     transform-origin: left;
     z-index:1;
 }
-.right-hand-after {
+.boy-on-bench .right-hand-after {
     /* content: ""; */
     position: absolute;
     height: 70%;
@@ -342,7 +353,7 @@ body {
     z-index: 3;
 }
 
-.right-hand-after .top{
+.boy-on-bench .right-hand-after .top{
     position: absolute;
     top: -30px;
     right: 0;
@@ -354,7 +365,7 @@ body {
 }
 
 
-.right-hand-after .mobile{  
+.boy-on-bench .right-hand-after .mobile{  
     height: 60%;
     width: 120%;
     position: absolute;
@@ -365,7 +376,7 @@ body {
 }
 
 
-.right-hand-after .thumb {
+.boy-on-bench .right-hand-after .thumb {
     background-color: #ed9890;
     right: 0;
     top: -48%;
@@ -375,7 +386,7 @@ body {
     border-top-left-radius: 35%;
 }
 
-.right-hand-after .mobile::after {
+.boy-on-bench .right-hand-after .mobile::after {
     position: absolute;
     background-color: #ecf7f7;
     height: 20%;
@@ -387,7 +398,7 @@ body {
 }
 
 
-.left-hand {
+.boy-on-bench .left-hand {
     position: absolute;
     right: 100%;
     height: 40%;
@@ -396,7 +407,7 @@ body {
      z-index: 2;
 }
 
-.left-hand .tshirt-sleeves {
+.boy-on-bench .left-hand .tshirt-sleeves {
     background: linear-gradient(90deg, #002842 0%,#002842 7%, #ef9791 8%, #ef9791 20%,#f07d7d 21%, #f07d7d 30%, #2295f6 31%, #2295f6 40%, #f1cf24 40%, #f1cf24 100%);
     height: 40%;
     width: 70%;
@@ -404,7 +415,7 @@ body {
     right: 0;
 }
 
-.left-hand .tshirt-sleeves::after {
+.boy-on-bench .left-hand .tshirt-sleeves::after {
     content: "";
     position: absolute;
     background-color: #f6e9aa;
@@ -414,7 +425,7 @@ body {
     left: 39%;
 }
 
-.left-hand .tshirt-sleeves::before {
+.boy-on-bench .left-hand .tshirt-sleeves::before {
     content: "";
     position: absolute;
     background-color: #f2968f;
@@ -425,7 +436,7 @@ body {
     /* border-radius: 50%; */
 }
 
-.fingure {
+.boy-on-bench .fingure {
     position: absolute;
     right: 80%;
     background-color: #f2968f;
@@ -437,7 +448,7 @@ body {
     border-radius: 20%;
 }
 
-.fingure-left {
+.boy-on-bench .fingure-left {
     width: 7%;
     height: 40%;
     position: absolute;
@@ -447,7 +458,7 @@ body {
     transform-origin: left;
 }
 
-.legs {
+.boy-on-bench .legs {
     position: absolute;
    
     left: 15%;
@@ -455,7 +466,7 @@ body {
     width: 50%;
     opacity: 0;
     animation: legs 1s forwards;
-    -webkit-animation-delay: 7s;
+    -webkit-animation-delay: 6s;
     opacity: 0;
     z-index: 4;
 }
@@ -473,7 +484,7 @@ body {
 }
 
 
-.left-leg {
+.boy-on-bench .left-leg {
      z-index: 4;
     position: absolute;
     top: 0;
@@ -481,7 +492,7 @@ body {
     height: 15%;
     background: linear-gradient(#f365cf 0%, #f365cf 50%,#ed3eb3 51%, #ed3eb3 100% );
 }
-.left-leg::after {
+.boy-on-bench .left-leg::after {
     content: "";
     position: absolute;
     right: -25%;
@@ -492,7 +503,7 @@ body {
     border-bottom-right-radius: 35%;
 }
 
-.left-leg::before {
+.boy-on-bench .left-leg::before {
     content: "";
     position: absolute;
     right: -7%;
@@ -503,7 +514,7 @@ body {
     z-index: 3;
 }
 
-.butt {
+.boy-on-bench .butt {
     position: absolute;
     background: #d3178c;
     position: absolute;
@@ -513,7 +524,7 @@ body {
     border-bottom-left-radius: 100%;
     z-index: 4;
 }
-.right-leg {
+.boy-on-bench .right-leg {
     width: 15%;
     height: 65%;
     background: #ed3eb3;
@@ -522,7 +533,7 @@ body {
     top: 15%;
     z-index: 4;
 }
-.right-leg::after {
+.boy-on-bench .right-leg::after {
     content: "";
     position: absolute;
     background: #012741;
@@ -534,17 +545,17 @@ body {
     border-top-right-radius: 50%;
 }
 
-.bench {
+.boy-on-bench .bench {
     z-index: 1;
     position: absolute;
-    top: 50%;
-    height: 40%;
-    width: 60%;
+    bottom: 200px;
+    height: 400px;
+    width: 800px;
     /* border: 1px solid black; */
     /* opacity: 0.7; */
 }
 
-.bench  .bottom {
+.boy-on-bench .bench  .bottom {
     position: absolute;
     bottom: 0;
     height: 2%;
@@ -553,24 +564,24 @@ body {
     width: 100%;
 }
 
-.bench  .left, .bench  .right {
+.boy-on-bench .bench  .left, .boy-on-bench .bench  .right {
     background: #652788;
     height: 100%;
     width: 2%;
     position: absolute;
 }
-.bench  .left  {
+.boy-on-bench .bench  .left  {
     left: 5%;
     z-index: 3;
     
 }
 
-.bench  .right  {
+.boy-on-bench .bench  .right  {
     right: 5%;
      z-index: 3;
 }
 
-.bench .top {
+.boy-on-bench .bench .top {
     position: absolute;
     top: 0;
     height: 100%;
@@ -578,7 +589,7 @@ body {
 
 }
 
-.bench .top div {
+.boy-on-bench .bench .top div {
     background: #672687;
     height: 10%;
     width: 100%;

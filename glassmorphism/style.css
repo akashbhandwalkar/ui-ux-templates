@@ -1,0 +1,39 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --from: #3f72cf;
+    --to: #f838a7;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--from), var(--to));
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+
+.container {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 600px;
+    height: 300px;
+    background: white;
+    opacity: 0.25;
+    backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    z-index: 1;
+}
+.content {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: #cca3dd;
+    position: absolute;
+    font-weight: 900;
+}
