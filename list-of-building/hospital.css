@@ -1,0 +1,500 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #e3edf7;
+    font-family: sans-serif;
+}
+
+
+.hospital-container {
+    position: relative;
+    height: 600px;
+    width: 600px;
+    background-color: white;
+    overflow: hidden;
+    position: absolute;
+    left: 1240px;
+    display: none;
+}
+
+.space {
+    position: absolute;
+    height: 75%;
+    width: 100%;
+    background: linear-gradient(orangered, #0093c4);
+    opacity: 0.8;
+}
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    height: 25%;
+    width: 100%;
+    background: #9bcd33;
+}
+.road {
+    position: absolute;
+    background-color: #8b8784;
+}
+.horizontal-road {
+    top: 30%;
+    width: 100%;
+    height: 30%;
+}
+
+.horizontal-road::after {
+    position: absolute;
+    content: "";
+    height: 0;
+    top: 50%;
+    width: 100%;
+    border: 1px dashed #fffdfa;
+}
+
+.vertical-road {
+    top: 0%;
+    left: 45%;
+    width: 12%;
+    height: 100%;
+}
+
+.vertical-road::after {
+    position: absolute;
+    content: "";
+    height: 35%;
+    bottom: 0;
+    left: 40%;
+    border: 1px dashed #fffdfa;
+}
+.vertical-road::before {
+    position: absolute;
+    content: "";
+    height: 0%;
+    bottom: 36%;
+    width: 57%;
+    left: 40%;
+    border: 1px solid #fffdfa;
+}
+
+.hospital {
+    position: absolute;
+    width: 60%;
+    /* background-color: #eefeff; */
+    height: 30%;
+    bottom: 20%;
+    left: 20%;
+}
+
+.left-building {
+    position: absolute;
+    background-color: #e6f5f9;
+    width: 25%;
+    height: 90%;
+    border-top: 6px solid #d04b2f;
+    left: 0%;
+    display: flex;
+}
+
+.middle-building {
+    position: absolute;
+    background-color: #e6f5f9;
+    width: 50%;
+    height: 100%;
+    border-top: 6px solid #d04b2f;
+    left: 20%;
+    bottom: 10%;
+    box-shadow: 3px 3px 3px #d4eaee,
+                3px -3px 3px #d4eaee,
+                -3px 3px 3px #d4eaee,
+                -3px -3px 3px #d4eaee;
+    z-index: 3;
+}
+
+.right-building {
+    position: absolute;
+    background-color: #e6f5f9;
+    width: 25%;
+    height: 90%;
+    border-top: 6px solid #d04b2f;
+    right: 5%;
+
+}
+
+.hospital-container .left-windows {
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    /* padding: 20px; */
+}
+
+.hospital-container .window {
+    margin-top: 20px;
+    background-color: #b3dfde;
+    height: 35px;
+    width: 36px;
+    border: 1px solid #7c9596;
+    position: relative;
+}
+.hospital-container .window::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    height: 33px;
+    width: 2px;
+    background-color:  #7c9596;;
+}
+
+.hospital-container .window::before {
+    content: "";
+    position: absolute;
+    left: 21px;
+    height: 33px;
+    width: 2px;
+    background-color:  #7c9596;;
+}
+
+.middle-building .first-floor-top {
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    bottom: 22%;
+    background-color: #ed4e2b;
+}
+.middle-building .hospital-title {
+    content: "";
+    position: absolute;
+    left: 25%;
+    bottom: 18%;
+    background-color: #5c5858;
+    color: white;
+    letter-spacing: 2px;
+    padding: 4px;
+    font-size: 12px;
+}
+
+.middle-building .first-floor-doors {
+    height: 23%;
+    border: 3px solid #6c9895;
+    background-color: #c2ebe8;
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+
+.door {
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    border: 1px solid #4e7571;
+}
+.door-one {
+    left: 0;
+}
+.door-one::before, .door-two::before, .door-three::before  {
+    content: "";
+    background-color: #85b0b1;
+    position: absolute;
+    width: 1px;
+    left: 25%;
+    height: 100%;
+}
+.door-one::after, .door-two::after, .door-three::after {
+    content: "";
+    background-color: #85b0b1;
+    position: absolute;
+    width: 1px;
+    left: 75%;
+    height: 100%;
+}
+
+.door-two{
+    left: 34%
+}
+.door-three {
+    left: 69%;
+    width: 32%;
+}
+
+.separator {
+    width: 8px;
+    height: 96%;
+    background-color: white;
+}
+
+.separator.one {
+    position: absolute;
+    left: 30%;
+}
+.separator.two {
+    position: absolute;
+    left: 64%;
+    width: 10px;
+}
+.hospital-logo {
+    left: 45%;
+    top: 33%;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: #e80808;
+}
+.hospital-logo::before {
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    height: 18px;
+    width: 18px;
+    background-color: white;
+    clip-path: polygon(10% 40%, 35% 41%, 35% 0%, 65% 0%, 64% 39%, 89% 39%, 90% 63%, 66% 63%, 66% 100%, 35% 100%, 36% 66%, 10% 65%);
+}
+.top-floor-windows {
+    /* background-color: red; */
+    /* border: 1px solid blue; */
+    width: 90%;
+    left: 5%;
+    height: 60%;
+    position: absolute;
+    top: 5%;
+}
+
+.top-floor-windows .first-line {
+    position: absolute;
+    width: 90%;
+    /* border: 1px solid blue; */
+    height: 30%;
+    top: 10%;
+    left: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-floor-windows .second-line { 
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    width: 90%;
+    /* border: 1px solid blue; */
+    height: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+.top-window {
+    position: relative;
+    background-color: #bfd6d7;
+    height: 80%;
+    width: 20%;
+    border: 1px solid #4e5b59;
+}
+
+.top-window::before {
+    content:"";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    left: 30%;
+    background-color: #688c8b;
+}
+.top-window::after {
+    content:"";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    left: 66%;
+    background-color: #688c8b;
+}
+
+.ambulance-container {
+    position: absolute;
+    left: 80%;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    animation: 4s ambulance-move forwards;
+}
+@keyframes ambulance-move {
+    100% {
+        left: 0%;
+    }
+}
+
+
+.ambulance {
+    position: absolute;
+    background: linear-gradient( #f6faf4 0%, #f6faf4 55%, #de761b 55%, #de761b 60%,  #efc213 61%, #efc213 90%, #c9c894 91%, #c9c894);
+    width: 15%;
+    height: 80%;
+    z-index: 5;
+    clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%);
+}
+
+.ambulance label {
+    position: absolute;
+    font-size: 8px;
+    left: 40%;
+    top: 15%;
+    text-transform: uppercase;
+}
+
+.ambulance-window {
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    left: 25px;
+    top: 5px;
+    z-index: 14;
+    background: #cae7e8;
+    clip-path: polygon(80% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 80%);
+}
+.tyre-container {
+    width: 10%;
+    height: 25%;
+    /* border: 1px solid black; */
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    z-index: 15;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tyre-container .tyre {
+    position: relative;
+    width: 15px;
+    z-index: 15;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: #d2d0ce;
+}
+
+
+.tyre-container .tyre::after {
+    position: absolute;
+    content: "";
+    width: 4px;
+    height: 4px;
+    background-color: #545454;
+    border-radius: 50%;
+    left: 35%;
+    top: 30%;
+}
+
+.cloud {
+	background: #fff;
+	background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+	border-radius: 100px;
+	
+	-webkit-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+
+	height: 120px;
+	position: relative;
+	width: 350px;
+}
+
+.cloud {
+    /* background: red; */
+    border-radius: 20px;
+    box-shadow: 0 8px 5px rgba(0, 0, 0, 0.1);
+    height: 40px;
+    position: relative;
+    width: 100px;
+}
+
+.cloud::after, .cloud::before {
+	content: '';
+	position: absolute;
+    z-indeX: -1;
+    z-index: 10;
+    background: #fff;
+	background: linear-gradient(top,  #fff 5%,#f1f1f1 100%);
+}
+
+.cloud::after {
+    border-radius: 50%;
+    height: 60px;
+    right: 6px;
+    top: -20px;
+    width: 60px;
+    z-index: 14;
+}
+
+.cloud::before {
+    border-radius: 50%;
+    height: 60px;
+    left: -10px;
+    top: -30px;
+    width: 60px;
+    z-index: 14;
+    
+}
+
+.clouds {
+    /* background: red; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+}
+.cloud-one {
+    position: absolute;
+    top: 5%;
+    left: -100%;
+    animation: move-cloud 5s infinite;
+
+}
+.cloud-two {
+    left: -10%;
+    position: absolute;
+    top: 40%;
+    left: -40%;
+    animation-delay: 2s;
+    animation: move-cloud 5s infinite;
+
+}
+.cloud-three {
+    left: -10%;
+    position: absolute;
+    top: 20%;
+    left: -20%;
+    animation: move-cloud 5s infinite;
+
+}
+
+@keyframes move-cloud {
+  
+    100% {
+        left: 100%;
+    }
+}
+
+.ambulance-container2 {
+    position: absolute;
+    left: 80%;
+    top: -90%;
+    width: 100%;
+    height: 100%;
+    transform-origin: left;
+    /* transform: rotate(270deg); */
+}
+
+.light {
+    position: absolute;
+    background-color: blue;
+    height: 4px;
+    width: 10px;
+    left: 7%;
+    top: -7%;
+    z-index: 15;
+}

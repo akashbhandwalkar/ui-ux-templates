@@ -1,0 +1,577 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --green: #aeca1e;
+    --orange-primary: #ef5701; 
+    --orange-secondary: #fa6810;
+    --wallcolor: #a79a94;
+    --wallcolor-second: #c5bbb9;
+    --wallcolor-third: #d4c9c5;
+    --window-color: #947f74;
+    --gate-left: #bc6732;
+    --gate-right:#d07d34;
+    --mud-color: #7c5334;
+    --bridge-color: #c5b99f;
+    --bridge-color-1: #827b5e;
+    --background-color: #3a5c90;
+  }
+
+
+.castle-container {
+    background-color: var(--background-color);
+    width: 750px;
+    height: 730px;
+    position: absolute;
+    top: 546px;
+    left: 1165px;
+    overflow: hidden;
+    transform: scale(0.8);
+    display: none;
+}
+
+.castle-container .catsle {
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.castle-container .base-line {
+    width: 100%;
+    height: 9px;
+    background-color: var( --green);
+    bottom: 10px;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    z-index: 99;
+}
+
+.castle-container .bottom {
+    position: absolute;
+    left: 10%;
+    display: flex;
+    bottom: 150px;
+    z-index: 3; 
+}
+
+
+
+
+
+.castle-container .bottom .wall {
+    position: absolute;
+    bottom: 0;
+}
+.castle-container .bottom .wall.one {
+    width: 70px;
+    background-color: var(--wallcolor);
+    height: 100px;
+    left: 0;
+    bottom: -400px;
+    animation: bottom-animation 1s forwards;
+    animation-delay: 1s;
+}
+.castle-container .bottom .wall.two {
+    width:70px;
+    background-color: var(--wallcolor-second);
+    height: 200px;
+    left: 70px;
+    bottom: -400px;
+    animation: bottom-animation 2s forwards;
+    animation-delay: 1.5s;
+
+}
+.two-duplicate {
+    left: 324px !important;
+}
+.castle-container .bottom .wall.three{
+    width:130px;
+    background-color: var(--wallcolor-third);
+    height: 110px;
+    left: 140px;
+    bottom: -400px;
+    animation: bottom-animation 3.5s forwards;
+    animation-delay: 2s;
+
+}
+.castle-container .bottom .wall.four {
+    width:70px;
+    background-color: var(--wallcolor-second);
+    height: 200px;
+    left: 270px;
+    bottom: -400px;
+    animation: bottom-animation 2s forwards;
+    animation-delay: 3s;
+
+
+}
+.castle-container .bottom .wall.five {
+    width: 70px;
+    background-color: var(--wallcolor);
+    left: 340px;
+    height: 100px;
+    bottom: -400px;
+    animation: bottom-animation 2s forwards;
+    animation-delay: 3.5s;
+
+}
+
+.castle-container .bottom .wall.one .after-wall {
+    display: flex;
+    top: -10px;
+    position: absolute;
+    justify-items: space-between;
+}
+.castle-container .bottom .wall.one .after-wall div, .castle-container .bottom .wall.two .after-wall div, .castle-container .bottom .wall.four .after-wall div,.castle-container .bottom .wall.five .after-wall div {
+    height: 10px;
+    width: 10px;
+    background-color: var(--wallcolor);
+    margin-right: 10px;
+}   
+.castle-container .bottom .wall.three .after-wall {
+    display: flex;
+    top: -10px;
+    position: absolute;
+    justify-items: space-between;
+}
+.castle-container .bottom .wall.two .after-wall div, .castle-container .bottom .wall.four .after-wall div {
+    background-color: var(--wallcolor-second);
+}
+
+.castle-container .bottom .wall.three .after-wall div {
+    height: 10px;
+    width: 10px;
+    background-color: var(--wallcolor);
+    margin-right: 10px;
+    background-color: var(--wallcolor-third);
+}
+
+.castle-container .bottom .wall.one .after-wall,  .bottom .wall.two .after-wall, .bottom .wall.four .after-wall, .bottom .wall.five .after-wall{
+    display: flex;
+    top: -10px;
+    position: absolute;
+    justify-items: space-between;
+}
+
+.castle-container .window {
+    background-color: var(--window-color);
+    height: 20px;
+    width: 12px;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.castle-container .wall.one .window, .castle-container .wall.five .window {
+    position: absolute;
+    top: 38%;
+    left: 38%;
+}
+
+.castle-container .wall.two .windows, .castle-container .wall.four .windows {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+}
+
+.castle-container .wall.two .windows .window, .castle-container .wall.four .windows .window {
+    margin-bottom: 70px;
+}
+
+/***/
+
+.castle-container .wall.two .separator, .castle-container .wall.four .separator {
+    background: #d4c9c5;
+    width: 70px;
+    height: 12px;
+    z-index: 5;
+    position: absolute;
+    top: 45%;
+}
+
+.castle-container .wall.three .windows {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.castle-container .wall.three .gate {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    width: 50%;
+    height: 60%;;
+    background: linear-gradient(90deg, var(--gate-left) 0%, var(--gate-left) 50%, var(--gate-right) 50%, var(--gate-right) 100%);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    box-shadow:  inset 5px 5px 5px #a65a18,
+                    inset 5px -5px 5px #a65a18,
+                    inset -5px 5px 5px #a65a18,
+                    inset -5px -5px 5px #a65a18;
+}
+
+.castle-container .middle-layer {
+    position: absolute;
+    left: 24%;
+    display: flex;
+    bottom: 150px;
+    z-index: 2;
+}
+.castle-container .middle-layer  .wall {
+    position: absolute;
+    bottom: 0;
+}
+
+.castle-container .middle-layer .wall.one {
+    width: 70px;
+    background-color: var(--wallcolor);
+    height: 300px;
+    bottom: -700px;
+    left: 0;
+    animation: middle-animation 2.5s forwards;
+    animation-delay: 5s;
+}
+.castle-container .middle-layer .wall.two {
+    width: 100px;
+    background-color: var(--wallcolor-second);
+    height: 400px;
+    left: 70px;
+    bottom: -700px;
+    animation: middle-animation 2s forwards;
+    animation-delay: 5.5s;
+}
+.castle-container .middle-layer .wall.three{
+    width: 70px;
+    background-color: var(--wallcolor);
+    height: 300px;
+    left: 170px;
+    bottom: -700px;
+    animation: middle-animation 3s forwards;
+    animation-delay: 6s;
+}
+
+
+
+.castle-container .middle-layer .wall.one .top, .castle-container .middle-layer .wall.three .top {
+   position: absolute;
+   top: -50px;
+   left: 0;
+}
+
+.castle-container .middle-layer .wall.one .top .top-most, .castle-container .middle-layer .wall.three .top .top-most {
+    height: 50px;
+    width: 70px;
+    background: linear-gradient(90deg,  var(--orange-primary) 0%,  var(--orange-primary) 50%,  var(--orange-secondary) 51%,  var(--orange-secondary) 100%);
+    clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+    position: absolute;
+    z-index: 2;
+
+}
+
+.castle-container .middle-layer .wall.two .top {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    z-index: 3;
+ }
+ 
+ .castle-container .middle-layer .wall.two .top .top-most {
+     position: absolute;
+     height: 70px;
+     width: 100px;
+     background: linear-gradient(90deg,  var(--orange-primary) 0%,  var(--orange-primary) 50%,  var(--orange-secondary) 51%,  var(--orange-secondary) 100%);
+     clip-path: polygon(50% 0, 100% 100%, 0% 100%);
+     z-index: 3;
+    position: absolute;
+
+ }
+
+ .flag {
+     background-color: #b1958a;
+     height: 50px;
+     width: 3px;
+     border-radius: 7px;
+     position: absolute;
+     top: -40px;
+     left: 34px;
+     z-index: 1;
+     animation: animate-flag 2s infinite;
+ }
+
+ .flag::after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: orangered;
+    top: 3px;
+    right: 2px;
+    clip-path: polygon(0% 50%, 100% 0, 100% 100%);
+    animation: animate-flag 6s infinite;
+}
+
+
+.castle-container .middle-layer .wall.two .top .flag {
+    left: 48px;
+}
+
+
+.castle-container .middle-layer .wall.two .balcony {
+    background-color: #d4c9c5;
+    width: 120px;
+    height: 10px;
+    position: absolute;
+    top: 15px;
+    left: -10px;
+}
+
+.castle-container .middle-layer .wall.two .separator1 {
+    background: #d4c9c5;
+    width: 100px;
+    height: 12px;
+    z-index: 5;
+    position: absolute;
+    top: 25%;
+}
+.castle-container .middle-layer .wall.two .separator2 {
+    background: #d4c9c5;
+    width: 100px;
+    height: 12px;
+    z-index: 5;
+    position: absolute;
+    top: 45%;
+}
+
+.castle-container .middle-layer .wall.two .balcony .div-container {
+   position: absolute;
+   top: 0px;
+   display: flex;
+    justify-content: space-between;
+   z-index: 10;
+   width: 100%;
+}
+
+.castle-container .middle-layer .wall.two .balcony .div-container div {
+    height: 15px;
+    width: 10px;
+    margin-top:-10px;
+    background-color:#d4c9c5;
+}
+.first-window-set  {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    width:70%;
+    display: flex;
+    justify-content: space-between;
+}
+.second-window-set  {
+    position: absolute;
+    top: 35%;
+    left: 15%;
+    width:70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.third-window-set  {
+    position: absolute;
+    top: 55%;
+    left: 15%;
+    width:70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.first-window-set div, .second-window-set div, .third-window-set div {
+    height: 18px;
+    width: 12px;
+    background-color: #937e73;
+}
+.castle-container .middle-layer .wall.one .window {
+    top: 10% !important;
+}
+
+.castle-container .middle-layer .window {
+    position: absolute;
+    top: 10%;
+    left: 38%;
+}
+
+.mountain {
+    position: absolute;
+    bottom: -400px;
+    left: 30px;
+    width: 650px;
+    height: 140px;
+    background-color: var(--mud-color);
+    clip-path: polygon(40px 0, 600px 0, 100% 100%, 0% 100%);
+    animation: animate-mountain 1s forwards;
+}
+
+@keyframes animate-mountain {
+    100% {
+        bottom: 10px;
+    }
+}
+
+.castle-container .bridge {
+    width: 80px;
+    height: 20px;
+    border: 4px solid var(--bridge-color);
+    bottom: 145px;
+    position: absolute;
+    z-index: 5;
+    left: 411px;
+    box-sizing: border-box;
+    background: linear-gradient(90deg, transparent 0, transparent 10%, var(--bridge-color) 10%, var(--bridge-color) 15%, transparent 15%, transparent 25%, var(--bridge-color) 25%, var(--bridge-color) 30%, 
+    transparent 30%, transparent 40%, var(--bridge-color) 40%, var(--bridge-color) 45%, transparent 45%, transparent 55%, var(--bridge-color) 55%, var(--bridge-color) 60%,
+    transparent 60%, transparent 70%, var(--bridge-color) 70%, var(--bridge-color) 75%, transparent 75%, transparent 85%, var(--bridge-color) 85%, var(--bridge-color) 90%,
+    transparent 90%, transparent 100%);
+    opacity: 0;
+    animation: bridge 2s forwards;
+    animation-delay: 7s;
+}
+
+@keyframes bridge {
+    100% {
+        opacity: 1;
+    }
+}
+
+.castle-container .bridge::before {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    background: var(--bridge-color-1);
+    height: 20px;
+    width: 80px;
+    left: -4px;
+}
+.castle-container .bridge::after {
+    content: "";
+    position: absolute;
+    bottom: -45px;
+    border-radius: 50%;
+    background: var(--background-color);
+    height: 40px;
+    width: 80px;
+    left: -4px;
+}
+
+.valley {
+    position: absolute;
+    background: var(--background-color);
+    bottom: -120px;
+    height: 100px;
+    width: 80px;
+    left: -5px;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 70%, 50% 100%, 0% 70%);
+}
+
+.stepper {
+    position: absolute;
+    bottom: 0;
+}
+
+.stepper-border {
+    border: 3px solid #827b5e; 
+    background-color: #b2a48b;
+    display: flex;
+    justify-content: space-around;
+    animation: animate-steps 1s forwards;
+    animation-delay: 7s;
+    opacity: 0;
+}
+
+@keyframes animate-steps  {
+    100% { 
+        opacity: 1;
+    }
+}
+
+.stepper-border div {
+    height: 15px;
+    width: 5px;
+    background-color: #c7bd9b;
+    z-index: 5;
+    margin-top: -4px;
+}
+.stepper-border div::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 5px;
+    background-color: #f2eaca;
+    z-index: 5;
+    top: -6px;
+    /* margin-top: -3px; */
+}
+
+
+.stepper-1 {
+    width: 130px;
+    height: 10px;
+    position: absolute;
+    left: 180px;
+    bottom: 8px;
+    transform: rotate(-20deg);
+    transform-origin: 0 0;
+}
+.stepper-2 {
+    width: 60px;
+    height: 10px;
+    position: absolute;
+    left: 312px;
+    bottom: 55px;
+
+}
+.stepper-3 {
+    width: 130px;
+    height: 10px;
+    position: absolute;
+    left: 180px;
+    bottom: 100px;
+    transform: rotate(15deg);
+    transform-origin: 0 0;
+}
+.stepper-4 {
+    width: 60px;
+    height: 10px;
+    position: absolute;
+    left: 175px;
+    bottom: 125px;
+    transform: rotate(-25deg);
+}
+.stepper-5 {
+    width: 80px;
+    height: 10px;
+    position: absolute;
+    left: 93px;
+    bottom: 107px;
+}
+@keyframes bottom-animation {
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes middle-animation {
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes animate-flag {
+    
+    50% {
+        transform: rotateY(-45deg);
+    }
+}

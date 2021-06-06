@@ -6,6 +6,9 @@
 body {
     /* background: linear-gradient(red, blue); */
     font-family: sans-serif;
+    height: 879px;
+    width: 1283px;
+    overflow: hidden;
 }
 
 .container {

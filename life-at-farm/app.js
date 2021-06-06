@@ -21,10 +21,10 @@ for(var i = 0; i < 200; i++) {
 
 const beeContainers = document.getElementsByClassName('bee-container');
 const beeCollection = document.querySelector('.bee-collection');
-for(var i = 0; i< 20; i++) {
+for(var i = 0; i< 5; i++) {
     var cln = beeContainers[0].cloneNode(true);
-    cln.style.left = 200 + ((Math.random() * 1000) % 300) % 500 + 'px';
-    cln.style.top = 200 +  ((Math.random() * 1000) % 300) % 500 + 'px';
+    cln.style.left = 200 + ((Math.random() * 1000) % 300) % 300 + 'px';
+    cln.style.top = 200 +  ((Math.random() * 1000) % 300) % 300 + 'px';
 
     beeCollection.appendChild(cln);
 }
